@@ -1,0 +1,136 @@
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\App.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\AddSubjects.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\FogotPage.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\LogIn.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\MainPage.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\Register.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\ReminderPage.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\ReportPage.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyPage.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyApp.WindowsPhone.xr.xml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyApp.WindowsPhone.exe
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyApp.WindowsPhone.pdb
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\resources.pri
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\AppxManifest.xml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyApp.WindowsPhone.build.appxrecipe
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.g.i.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.g.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.g.i.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.g.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\FogotPage.g.i.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\FogotPage.g.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\LogIn.g.i.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\LogIn.g.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\MainPage.g.i.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\MainPage.g.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\Register.g.i.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\Register.g.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReminderPage.g.i.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReminderPage.g.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReportPage.g.i.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReportPage.g.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.g.i.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.g.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\XamlTypeInfo.g.cs
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.xaml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.xaml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\FogotPage.xaml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\LogIn.xaml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\MainPage.xaml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\Register.xaml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReminderPage.xaml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReportPage.xaml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.xaml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\FogotPage.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\LogIn.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\MainPage.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\Register.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReminderPage.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReportPage.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.xbf
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\XamlSaveStateFile.xml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.exe
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.pdb
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.csproj.GenerateResource.Cache
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\priconfig.xml
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\priconfig.xml.intermediate
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\layout.resfiles
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\layout.resfiles.intermediate
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\resources.resfiles
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\resources.resfiles.intermediate
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\pri.resfiles
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\pri.resfiles.intermediate
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\qualifiers.txt
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\qualifiers.txt.intermediate
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\Data\2015\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ProjectArchitectures.txt
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.g.i.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.g.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.g.i.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.g.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\FogotPage.g.i.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\FogotPage.g.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\LogIn.g.i.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\LogIn.g.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\MainPage.g.i.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\MainPage.g.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\Register.g.i.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\Register.g.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReminderPage.g.i.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReminderPage.g.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReportPage.g.i.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReportPage.g.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.g.i.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.g.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\XamlTypeInfo.g.cs
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.xaml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.xaml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\FogotPage.xaml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\LogIn.xaml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\MainPage.xaml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\Register.xaml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReminderPage.xaml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReportPage.xaml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.xaml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\FogotPage.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\LogIn.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\MainPage.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\Register.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReminderPage.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReportPage.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\XamlSaveStateFile.xml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\App.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\AddSubjects.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\FogotPage.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\LogIn.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\MainPage.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\Register.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\ReminderPage.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\ReportPage.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyPage.xbf
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyApp.WindowsPhone.xr.xml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyApp.WindowsPhone.exe
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyApp.WindowsPhone.pdb
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\resources.pri
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\AppxManifest.xml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyApp.WindowsPhone.build.appxrecipe
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.exe
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.pdb
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.csproj.GenerateResource.Cache
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\priconfig.xml
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\priconfig.xml.intermediate
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\layout.resfiles
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\layout.resfiles.intermediate
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\resources.resfiles
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\resources.resfiles.intermediate
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\pri.resfiles
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\pri.resfiles.intermediate
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\qualifiers.txt
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\qualifiers.txt.intermediate
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ProjectArchitectures.txt

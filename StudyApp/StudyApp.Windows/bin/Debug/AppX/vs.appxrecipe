@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MOBILE-LAB13</Machine>
+    <WindowsUser>Mod</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>a2e02dc8-3dd6-496d-9ef8-4ebd6852a3d6</PackageIdentityName>
+    <IntermediateOutputPath>D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>422699B8F208F542DF51BE3DBF7BEBFB1BD392AE7D754DD3D103C5F43637E015</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>a2e02dc8-3dd6-496d-9ef8-4ebd6852a3d6_1.0.0.0_neutral__4xwyns1sn5zry</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>a2e02dc8-3dd6-496d-9ef8-4ebd6852a3d6_4xwyns1sn5zry!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>a2e02dc8-3dd6-496d-9ef8-4ebd6852a3d6</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Mod</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-06-17T07:18:10.969</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\bin\Debug\StudyApp.Windows.exe">
+      <PackagePath>StudyApp.Windows.exe</PackagePath>
+      <Modified>2015-06-22T10:30:22.135</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T08:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T08:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T08:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T08:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-06-17T07:04:38.122</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\bin\Debug\LogIn.xbf">
+      <PackagePath>LogIn.xbf</PackagePath>
+      <Modified>2015-06-17T08:25:51.098</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-06-22T10:30:21.922</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\bin\Debug\Register.xbf">
+      <PackagePath>Register.xbf</PackagePath>
+      <Modified>2015-06-17T08:25:51.117</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\bin\Debug\StudyApp.Windows.xr.xml">
+      <PackagePath>StudyApp.Windows.xr.xml</PackagePath>
+      <Modified>2015-06-17T08:25:50.937</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-06-17T07:18:10.721</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

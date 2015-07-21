@@ -1,0 +1,1 @@
+G:\DATA\2015\Visual Studio 2013\Projects\StudyApp\StudyApp\StudyApp.Windows\StudyApp.Windows.csproj;neutral
