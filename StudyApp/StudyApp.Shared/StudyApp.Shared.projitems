@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Date.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FogotPage.xaml.cs">
       <DependentUpon>FogotPage.xaml</DependentUpon>
     </Compile>

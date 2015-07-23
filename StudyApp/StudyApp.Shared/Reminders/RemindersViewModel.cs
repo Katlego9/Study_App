@@ -24,26 +24,7 @@ namespace StudyApp.Reminders
             }
             private StudyApp.App app = (Application.Current as App);
 
-            public ObservableCollection<ReminderViewModel> GetSubjects()
-            {
-                reminder = new ObservableCollection<ReminderViewModel>();
-                using (var db = new SQLite.SQLiteConnection(app.dbPath))
-                {
-                    var query = db.Table<Reminder>().OrderBy(c => c.rName);
-                    foreach (var _reminder in query)
-                    {
-                        var reminders = new ReminderViewModel()
-                        {
-                            Id = _reminder.Id,
-                            rName = _reminder.rName,
-                            rDate = _reminder.rDate
-
-                        };
-                        reminder.Add(reminders);
-                    }
-                }
-                return reminder;
-            }
+          
             public ObservableCollection<ReminderViewModel> GetAllReminders()
             {
                 reminder = new ObservableCollection<ReminderViewModel>();

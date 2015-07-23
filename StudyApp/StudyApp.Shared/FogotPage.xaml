@@ -8,10 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" Margin="24,33,0,0" TextWrapping="Wrap" Text="Please enter all fields:" VerticalAlignment="Top" FontSize="18"/>
-        <TextBlock x:Name="txtUsername" HorizontalAlignment="Left" Margin="23,95,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontSize="17"/>
-        <TextBox x:Name="txbUsername" HorizontalAlignment="Left" Margin="132,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
-        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="21,144,0,0" VerticalAlignment="Top" Width="369" Click="btnSubmit_Click"/>
+        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" Margin="13,79,0,0" TextWrapping="Wrap" Text="Please enter all fields:" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock x:Name="txtUsername" HorizontalAlignment="Left" Margin="12,141,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontSize="17"/>
+        <TextBox x:Name="txbUsername" HorizontalAlignment="Left" Margin="121,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Width="369" Click="btnSubmit_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnBack_Click" Margin="0,-10,0,0"/>
 
     </Grid>
 </Page>

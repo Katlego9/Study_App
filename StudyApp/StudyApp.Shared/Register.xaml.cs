@@ -85,5 +85,10 @@ namespace StudyApp
             pwbConfirm.Password = "";
 
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LogIn));
+        }
     }
 }

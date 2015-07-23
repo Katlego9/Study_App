@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using StudyApp.Reminders;
 using StudyApp.Subjects;
 using System;
 using System.Collections.Generic;
@@ -62,6 +63,7 @@ namespace StudyApp
             {
                 dbase.CreateTable<Members>();
                 dbase.CreateTable<Subject>();
+                dbase.CreateTable<Reminder>();
             }
 #endif
            

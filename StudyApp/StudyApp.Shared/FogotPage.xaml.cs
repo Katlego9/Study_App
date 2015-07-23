@@ -69,5 +69,10 @@ namespace StudyApp
                 messageBox("Please enter username.");
             }
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LogIn));
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace StudyApp.Reminders
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string rName { get; set; }
-        public DateTime rDate { get; set; }
+        public DateTimeOffset rDate { get; set; }
 
     }
 }

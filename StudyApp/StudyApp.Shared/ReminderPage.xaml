@@ -16,12 +16,14 @@
         <StackPanel HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Width="390" Margin="0,44,0,0">
 
             <TextBlock TextWrapping="Wrap" Text="Add Reminder Description" FontSize="15" Margin="0,0,10.333,0" Height="18"/>
-            <TextBox TextWrapping="Wrap" Margin="0,0,126.333,0" Height="32"/>
+            <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="0,0,126.333,0" Height="32"/>
             <TextBlock TextWrapping="Wrap" Text="Please provide due date" Height="18" FontSize="15"/>
-            <DatePicker Margin="0.167,0,0.166,0"/>
+            <DatePicker x:Name="dtpDate" Margin="0.167,0,0.166,0"/>
             <Button Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0.167,0,0.166,0" Click="Button_Click"/>
         </StackPanel>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="0,-53,0,0" VerticalAlignment="Top" Click="btnBack_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="10,288,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <DatePicker x:Name="testDate" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" Width="380"/>
 
     </Grid>
 </Page>

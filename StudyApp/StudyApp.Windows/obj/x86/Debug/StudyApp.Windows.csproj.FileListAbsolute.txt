@@ -174,7 +174,6 @@ D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\LogIn.xaml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\MainPage.xaml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\Register.xaml
-D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\ReminderPage.xaml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\ReportPage.xaml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\StudyPage.xaml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\App.xbf
@@ -183,10 +182,11 @@ D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\LogIn.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\MainPage.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\Register.xbf
-D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\ReminderPage.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\ReportPage.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\StudyPage.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\XamlSaveStateFile.xml
+D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\ReminderPage.xaml
+D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\ReminderPage.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\StudyApp.Windows.exe
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\StudyApp.Windows.pdb
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\StudyApp.Windows.csproj.GenerateResource.Cache
