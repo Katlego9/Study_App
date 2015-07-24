@@ -7,23 +7,21 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,58.333,0,-0.333">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reminder" VerticalAlignment="Top" FontSize="25"/>
+        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reminder" VerticalAlignment="Top" FontSize="25" Margin="16,60,0,0"/>
 
-        <StackPanel HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Width="390" Margin="0,44,0,0">
+        <StackPanel HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Width="390" Margin="16,95,0,0">
 
             <TextBlock TextWrapping="Wrap" Text="Add Reminder Description" FontSize="15" Margin="0,0,10.333,0" Height="18"/>
             <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="0,0,126.333,0" Height="32"/>
             <TextBlock TextWrapping="Wrap" Text="Please provide due date" Height="18" FontSize="15"/>
             <DatePicker x:Name="dtpDate" Margin="0.167,0,0.166,0"/>
-            <Button x:ConnectionId='3' Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0.167,0,0.166,0"                     />
+            <Button x:ConnectionId='2' Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="-3,0,0,0"/>
         </StackPanel>
-        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="0,-53,0,0" VerticalAlignment="Top"                      />
-        <Button x:ConnectionId='2' Content="Button" HorizontalAlignment="Left" Margin="10,288,0,0" VerticalAlignment="Top"                       />
-        <DatePicker x:Name="testDate" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" Width="380"/>
+        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="-3,7,0,0" VerticalAlignment="Top"                      />
 
     </Grid>
 </Page>

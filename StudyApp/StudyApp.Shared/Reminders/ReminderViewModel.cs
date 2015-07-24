@@ -43,8 +43,8 @@ namespace StudyApp.Reminders
             }
         }
 
-        private DateTimeOffset RDate = DateTime.Now;
-        public DateTimeOffset rDate
+        private string RDate = string.Empty;
+        public string rDate
         {
             get
             { return RDate; }
@@ -73,16 +73,16 @@ namespace StudyApp.Reminders
             }
         }
 
-        public Reminder getDate()
+        public Reminder getDate(string date)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _rem = db.Query<Reminder>("Select * from Reminder Where rDate > '" + DateTimeOffset.Now + "'").FirstOrDefault();
+                var _rem = db.Query<Reminder>("Select * from Reminder Where rDate = '" + date + "'").FirstOrDefault();
                 return _rem;
 
             }
         }
-        public void SetReminder(string Name, DateTimeOffset Date)
+        public void SetReminder(string Name, string Date)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {

@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace StudyApp
@@ -49,19 +50,23 @@ namespace StudyApp
             var objReminder = new ReminderViewModel();
 
             string task = string.Empty;
-            DateTimeOffset date;
-
             task = txbReminder.Text;
-            date = dtpDate.Date;
 
+
+            DateTimeOffset datepicker = dtpDate.Date;
+
+            string date = datepicker.ToString();
+            string reminderdate = date.Substring(0, 10);
+          
             if (task != "")
             {
-                if (VerifyDateIsFuture(date) == true)
+                if (VerifyDateIsFuture(datepicker) == true)
                 {
                     try
                     {
-                        objReminder.SetReminder(task, date);
-                        message = "Successfully added Reminder" + "\n" + task + " with a due date of " + date;
+                        objReminder.SetReminder(task, reminderdate);
+                        message = "Successfully added Reminder" + "\n" + task + " with a due date of " + reminderdate;
+                       
                         txbReminder.Text = "";
 
                     }
@@ -82,6 +87,7 @@ namespace StudyApp
                message = "Please specify the reminder name";
             }
             messageBox(message);
+              
         }
         
         private void btnBack_Click(object sender, RoutedEventArgs e)
