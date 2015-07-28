@@ -86,6 +86,9 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="StudyApp.ReportPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
+      <RootProperty Name="RenderTransformOrigin" />
+    </RootType>
     <RootType FullName="StudyApp.StudyPage" />
   </Roots.RootTypes>
 </Roots>

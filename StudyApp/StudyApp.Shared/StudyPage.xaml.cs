@@ -22,9 +22,82 @@ namespace StudyApp
     /// </summary>
     public sealed partial class StudyPage : Page
     {
+        private DispatcherTimer timer = new DispatcherTimer();
+        private TimeSpan startTime;
+        private TimeSpan endTime;
+        private TimeSpan now;
         public StudyPage()
         {
             this.InitializeComponent();
+
+            this.NavigationCacheMode = NavigationCacheMode.Required;
+            startTime = tmpStart.Time;
+            endTime = tmpEnd.Time;
+            now = DateTime.Now.TimeOfDay;
+            timer.Interval = new TimeSpan(0, 0, 0, 1);
+            timer.Tick += Each_Tick;
+        }
+
+        public void TimeTrimmer(TimeSpan timeDifference)
+        {
+            if (timeDifference < TimeSpan.FromMinutes(1))
+            {
+                txtTime.Text = timeDifference.Seconds.ToString() + "s";
+            }
+            if (timeDifference < TimeSpan.FromHours(1) && timeDifference > TimeSpan.FromMinutes(1))
+            {
+                txtTime.Text = timeDifference.Minutes.ToString() + "m" + timeDifference.Seconds.ToString() + "s";
+            }
+            if (timeDifference < TimeSpan.FromDays(1) && timeDifference > TimeSpan.FromHours(1))
+            {
+                txtTime.Text = timeDifference.Hours.ToString() + "h" + timeDifference.Minutes.ToString() + "m" + timeDifference.Seconds.ToString() + "s";
+            }
+        }
+
+        private void Each_Tick(object sender, object e)
+        { 
+            var studyStartTime = tmpStart.Time;
+            var studyEndTime = studyStartTime + TimeSpan.FromSeconds(10);
+
+            
+            var studyStartTime1 = tmpEnd.Time;
+            var studyEndTime1 = studyStartTime1 + TimeSpan.FromSeconds(10);
+
+            //Time right now
+            var now = DateTime.Now.TimeOfDay;
+            var timeDifference = TimeSpan.Zero;
+
+            if (now < studyStartTime)
+            {
+                timeDifference = studyStartTime - now;
+                txtElapsedTime.Text = "Time to start studying is in...";
+                TimeTrimmer(timeDifference);
+            }
+
+            if (now > studyStartTime && now < studyEndTime)
+            {
+                txtElapsedTime.Text = "Yay!";
+                txtTime.Text = "It is now Time to start studying!!";
+            }
+
+            if (now > studyEndTime && now < studyStartTime1)
+            {
+                timeDifference = studyStartTime1 - now;
+                txtElapsedTime.Text = "Studying has started: Elapsed time is in...";
+                TimeTrimmer(timeDifference);
+            }
+
+            if (now > studyStartTime1 && now < studyEndTime1)
+            {
+                txtElapsedTime.Text = "Yay!"; 
+                txtTime.Text = "It is now Time to finish studying!!";
+            }
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Start();
         }
     }
 }
