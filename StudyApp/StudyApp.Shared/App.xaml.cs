@@ -1,5 +1,6 @@
 ﻿using SQLite;
 using StudyApp.Reminders;
+using StudyApp.StudyTime;
 using StudyApp.Subjects;
 using System;
 using System.Collections.Generic;
@@ -64,6 +65,7 @@ namespace StudyApp
                 dbase.CreateTable<Members>();
                 dbase.CreateTable<Subject>();
                 dbase.CreateTable<Reminder>();
+                dbase.CreateTable<Study>();
             }
 #endif
            
@@ -148,6 +150,6 @@ namespace StudyApp
             // TODO: Save application state and stop any background activity
             deferral.Complete();
         }
-        public string DBPath { get; set; }
+        //public string DBPath { get; set; }
     }
 }

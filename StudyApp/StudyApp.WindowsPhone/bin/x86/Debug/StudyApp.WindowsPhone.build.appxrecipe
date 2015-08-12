@@ -61,6 +61,9 @@
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\Progress.xbf">
+      <PackagePath>Progress.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\Register.xbf">
       <PackagePath>Register.xbf</PackagePath>
     </AppxPackagedFile>
@@ -72,6 +75,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyPage.xbf">
       <PackagePath>StudyPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\TimeTable.xbf">
+      <PackagePath>TimeTable.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\StudyApp.WindowsPhone.xr.xml">
       <PackagePath>StudyApp.WindowsPhone.xr.xml</PackagePath>

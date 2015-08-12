@@ -34,7 +34,6 @@ namespace StudyApp
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string message;
             var objLogin = new MemberViewModel();
 
             string name = string.Empty;
@@ -49,20 +48,21 @@ namespace StudyApp
                     var confirm = objLogin.getMember(name, pass);
                     if (confirm != null)
                     {
-                        message = "Login successful" + "\nWelcome " + confirm.Name;
+                        messageBox("Login successful" + "\nWelcome " + confirm.Name);
                         this.Frame.Navigate(typeof(MainPage));
 
                     }
                     else
                     {
-                        message = "Login not successful, incorrect credentials";
+                        messageBox("Login not successful, incorrect credentials");
                         txbName.Text = "";
                         pwbPass.Password = "";
                     }
-                    messageBox(message);
+                    
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    messageBox("error " + ex.Message);
                 }
             }
             else
@@ -74,16 +74,6 @@ namespace StudyApp
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Register));
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void txtforgot_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-            
         }
 
         private void hpbForgot_Click(object sender, RoutedEventArgs e)

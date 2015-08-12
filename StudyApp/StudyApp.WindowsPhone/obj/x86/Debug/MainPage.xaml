@@ -9,10 +9,13 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="378" Margin="10,61,0,0">
-            <Button x:ConnectionId='1' x:Name="btnAdd" Content="Add Subject" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="132" Margin="10,0,10.333,0"                     />
-            <Button x:ConnectionId='2' x:Name="btnReminder" Content="Add Reminders" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="130" Margin="10,0,10.333,0"                          />
-            <Button x:ConnectionId='3' x:Name="btnStudy" Content="Study Time" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="139" Margin="10,0,10.333,0"                       />
-            <Button x:ConnectionId='4' x:Name="btnReport" Content="Status Report" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="138" Margin="10,0,10.333,0"                        />
+            <Button x:ConnectionId='1' x:Name="btnAdd" Content="Add Subject" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="87" Margin="10,0,10.333,0"                     />
+            <Button x:ConnectionId='2' x:Name="btnProgress" Content="Progress Marks" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="90" Margin="10,0,10.333,0"                          />
+            <Button x:ConnectionId='3' x:Name="btnReminder" Content="Add Reminders" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="90" Margin="10,0,10.333,0"                          />
+            <Button x:ConnectionId='4' x:Name="btnStudy" Content="Study Time" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="90" Margin="10,0,10.333,0"                       />
+            <Button x:ConnectionId='5' x:Name="btnTable" Content="Time Table" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="90" Margin="10,0,10.333,0"                       />
+            <Button x:ConnectionId='6' x:Name="btnReport" Content="Status Report" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="95" Margin="10,0,10.333,0"                        />
+
         </StackPanel>
         <TextBlock x:Name="txtMain" HorizontalAlignment="Left" Margin="95,10,0,0" TextWrapping="Wrap" Text="Main Menu" VerticalAlignment="Top" FontSize="40" Height="51" Width="212"/>
 

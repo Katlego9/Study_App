@@ -8,13 +8,15 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Left" Height="353" VerticalAlignment="Top" Width="390" Margin="0,45,0,0">
+        <StackPanel HorizontalAlignment="Left" Height="423" VerticalAlignment="Top" Width="390" Margin="0,45,0,0">
             <TextBlock TextWrapping="Wrap" Text="Please select the subject you want to study:" Margin="1,0,13.667,0" Height="16" FontSize="15"/>
-          
-            <ComboBox Margin="1,0,-0.333,0" Height="53"/>
+           
+
+
+            <ComboBox x:Name="cmbSubjects" Margin="1,0,-0.333,0" Height="53"/>
             <TextBlock x:Name="txtStartTime" HorizontalAlignment="Left" Margin="2,0,0,0" TextWrapping="Wrap" Text="Start Time:" VerticalAlignment="Top" Width="361" Height="28" FontSize="15"/>
             <TimePicker x:Name="tmpStart" RenderTransformOrigin="0.513,1.853"/>
-              <TextBlock x:Name="txtEndTime" TextWrapping="Wrap" Text="End Time:" FontSize="15"/>
+            <TextBlock x:Name="txtEndTime" TextWrapping="Wrap" Text="End Time:" FontSize="15"/>
             <TimePicker x:Name="tmpEnd"/>
             <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click"/>
             <TextBlock x:Name="txtElapsedTime" TextWrapping="Wrap" Text="Elapsed Time:" FontSize="15"/>

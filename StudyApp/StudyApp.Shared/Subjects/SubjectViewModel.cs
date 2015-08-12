@@ -67,21 +67,13 @@ namespace StudyApp.Subjects
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _sub = db.Query<Subject>("Select * from Subject Where SbjName ='" + sbjname + "'").FirstOrDefault();
+                var _sub = db.Query<Subject>("Select * from Subject Where SbjName ='" + sbjname + "' ").FirstOrDefault();
                 return _sub;
 
             }
         }
 
-        public Subject getMark(int sbjMark)
-        {
-            using (var db = new SQLite.SQLiteConnection(app.dbPath))
-            {
-                var _sub = db.Query<Subject>("Select * from Subject Where SbjMark ='" + sbjMark + "'").FirstOrDefault();
-                return _sub;
 
-            }
-        }
         public void SetSubject(string Name, int Mark)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))

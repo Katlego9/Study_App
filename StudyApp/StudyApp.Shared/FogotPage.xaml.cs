@@ -35,7 +35,6 @@ namespace StudyApp
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            string message;
             var objForgot = new MemberViewModel();
 
             string name = string.Empty;
@@ -48,20 +47,20 @@ namespace StudyApp
                     var valid = objForgot.getForgot(name);
                     if (valid != null)
                     {
-                        message = "Your Password is" + "\n" + valid.Password;
+                       messageBox("Your Password is" + "\n" + valid.Password);
                         this.Frame.Navigate(typeof(LogIn));
 
                     }
                     else
                     {
-                        message = "Incorrect username, please try again";
+                       messageBox("Incorrect username, please try again");
                         txbUsername.Text = "";
                         
                     }
-                    messageBox(message);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    messageBox("error " + ex.Message);
                 }
             }
             else

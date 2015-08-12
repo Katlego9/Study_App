@@ -46,7 +46,7 @@ namespace StudyApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string message;
+            
             var objReminder = new ReminderViewModel();
 
             string task = string.Empty;
@@ -65,29 +65,26 @@ namespace StudyApp
                     try
                     {
                         objReminder.SetReminder(task, reminderdate);
-                        message = "Successfully added Reminder" + "\n" + task + " with a due date of " + reminderdate;
+                         messageBox("Successfully added Reminder" + "\n" + task + " with a due date of " + reminderdate);
                        
                         txbReminder.Text = "";
 
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
-                        message = "Please fill the correct format";
+                        messageBox("error " + ex.Message);
                     }
                 }
                 else
                 {
-                    message = "Date must be later than today.";
+                    messageBox("Date must be later than today.");
                   
                 }
-
             }
             else
             {
-               message = "Please specify the reminder name";
-            }
-            messageBox(message);
-              
+                messageBox("Please specify the reminder name");
+            }  
         }
         
         private void btnBack_Click(object sender, RoutedEventArgs e)

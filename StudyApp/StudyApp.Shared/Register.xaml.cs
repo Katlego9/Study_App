@@ -41,7 +41,6 @@ namespace StudyApp
             string pass = string.Empty;
             string confirm = string.Empty;
 
-            string msg;
             name = txbUsername.Text;
             pass = pwbPass.Password;
             confirm = pwbConfirm.Password;
@@ -53,16 +52,14 @@ namespace StudyApp
                     try
                     {
                         objRegister.SetMember(name, pass);
-                        msg = "Registration successful";
+                        messageBox("Registration successful");
                         this.Frame.Navigate(typeof(LogIn));
 
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
-                        msg = "Registration unsuccessful";
-
+                        messageBox("error " + ex.Message);
                     }
-                    messageBox(msg);
                 }
                 else
                 {

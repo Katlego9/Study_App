@@ -8,8 +8,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
-      <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="ColumnDefinitions" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
@@ -71,21 +71,33 @@
     </RootType>
     <RootType FullName="StudyApp.LogIn" />
     <RootType FullName="StudyApp.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="StudyApp.Progress" />
     <RootType FullName="StudyApp.Register" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition" />
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="StudyApp.ReminderPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="StudyApp.ReportPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
+      <RootProperty Name="RenderTransformOrigin" />
+    </RootType>
     <RootType FullName="StudyApp.StudyPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="StudyApp.TimeTable" />
   </Roots.RootTypes>
 </Roots>

@@ -27,12 +27,6 @@ namespace StudyApp
             this.InitializeComponent();
         }
 
-        private async void messageBox(string msg)
-        {
-            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
-            await msgDisplay.ShowAsync();
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AddSubjects));
@@ -51,6 +45,17 @@ namespace StudyApp
         private void btnReport_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ReportPage));
+        }
+
+        private void btnProgress_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Progress));
+
+        }
+
+        private void btnTable_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TimeTable));
         }
 
     }

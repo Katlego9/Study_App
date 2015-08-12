@@ -37,46 +37,47 @@ namespace StudyApp
 
         private void btnAddSubject_Click(object sender, RoutedEventArgs e)
         {
-            string message;
             var objSubject = new SubjectViewModel();
 
             string sbjName = string.Empty;
             int sbjMark = 0;
+            int verifyNum;
 
-            sbjName = txbSubject.Text;
-            sbjMark = Convert.ToInt16(txbGoalMark.Text);
+            bool isNumeric = int.TryParse(txbGoalMark.Text, out verifyNum);
 
-            if ((sbjName != "") && (sbjMark != 0))
+            if (isNumeric == true)
             {
-                if ((sbjMark >= 50) && (sbjMark <= 100))
+                sbjName = txbSubject.Text;
+                sbjMark = Convert.ToInt16(txbGoalMark.Text);
+
+                if ((sbjName != "") && (sbjMark < 50))
                 {
-                    try
+                    if ((sbjMark >= 50) && (sbjMark <= 100))
                     {
-                        objSubject.SetSubject(sbjName, sbjMark);
-                        message = "Successfully added" + "\n" + sbjName + " with a goal mark of " + sbjMark;
-                        txbSubject.Text = "";
-                        txbGoalMark.Text = "";
-                        
+                        try
+                        {
+                            objSubject.SetSubject(sbjName, sbjMark);
+                            messageBox("Successfully added" + "\n" + sbjName + " with a goal mark of " + sbjMark);
+                            txbSubject.Text = "";
+                            txbGoalMark.Text = "";
+                        }
+                        catch (Exception ex)
+                        {
+                            messageBox("error " + ex.Message);
+                        }
                     }
-                    catch (Exception)
+                    else
                     {
-                        message = "Please fill the correct format";
+                        messageBox("Please specify the goal mark between 50 and 100.");
+
                     }
-                    
                 }
                 else
                 {
-                    message = "Please specify the goal mark between 50 and 100.";
-                    
+                    messageBox("Please fill all fields and the goal mark can not be less than 50.");
+
                 }
-                messageBox(message);
             }
-            else
-            {
-                messageBox("Please fill all fields.");
-                
-            }
-            
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

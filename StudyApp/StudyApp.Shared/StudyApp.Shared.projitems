@@ -18,7 +18,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Date.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FogotPage.xaml.cs">
       <DependentUpon>FogotPage.xaml</DependentUpon>
     </Compile>
@@ -32,6 +31,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Members\MembersViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Members\MemberViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Members\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Progress.xaml.cs">
+      <DependentUpon>Progress.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
@@ -49,9 +51,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)StudyPage.xaml.cs">
       <DependentUpon>StudyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)StudyTime\Study.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StudyTime\StudysViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StudyTime\StudyViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Subjects\Subject.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Subjects\SubjectsViewModelcs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Subjects\SubjectsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Subjects\SubjectViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TimeTable.xaml.cs">
+      <DependentUpon>TimeTable.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)AddSubjects.xaml">
@@ -70,6 +78,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Progress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -83,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)StudyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)TimeTable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
