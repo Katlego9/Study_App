@@ -8,9 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Left" Height="423" VerticalAlignment="Top" Width="390" Margin="0,45,0,0">
+        <StackPanel HorizontalAlignment="Left" Height="390" VerticalAlignment="Top" Width="390" Margin="0,78,0,0">
             <TextBlock TextWrapping="Wrap" Text="Please select the subject you want to study:" Margin="1,0,13.667,0" Height="16" FontSize="15"/>
-           
+
 
 
             <ComboBox x:Name="cmbSubjects" Margin="1,0,-0.333,0" Height="53"/>
@@ -22,7 +22,8 @@
             <TextBlock x:Name="txtElapsedTime" TextWrapping="Wrap" Text="Elapsed Time:" FontSize="15"/>
             <TextBlock x:Name="txtTime" TextWrapping="Wrap" FontSize="15"/>
         </StackPanel>
-        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Study Time" VerticalAlignment="Top" FontSize="25"/>
+        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" Margin="0,43,0,0" TextWrapping="Wrap" Text="Study Time" VerticalAlignment="Top" FontSize="25"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="0,-5,0,0" VerticalAlignment="Top" Click="btnBack_Click"/>
 
     </Grid>
 </Page>

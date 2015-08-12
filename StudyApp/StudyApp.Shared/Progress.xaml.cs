@@ -115,5 +115,10 @@ namespace StudyApp
                  messageBox("Please specify a numeric number");
             }
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
      }
 }

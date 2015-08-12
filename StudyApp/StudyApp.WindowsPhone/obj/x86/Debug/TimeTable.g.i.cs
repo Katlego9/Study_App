@@ -17,6 +17,10 @@ namespace StudyApp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.Grid stpTable; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.Button btnBack; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.TextBlock txtHeading; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.GridView grdTimeTable; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private bool _contentLoaded;
@@ -32,6 +36,8 @@ namespace StudyApp
             global::Windows.UI.Xaml.Application.LoadComponent(this, new global::System.Uri("ms-appx:///TimeTable.xaml"), global::Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);
  
             stpTable = (global::Windows.UI.Xaml.Controls.Grid)this.FindName("stpTable");
+            btnBack = (global::Windows.UI.Xaml.Controls.Button)this.FindName("btnBack");
+            txtHeading = (global::Windows.UI.Xaml.Controls.TextBlock)this.FindName("txtHeading");
             grdTimeTable = (global::Windows.UI.Xaml.Controls.GridView)this.FindName("grdTimeTable");
         }
     }

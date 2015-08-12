@@ -17,6 +17,8 @@ namespace StudyApp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.TextBlock txtHeading; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.Button btnBack; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.TextBlock txtTitle; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.ComboBox cmbSubjects; 
@@ -40,6 +42,7 @@ namespace StudyApp
             global::Windows.UI.Xaml.Application.LoadComponent(this, new global::System.Uri("ms-appx:///Progress.xaml"), global::Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);
  
             txtHeading = (global::Windows.UI.Xaml.Controls.TextBlock)this.FindName("txtHeading");
+            btnBack = (global::Windows.UI.Xaml.Controls.Button)this.FindName("btnBack");
             txtTitle = (global::Windows.UI.Xaml.Controls.TextBlock)this.FindName("txtTitle");
             cmbSubjects = (global::Windows.UI.Xaml.Controls.ComboBox)this.FindName("cmbSubjects");
             txtMark = (global::Windows.UI.Xaml.Controls.TextBlock)this.FindName("txtMark");
