@@ -74,6 +74,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="StudyApp.Progress" />
     <RootType FullName="StudyApp.Register" />
@@ -82,7 +83,7 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="StudyApp.ReminderPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
     </RootType>

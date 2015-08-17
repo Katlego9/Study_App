@@ -11,6 +11,8 @@ namespace StudyApp.Subjects
         public int Id { get; set; }
         public string SbjName { get; set; }
         public int SbjMark { get; set; }
+        public int ObtainMark { get; set; }
+        public string Performance { get; set; }
 
     }
 }

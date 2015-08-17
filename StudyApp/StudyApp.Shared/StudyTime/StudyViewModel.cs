@@ -58,6 +58,22 @@ namespace StudyApp.StudyTime
             }
         }
 
+        private DateTimeOffset date;
+        public DateTimeOffset Date
+        {
+            get
+            { return date; }
+
+            set
+            {
+                if (date == value)
+                { return; }
+
+                date = value;
+                RaisePropertyChanged("Date");
+            }
+        }
+
         #endregion "Properties"
 
         private StudyApp.App app = (Application.Current as App);
@@ -81,6 +97,7 @@ namespace StudyApp.StudyTime
                     Id = 0,
                     StudyName = name,
                     Duration = duration,
+                    Date = DateTimeOffset.Now,
                 });
             }
 

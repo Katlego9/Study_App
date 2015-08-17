@@ -56,6 +56,7 @@ namespace StudyApp
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            tmpStart.IsEnabled = false;
             SubjectModel = new SubjectsViewModel();
             try
             {
@@ -93,8 +94,6 @@ namespace StudyApp
             {
                 txtTime.Text = timeDifference.Hours.ToString() + "h" + timeDifference.Minutes.ToString() + "m" + timeDifference.Seconds.ToString() + "s";
             }
-
-
         }
 
         private void Each_Tick(object sender, object e)
@@ -137,14 +136,12 @@ namespace StudyApp
                 txtElapsedTime.Text = "Yay!";
                 txtTime.Text = "It is now Time to finish studying!!";
             }
-
-
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             timer.Start();
+
 
             var studyStartTime = tmpStart.Time;
             var studyEndTime = studyStartTime + TimeSpan.FromSeconds(10);
@@ -158,29 +155,25 @@ namespace StudyApp
             var objStudy = new StudyViewModel();
 
             string studyName = string.Empty;
+
             studyName = (string)cmbSubjects.SelectedItem;
-            
-            
+
+
+            if (studyName != null)
+            {
                 try
                 {
-                     var confirm = objStudy.getStudyTime(studyName);
-                     if (confirm != null)
-                     {
-                        objStudy.SetStudy(studyName, time.ToString());
-                     }
-                     else
-                     {
-                        messageBox("Please select a subject to study");
-                     }
+                    objStudy.SetStudy(studyName, time.ToString());
                 }
                 catch (Exception ex)
                 {
-                   messageBox("error " + ex.Message);
+                    messageBox("error " + ex.Message);
                 }
-        }
-
-        private void btnMark_Click(object sender, RoutedEventArgs e)
-        {
+            }
+            else
+            {
+                messageBox("Please select a subject to study");
+            }
 
         }
 

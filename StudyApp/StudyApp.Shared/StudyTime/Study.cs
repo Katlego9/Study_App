@@ -11,5 +11,6 @@ namespace StudyApp.StudyTime
         public int Id { get; set; }
         public string StudyName { get; set; }
         public string Duration { get; set; }
+        public DateTimeOffset Date { get; set; }
     }
 }

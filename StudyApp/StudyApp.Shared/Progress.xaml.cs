@@ -68,6 +68,7 @@ namespace StudyApp
             var objSubject = new SubjectViewModel();
 
             string studyName = string.Empty;
+            string Performance = string.Empty;
             int mark = 0;
 
             int verifyNum;
@@ -86,14 +87,25 @@ namespace StudyApp
                         var confirm = objSubject.getSubject(studyName);
                         if (confirm != null)
                         {
-                            if (mark >= confirm.SbjMark)
+                            if (mark > confirm.SbjMark)
                             {
-                                messageBox("Performing better than the goal mark");
+                                Performance = "Better";
+                                messageBox("Performing better than the goal mark of " + Convert.ToString(confirm.SbjMark));
+                                
                             }
-                            else if (mark <= confirm.SbjMark)
+                            else if (mark == confirm.SbjMark)
                             {
-                                messageBox("Performing Badly than the goal mark");
+                                Performance = "Good";
+                                messageBox("Performing good, the marks are equal of " + Convert.ToString(confirm.SbjMark));
+                               
                             }
+                            else if (mark < confirm.SbjMark)
+                            {
+                                Performance = "Badly";
+                                messageBox("Performing badly than the goal mark of " + Convert.ToString(confirm.SbjMark));
+                                
+                            }
+                            objSubject.UpdateSubject(studyName,mark,Performance);
                         }
                         else
                         {
@@ -112,7 +124,7 @@ namespace StudyApp
             }
             else
             {
-                 messageBox("Please specify a numeric number");
+                 messageBox("Please specify a numeric mark number");
             }
         }
 

@@ -50,32 +50,31 @@ namespace StudyApp
                 sbjName = txbSubject.Text;
                 sbjMark = Convert.ToInt16(txbGoalMark.Text);
 
-                if ((sbjName != "") && (sbjMark < 50))
+                if (!sbjName.Equals(""))
                 {
-                    if ((sbjMark >= 50) && (sbjMark <= 100))
-                    {
-                        try
+                        if ((sbjMark >= 50) && (sbjMark <= 100))
                         {
-                            objSubject.SetSubject(sbjName, sbjMark);
-                            messageBox("Successfully added" + "\n" + sbjName + " with a goal mark of " + sbjMark);
-                            txbSubject.Text = "";
-                            txbGoalMark.Text = "";
+                            try
+                            {
+                                objSubject.SetSubject(sbjName, sbjMark);
+                                messageBox("Successfully added" + "\n" + sbjName + " with a goal mark of " + sbjMark);
+                                txbSubject.Text = "";
+                                txbGoalMark.Text = "";
+                            }
+                            catch (Exception ex)
+                            {
+                                messageBox("error " + ex.Message);
+                            }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            messageBox("error " + ex.Message);
-                        }
-                    }
-                    else
-                    {
-                        messageBox("Please specify the goal mark between 50 and 100.");
+                            messageBox("Please specify the goal mark between 50 and 100.");
 
-                    }
+                        }
                 }
                 else
                 {
-                    messageBox("Please fill all fields and the goal mark can not be less than 50.");
-
+                    messageBox("Please fill the subject name");
                 }
             }
         }

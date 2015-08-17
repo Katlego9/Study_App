@@ -55,10 +55,41 @@ namespace StudyApp.Subjects
                 { return; }
 
                 Sbjmark = value;
-                RaisePropertyChanged("sbjMark");
+                RaisePropertyChanged("SbjMark");
             }
         }
 
+        private int Obtainmark = 0;
+        public int ObtainMark
+        {
+            get
+            { return Obtainmark; }
+
+            set
+            {
+                if (Obtainmark == value)
+                { return; }
+
+                Obtainmark = value;
+                RaisePropertyChanged("ObtainMark");
+            }
+        }
+
+        private string performance = string.Empty;
+        public string Performance
+        {
+            get
+            { return performance; }
+
+            set
+            {
+                if (performance == value)
+                { return; }
+
+                performance = value;
+                RaisePropertyChanged("Performance");
+            }
+        }
         #endregion "Properties"
 
         private StudyApp.App app = (Application.Current as App);
@@ -73,6 +104,15 @@ namespace StudyApp.Subjects
             }
         }
 
+        public Subject UpdateSubject(string sbjname, int mark, string status)
+        {
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+                var _sub = db.Query<Subject>("Update Subject set ObtainMark = " + mark + ", Performance = '" + status + "' Where SbjName ='" + sbjname + "' ").FirstOrDefault();
+                return _sub;
+
+            }
+        }
 
         public void SetSubject(string Name, int Mark)
         {
@@ -83,6 +123,8 @@ namespace StudyApp.Subjects
                     Id = 0,
                     SbjName = Name,
                     SbjMark = Mark,
+                    ObtainMark = 0,
+                    Performance = "N/A",
                 });
             }
 

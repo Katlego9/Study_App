@@ -24,7 +24,7 @@ namespace StudyApp.StudyTime
         }
         private StudyApp.App app = (Application.Current as App);
 
-        public ObservableCollection<StudyViewModel> GetSubjects()
+        public ObservableCollection<StudyViewModel> GetStudy()
         {
             study = new ObservableCollection<StudyViewModel>();
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
@@ -36,7 +36,8 @@ namespace StudyApp.StudyTime
                     {
                         Id = _subject.Id,
                         StudyName = _subject.StudyName,
-                        Duration = _subject.Duration
+                        Duration = _subject.Duration,
+                        Date = _subject.Date
 
                     };
                     study.Add(studytime);
@@ -44,7 +45,7 @@ namespace StudyApp.StudyTime
             }
             return study;
         }
-        public ObservableCollection<StudyViewModel> GetAllSubjects()
+        public ObservableCollection<StudyViewModel> GetAllStudies()
         {
             study = new ObservableCollection<StudyViewModel>();
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
@@ -57,6 +58,7 @@ namespace StudyApp.StudyTime
                         Id = _subject.Id,
                         StudyName = _subject.StudyName,
                         Duration = _subject.Duration,
+                        Date = _subject.Date,
 
                     };
                     study.Add(studytime);

@@ -36,7 +36,9 @@ namespace StudyApp.Subjects
                         {
                             Id = _subject.Id,
                             SbjName = _subject.SbjName,
-                            SbjMark = _subject.SbjMark
+                            SbjMark = _subject.SbjMark,
+                            ObtainMark = _subject.ObtainMark,
+                            Performance = _subject.Performance
 
                         };
                         subjects.Add(subject);
@@ -57,6 +59,8 @@ namespace StudyApp.Subjects
                             Id = _subject.Id,
                             SbjName = _subject.SbjName,
                             SbjMark = _subject.SbjMark,
+                            ObtainMark = _subject.ObtainMark,
+                            Performance = _subject.Performance,
 
                         };
                         subjects.Add(subject);
