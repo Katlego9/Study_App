@@ -1,5 +1,7 @@
-﻿using System;
+﻿using StudyApp.Reminders;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,6 +24,7 @@ namespace StudyApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+    
         public MainPage()
         {
             this.InitializeComponent();
@@ -51,11 +54,6 @@ namespace StudyApp
         {
             this.Frame.Navigate(typeof(Progress));
 
-        }
-
-        private void btnTable_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(TimeTable));
         }
 
     }

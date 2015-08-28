@@ -1,7 +1,5 @@
-﻿using StudyApp.Subjects;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -24,64 +22,9 @@ namespace StudyApp
     /// </summary>
     public sealed partial class TimeTable : Page
     {
-        SubjectsViewModel SubjectModel = null;
-        ObservableCollection<SubjectViewModel> subjets = null;
-
         public TimeTable()
         {
             this.InitializeComponent();
-
-            this.NavigationCacheMode = NavigationCacheMode.Required;
-          
-        }
-
-        private async void messageBox(string msg)
-        {
-            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
-            await msgDisplay.ShowAsync();
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            
-            DispatcherTimer timer = new DispatcherTimer();
-            TimeSpan startTime;
-            timer.Start();
-
-            grdTimeTable.Items.Add("Subject Name" + "\t\t" + "Time\t\t\t");
-            SubjectModel = new SubjectsViewModel();
-            try
-            {
-                subjets = SubjectModel.GetAllSubjects();
-                if (subjets != null)
-                {
-                    startTime = new TimeSpan(18, 0, 0);
-                    foreach (var s in subjets)
-                    {
-                        grdTimeTable.Items.Add(s.SbjName + "\t\t" + Convert.ToString(startTime));
-                        grdTimeTable.SelectionChanged += grdTimeTable_SelectionChanged;
-                        startTime += new TimeSpan(1, 30, 0);
-                    }
-                }
-                else
-                {
-                    messageBox("No Subjects in the database");
-                }
-            }
-            catch (Exception ex)
-            {
-                messageBox("error " + ex.Message);
-            }
-            base.OnNavigatedTo(e);
-        }
-        private void grdTimeTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-        }
-
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

@@ -42,27 +42,17 @@ namespace StudyApp
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            SubjectModel = new SubjectsViewModel();
             try
             {
-                subjets = SubjectModel.GetAllSubjects();
-                if (subjets != null)
-                {
-                    foreach (var s in subjets)
-                    {
-                        cmbSubjects.Items.Add(s.SbjName);
-                    }
-                }
-                else
-                {
-                    messageBox("No Subjects in the database");
-                }
+                  cmbOutput.Items.Add("Progress");
+                  cmbOutput.Items.Add("Reminders");
+                  cmbOutput.Items.Add("StudyTime");
+                  btnClear.IsEnabled = false;
             }
             catch (Exception ex)
             {
                 messageBox("error " + ex.Message);
             }
-            base.OnNavigatedTo(e);
         }
 
         private async void messageBox(string msg)
@@ -75,36 +65,10 @@ namespace StudyApp
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void cmbSubjects_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            string subjName = string.Empty;
-            
-            try
-            {
-                subjName = (string)cmbSubjects.SelectedItem;
-
-                if (subjName != null)
-                {
-                   cmbOutput.Items.Add("Progress");
-                   cmbOutput.Items.Add("Reminders");
-                   cmbOutput.Items.Add("StudyTime");
-                  
-                }
-                else
-                {
-                    messageBox("No Subjects selected above");
-                }
-            }
-            catch (Exception ex)
-            {
-                messageBox("error " + ex.Message);
-            }
-        }
-
         private void cmbOutput_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string output = string.Empty;
-
+            btnClear.IsEnabled = true;
             
             try
             {
@@ -130,6 +94,8 @@ namespace StudyApp
                                     lsvOutput.Items.Add("Obtained Mark: " + s.ObtainMark);
                                     lsvOutput.Items.Add("Performance: " + s.Performance);
                                 }
+                                btnClear.Content = "Delete all Subjects";
+
                             }
                             else
                             {
@@ -155,8 +121,10 @@ namespace StudyApp
                                     lsvOutput.Items.Add("=========================");
                                     lsvOutput.Items.Add("Reminder Details");
                                     lsvOutput.Items.Add("Name: " + r.rName);
-                                    lsvOutput.Items.Add("Date: " + r.rDate);
+                                    lsvOutput.Items.Add("Due Date: " + r.rDate);
                                 }
+                                btnClear.Content = "Delete all Reminders";
+                                
                             }
                             else
                             {
@@ -185,6 +153,7 @@ namespace StudyApp
                                     lsvOutput.Items.Add("Duration: " + s.Duration);
                                     lsvOutput.Items.Add("Date: " + s.Date);
                                 }
+                                btnClear.Content = "Delete all Study Times";
                             }
                             else
                             {
@@ -206,6 +175,47 @@ namespace StudyApp
             catch (Exception ex)
             {
                 messageBox("error " + ex.Message);
+            }
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            var objSubject = new SubjectViewModel();
+            var objReminder = new ReminderViewModel();
+            var objStudy = new StudyViewModel();
+            string output = (string)cmbOutput.SelectedItem;
+            string table = string.Empty;
+
+            try
+            {
+                if (output == "Progress")
+                {
+                    lsvOutput.Items.Clear();
+                    objSubject.RemoveSubject();
+
+                }
+                else if (output == "Reminders")
+                {
+                    lsvOutput.Items.Clear();
+                    objReminder.RemoveReminder();
+
+                }
+                else if (output == "StudyTime")
+                {
+                    lsvOutput.Items.Clear();
+                    objStudy.RemoveStudy();
+                }
+            }
+            catch(Exception ex)
+            {
+                if (output == "Progress")
+                    table = "Subjects";
+                else if (output == "Reminders")
+                    table = "Reminders";
+                else if (output == "StudyTime")
+                    table = "StudyTimes";
+
+                messageBox("error " + ex.Message + "\nPlease add " + table);
             }
         }
     }

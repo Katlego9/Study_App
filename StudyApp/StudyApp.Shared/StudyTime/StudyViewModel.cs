@@ -87,7 +87,15 @@ namespace StudyApp.StudyTime
 
             }
         }
+        public Study RemoveStudy()
+        {
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+                var _sub = db.Query<Study>("Drop table Study").FirstOrDefault();
+                return _sub;
 
+            }
+        }
         public void SetStudy(string name, string duration)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))

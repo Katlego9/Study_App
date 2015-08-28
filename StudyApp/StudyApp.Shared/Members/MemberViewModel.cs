@@ -86,7 +86,7 @@ namespace StudyApp
             }
             
         }
-
+ 
         public Members getForgot(string name)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
@@ -96,53 +96,5 @@ namespace StudyApp
 
             }
         }
-        /* public string DeleteMember(int memberId)
-         {
-             string result = string.Empty;
-             using (var db = new SQLite.SQLiteConnection(app.DBPath))
-             {
-                 var projects = db.Table<Project>().Where(
-                     p => p.CustomerId == memberId);
-                 foreach (Project project in projects)
-                 {
-                     db.Delete(project);
-                 }
-                 var existingCustomer = (db.Table<Customer>().Where(
-                     c => c.Id == memberId)).Single();
-
-                 if (db.Delete(existingCustomer) > 0)
-                 {
-                     result = "Success";
-                 }
-                 else
-                 {
-                     result = "This customer was not removed";
-                 }
-             }
-             return result;
-         }
-         */
-       /* public int GetNewMemberId()
-        {
-            int memberId = 0;
-            using (var db = new SQLite.SQLiteConnection(app.DBPath))
-            {
-                var members = db.Table<Members>();
-                if (members.Count() > 0)
-                {
-                    memberId = (from c in db.Table<Members>()
-                                select c.Id).Max();
-                    memberId += 1;
-                }
-                else
-                {
-                    memberId = 1;
-                }
-            }
-            return memberId;
-        }
-        */
-
-
     }
 }

@@ -7,12 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="stpTable" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Left" Height="552" Margin="10,78,0,0" VerticalAlignment="Top" Width="380">
-            <GridView x:ConnectionId='2' x:Name="grdTimeTable" HorizontalAlignment="Left" Height="530" VerticalAlignment="Top" Width="380"                                                 />
-        </StackPanel>
-        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"                      />
-        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" Text="Time Table" VerticalAlignment="Top" FontSize="20"/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <GridView HorizontalAlignment="Left" Height="407" Margin="10,87,0,0" VerticalAlignment="Top" Width="380"/>
+
     </Grid>
 </Page>
 

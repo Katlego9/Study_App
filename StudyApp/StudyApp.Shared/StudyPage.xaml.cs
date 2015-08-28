@@ -56,8 +56,10 @@ namespace StudyApp
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            cmbSubjects.Items.Clear();
             tmpStart.IsEnabled = false;
             SubjectModel = new SubjectsViewModel();
+
             try
             {
                 subjets = SubjectModel.GetAllSubjects();
@@ -142,37 +144,33 @@ namespace StudyApp
         {
             timer.Start();
 
-
             var studyStartTime = tmpStart.Time;
             var studyEndTime = studyStartTime + TimeSpan.FromSeconds(10);
-
 
             var studyStartTime1 = tmpEnd.Time;
             var studyEndTime1 = studyStartTime1 + TimeSpan.FromSeconds(10);
 
             time = studyEndTime1 - studyEndTime;
-
             var objStudy = new StudyViewModel();
-
             string studyName = string.Empty;
-
             studyName = (string)cmbSubjects.SelectedItem;
 
-
-            if (studyName != null)
+            try
             {
-                try
+                if (studyName != null)
                 {
+
                     objStudy.SetStudy(studyName, time.ToString());
+
                 }
-                catch (Exception ex)
+                else
                 {
-                    messageBox("error " + ex.Message);
+                    messageBox("Please select a subject to study");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                messageBox("Please select a subject to study");
+                messageBox("error " + ex.Message);
             }
 
         }

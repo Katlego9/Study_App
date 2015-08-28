@@ -9,7 +9,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Input;/////
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
@@ -32,45 +32,48 @@ namespace StudyApp
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
             await msgDisplay.ShowAsync();
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var objLogin = new MemberViewModel();
 
             string name = string.Empty;
             string pass = string.Empty;
+            string status = string.Empty;
             name = txbName.Text;
             pass = pwbPass.Password;
 
-            if ((name != "") && (pass != ""))
+            try
             {
-                try
+                if ((name != string.Empty) && (pass != string.Empty))
                 {
+
                     var confirm = objLogin.getMember(name, pass);
                     if (confirm != null)
                     {
-                        messageBox("Login successful" + "\nWelcome " + confirm.Name);
+                        status = "Login successful" + "\nWelcome " + confirm.Name;
                         this.Frame.Navigate(typeof(MainPage));
 
                     }
                     else
                     {
-                        messageBox("Login not successful, incorrect credentials");
+                        status = "Login not successful, incorrect credentials";
                         txbName.Text = "";
                         pwbPass.Password = "";
                     }
-                    
+                    messageBox(status);
                 }
-                catch (Exception ex)
+                else
                 {
-                    messageBox("error " + ex.Message);
+                    messageBox("Please fill all fields.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                messageBox("Please fill all fields.");
+                messageBox("error " + ex.Message);
             }
         }
-
+        
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Register));

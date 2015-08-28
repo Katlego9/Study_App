@@ -114,6 +114,15 @@ namespace StudyApp.Subjects
             }
         }
 
+        public Subject RemoveSubject()
+        {
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+                var _sub = db.Query<Subject>("Drop table Subject").FirstOrDefault();
+                return _sub;
+
+            }
+        }
         public void SetSubject(string Name, int Mark)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))

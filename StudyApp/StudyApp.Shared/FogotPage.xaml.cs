@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace StudyApp
@@ -38,38 +39,41 @@ namespace StudyApp
             var objForgot = new MemberViewModel();
 
             string name = string.Empty;
+            string status = string.Empty;
             name = txbUsername.Text;
 
-            if (name != "")
+            try
             {
-                try
+                if (name != string.Empty)
                 {
+
                     var valid = objForgot.getForgot(name);
                     if (valid != null)
                     {
-                       messageBox("Your Password is" + "\n" + valid.Password);
+                        status = "Your Password is" + "\n" + valid.Password;
                         this.Frame.Navigate(typeof(LogIn));
 
                     }
                     else
                     {
-                       messageBox("Incorrect username, please try again");
+                        status = "Incorrect username, please try again";
                         txbUsername.Text = "";
-                        
+
                     }
+                    messageBox(status);
                 }
-                catch (Exception ex)
+                else
                 {
-                    messageBox("error " + ex.Message);
+                    messageBox("Please enter username.");
                 }
-            }
-            else
+            } 
+            catch (Exception ex)
             {
-                messageBox("Please enter username.");
+                messageBox("error " + ex.Message);
             }
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(LogIn));
         }

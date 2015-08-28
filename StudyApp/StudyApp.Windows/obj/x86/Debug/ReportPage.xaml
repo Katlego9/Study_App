@@ -6,18 +6,36 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
+    </Page.Background>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10,9.333,0,-0.333">
-        <StackPanel HorizontalAlignment="Left" Height="524" VerticalAlignment="Top" Width="377" Margin="0,97,0,0">
-            <TextBlock TextWrapping="Wrap" Text="Select from field below:" FontSize="15" Margin="0,0,-0.333,0" Height="20"/>
-            <ComboBox x:ConnectionId='2' x:Name="cmbSubjects" Margin="0,0,-0.333,0" Height="52"                                                />
-            <TextBlock TextWrapping="Wrap" Text="Report Output" FontSize="15"/>
-            <ComboBox x:ConnectionId='3' x:Name="cmbOutput"                                              />
-            <TextBlock TextWrapping="Wrap" Text="Output:" FontSize="15" Margin="0,0,-0.333,0"/>
-            <ListView x:Name="lsvOutput" Height="357" Margin="0,0,-0.333,0"/>
-        </StackPanel>
-        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reports" VerticalAlignment="Top" FontSize="25" Margin="0,55,0,0"/>
-        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top"                       Margin="0,-10,0,0"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Center" Height="627" Margin="15,30,10,0" VerticalAlignment="Top" Width="375">
+            <TextBlock TextWrapping="Wrap" Text="Please select report output below" FontSize="20" Margin="9,60,10,542"/>
+            <ComboBox x:ConnectionId='1' x:Name="cmbOutput"                                               Margin="10,85,10,483"/>
+            <TextBlock TextWrapping="Wrap" Text="Output:" FontSize="20" Margin="9,152,10,446"/>
+            <ListView x:Name="lsvOutput" Margin="10,186,10,66">
+                <Grid Height="100" Width="100"/>
+            </ListView>
+            <TextBlock x:Name="txtHeading" HorizontalAlignment="Right" TextWrapping="Wrap" Text="History" VerticalAlignment="Top" FontSize="40" Margin="0,5,127,0" Height="50" Width="133" RenderTransformOrigin="-1,0.5"/>
+            <Button x:ConnectionId='2' x:Name="btnBack" Content="&lt; Prev" HorizontalAlignment="Left" VerticalAlignment="Top"                       Margin="1,0,0,0" Height="43" Width="90"/>
+            <Button x:ConnectionId='3' x:Name="btnClear" Content="Clear All" HorizontalAlignment="Left" Margin="10,569,0,0" VerticalAlignment="Top" Width="355"                       >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF40BD57" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
 
     </Grid>
 </Page>

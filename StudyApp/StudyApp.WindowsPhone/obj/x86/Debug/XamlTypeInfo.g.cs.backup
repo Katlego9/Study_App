@@ -124,21 +124,31 @@ namespace StudyApp.StudyApp_WindowsPhone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
-            _typeNameTable[0] = "StudyApp.FogotPage";
+            _typeNameTable = new string[11];
+            _typeNameTable[0] = "StudyApp.AddSubjects";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "StudyApp.LogIn";
-            _typeNameTable[4] = "StudyApp.MainPage";
-            _typeNameTable[5] = "StudyApp.Register";
+            _typeNameTable[3] = "StudyApp.FogotPage";
+            _typeNameTable[4] = "StudyApp.LogIn";
+            _typeNameTable[5] = "StudyApp.MainPage";
+            _typeNameTable[6] = "StudyApp.Progress";
+            _typeNameTable[7] = "StudyApp.Register";
+            _typeNameTable[8] = "StudyApp.ReminderPage";
+            _typeNameTable[9] = "StudyApp.ReportPage";
+            _typeNameTable[10] = "StudyApp.StudyPage";
 
-            _typeTable = new global::System.Type[6];
-            _typeTable[0] = typeof(global::StudyApp.FogotPage);
+            _typeTable = new global::System.Type[11];
+            _typeTable[0] = typeof(global::StudyApp.AddSubjects);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::StudyApp.LogIn);
-            _typeTable[4] = typeof(global::StudyApp.MainPage);
-            _typeTable[5] = typeof(global::StudyApp.Register);
+            _typeTable[3] = typeof(global::StudyApp.FogotPage);
+            _typeTable[4] = typeof(global::StudyApp.LogIn);
+            _typeTable[5] = typeof(global::StudyApp.MainPage);
+            _typeTable[6] = typeof(global::StudyApp.Progress);
+            _typeTable[7] = typeof(global::StudyApp.Register);
+            _typeTable[8] = typeof(global::StudyApp.ReminderPage);
+            _typeTable[9] = typeof(global::StudyApp.ReportPage);
+            _typeTable[10] = typeof(global::StudyApp.StudyPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -173,10 +183,15 @@ namespace StudyApp.StudyApp_WindowsPhone_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_FogotPage() { return new global::StudyApp.FogotPage(); }
-        private object Activate_3_LogIn() { return new global::StudyApp.LogIn(); }
-        private object Activate_4_MainPage() { return new global::StudyApp.MainPage(); }
-        private object Activate_5_Register() { return new global::StudyApp.Register(); }
+        private object Activate_0_AddSubjects() { return new global::StudyApp.AddSubjects(); }
+        private object Activate_3_FogotPage() { return new global::StudyApp.FogotPage(); }
+        private object Activate_4_LogIn() { return new global::StudyApp.LogIn(); }
+        private object Activate_5_MainPage() { return new global::StudyApp.MainPage(); }
+        private object Activate_6_Progress() { return new global::StudyApp.Progress(); }
+        private object Activate_7_Register() { return new global::StudyApp.Register(); }
+        private object Activate_8_ReminderPage() { return new global::StudyApp.ReminderPage(); }
+        private object Activate_9_ReportPage() { return new global::StudyApp.ReportPage(); }
+        private object Activate_10_StudyPage() { return new global::StudyApp.StudyPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -188,9 +203,9 @@ namespace StudyApp.StudyApp_WindowsPhone_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  StudyApp.FogotPage
+            case 0:   //  StudyApp.AddSubjects
                 userType = new global::StudyApp.StudyApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_FogotPage;
+                userType.Activator = Activate_0_AddSubjects;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -203,23 +218,58 @@ namespace StudyApp.StudyApp_WindowsPhone_XamlTypeInfo
                 xamlType = new global::StudyApp.StudyApp_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  StudyApp.LogIn
+            case 3:   //  StudyApp.FogotPage
                 userType = new global::StudyApp.StudyApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_LogIn;
+                userType.Activator = Activate_3_FogotPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  StudyApp.MainPage
+            case 4:   //  StudyApp.LogIn
                 userType = new global::StudyApp.StudyApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_MainPage;
+                userType.Activator = Activate_4_LogIn;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  StudyApp.Register
+            case 5:   //  StudyApp.MainPage
                 userType = new global::StudyApp.StudyApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_Register;
+                userType.Activator = Activate_5_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  StudyApp.Progress
+                userType = new global::StudyApp.StudyApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_Progress;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  StudyApp.Register
+                userType = new global::StudyApp.StudyApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_Register;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  StudyApp.ReminderPage
+                userType = new global::StudyApp.StudyApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_ReminderPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 9:   //  StudyApp.ReportPage
+                userType = new global::StudyApp.StudyApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_ReportPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  StudyApp.StudyPage
+                userType = new global::StudyApp.StudyApp_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_StudyPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

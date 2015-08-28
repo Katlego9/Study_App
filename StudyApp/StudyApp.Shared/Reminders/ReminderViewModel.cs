@@ -82,6 +82,16 @@ namespace StudyApp.Reminders
 
             }
         }
+
+        public Reminder RemoveReminder()
+        {
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+                var _sub = db.Query<Reminder>("Drop table Reminder").FirstOrDefault();
+                return _sub;
+
+            }
+        }
         public void SetReminder(string Name, string Date)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))

@@ -6,18 +6,31 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
+    </Page.Background>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,-4.667,0,4.667">
-        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" Text="Check Progress " VerticalAlignment="Top" FontSize="20"/>
+    <Grid Margin="0,-26.667,0,-0.333">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
+        </Grid.Background>
+        <TextBlock x:Name="txtHeading" HorizontalAlignment="Center" Margin="65,40,55,0" TextWrapping="Wrap" Text="Check Progress " VerticalAlignment="Top" FontSize="40" Width="280"/>
         <StackPanel HorizontalAlignment="Left" Height="547" Margin="10,93,0,0" VerticalAlignment="Top" Width="380">
-            <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Text="Please select the subject you want to check progress:" Margin="1,0,3,0" Height="16" FontSize="15"/>
-            <ComboBox x:Name="cmbSubjects" Margin="1,0,3,0" Height="53"/>
-            <TextBlock x:Name="txtMark" TextWrapping="Wrap" FontSize="15" Text="Please enter obtained mark:" Margin="0,0,-10,0" Height="20"/>
-            <TextBox x:Name="edtMark" Margin="0,0,3,0" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="39"/>
-            <Button x:ConnectionId='2' x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                       Margin="0,0,3,0" Height="58"/>
+            <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Text="Please select the subject below" Margin="10,0" Height="25" FontSize="20"/>
+            <ComboBox x:Name="cmbSubjects" Margin="10,0" Height="53"/>
+            <TextBlock x:Name="txtMark" TextWrapping="Wrap" FontSize="20" Text="Please enter obtained mark:" Margin="10,0" Height="27"/>
+            <TextBox x:Name="edtMark" Margin="10,0" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="39"/>
+            <Button x:ConnectionId='2' x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                       Margin="10,0" Height="58">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF19E259" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
 
         </StackPanel>
-        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="-3,7,0,0" VerticalAlignment="Top"                      />
+        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="10,592,0,0" VerticalAlignment="Top"                      />
 
     </Grid>
 </Page>

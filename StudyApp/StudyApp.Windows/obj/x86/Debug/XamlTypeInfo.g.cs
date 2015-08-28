@@ -124,7 +124,7 @@ namespace StudyApp.StudyApp_Windows_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[12];
+            _typeNameTable = new string[11];
             _typeNameTable[0] = "StudyApp.AddSubjects";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -136,9 +136,8 @@ namespace StudyApp.StudyApp_Windows_XamlTypeInfo
             _typeNameTable[8] = "StudyApp.ReminderPage";
             _typeNameTable[9] = "StudyApp.ReportPage";
             _typeNameTable[10] = "StudyApp.StudyPage";
-            _typeNameTable[11] = "StudyApp.TimeTable";
 
-            _typeTable = new global::System.Type[12];
+            _typeTable = new global::System.Type[11];
             _typeTable[0] = typeof(global::StudyApp.AddSubjects);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -150,7 +149,6 @@ namespace StudyApp.StudyApp_Windows_XamlTypeInfo
             _typeTable[8] = typeof(global::StudyApp.ReminderPage);
             _typeTable[9] = typeof(global::StudyApp.ReportPage);
             _typeTable[10] = typeof(global::StudyApp.StudyPage);
-            _typeTable[11] = typeof(global::StudyApp.TimeTable);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -194,7 +192,6 @@ namespace StudyApp.StudyApp_Windows_XamlTypeInfo
         private object Activate_8_ReminderPage() { return new global::StudyApp.ReminderPage(); }
         private object Activate_9_ReportPage() { return new global::StudyApp.ReportPage(); }
         private object Activate_10_StudyPage() { return new global::StudyApp.StudyPage(); }
-        private object Activate_11_TimeTable() { return new global::StudyApp.TimeTable(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -273,13 +270,6 @@ namespace StudyApp.StudyApp_Windows_XamlTypeInfo
             case 10:   //  StudyApp.StudyPage
                 userType = new global::StudyApp.StudyApp_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_10_StudyPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 11:   //  StudyApp.TimeTable
-                userType = new global::StudyApp.StudyApp_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_TimeTable;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -617,6 +607,5 @@ namespace StudyApp.StudyApp_Windows_XamlTypeInfo
         }
     }
 }
-
 
 

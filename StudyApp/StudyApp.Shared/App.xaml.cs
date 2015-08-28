@@ -22,6 +22,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
 namespace StudyApp
@@ -32,6 +33,7 @@ namespace StudyApp
     public sealed partial class App : Application
     {
         public string dbPath { get; set; }
+       
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
@@ -43,6 +45,7 @@ namespace StudyApp
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+
         }
 
         /// <summary>
@@ -53,6 +56,7 @@ namespace StudyApp
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+           
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
@@ -67,6 +71,7 @@ namespace StudyApp
                 dbase.CreateTable<Reminder>();
                 dbase.CreateTable<Study>();
             }
+            
 #endif
            
             Frame rootFrame = Window.Current.Content as Frame;
@@ -150,6 +155,6 @@ namespace StudyApp
             // TODO: Save application state and stop any background activity
             deferral.Complete();
         }
-        //public string DBPath { get; set; }
+       
     }
 }

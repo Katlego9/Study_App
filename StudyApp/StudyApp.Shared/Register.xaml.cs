@@ -34,58 +34,61 @@ namespace StudyApp
             this.InitializeComponent();
         }
 
+    
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            txbUsername.Text = string.Empty;
+            pwbPass.Password = string.Empty;
+            pwbConfirm.Password = string.Empty;
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LogIn));
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var objRegister = new MemberViewModel();
             string name = string.Empty;
             string pass = string.Empty;
             string confirm = string.Empty;
+            string status = string.Empty;
+
 
             name = txbUsername.Text;
             pass = pwbPass.Password;
             confirm = pwbConfirm.Password;
 
-            if ((name != "") && (pass != "") && (confirm != ""))
+            try
             {
-                if (pass == confirm)
+                if ((name != string.Empty) && (pass != string.Empty) && (confirm != string.Empty))
                 {
-                    try
+                    if (pass == confirm)
                     {
-                        objRegister.SetMember(name, pass);
-                        messageBox("Registration successful");
-                        this.Frame.Navigate(typeof(LogIn));
 
+                        objRegister.SetMember(name, pass);
+                        status = "Registration successful";
+                        this.Frame.Navigate(typeof(LogIn));
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        messageBox("error " + ex.Message);
+                        status = "Passwords do not match, please try again";
+                        pwbPass.Password = "";
+                        pwbConfirm.Password = "";
+
                     }
                 }
                 else
                 {
-                    messageBox("Passwords do not match, please try again");
-                    pwbPass.Password = "";
-                    pwbConfirm.Password = "";
-                    
+                    status = "Please fill all the fields";
                 }
+                messageBox(status);
             }
-            else
+            catch (Exception ex)
             {
-                messageBox("Please fill all the fields");
+                messageBox("error " + ex.Message);
             }
-        }
-
-        private void btnReset_Click(object sender, RoutedEventArgs e)
-        {
-            txbUsername.Text = "";
-            pwbPass.Password = "";
-            pwbConfirm.Password = "";
-
-        }
-
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(LogIn));
         }
     }
 }

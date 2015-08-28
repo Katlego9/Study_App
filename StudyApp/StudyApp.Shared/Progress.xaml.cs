@@ -33,20 +33,22 @@ namespace StudyApp
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            SubjectModel = new SubjectsViewModel();
+           
             try
             {
+                SubjectModel = new SubjectsViewModel();
                 subjets = SubjectModel.GetAllSubjects();
-                if (subjets != null)
+
+                if (subjets != null) 
                 {
                     foreach (var s in subjets)
                     {
                         cmbSubjects.Items.Add(s.SbjName);
                     }
                 }
-                else
+                else 
                 {
-                    messageBox("No Subjects in the database");
+                    messageBox("No Subjects found");
                 }
             }
             catch (Exception ex)
@@ -69,66 +71,69 @@ namespace StudyApp
 
             string studyName = string.Empty;
             string Performance = string.Empty;
+            string status = string.Empty;
             int mark = 0;
 
             int verifyNum;
 
-            bool isNumeric = int.TryParse(edtMark.Text, out verifyNum);
+           
 
-            if (isNumeric == true)
+
+            try
             {
-                studyName = (string)cmbSubjects.SelectedItem;
-                mark = Convert.ToInt16(edtMark.Text);
+                bool isNumeric = int.TryParse(edtMark.Text, out verifyNum);
 
-                if ((mark > 0) && (mark <= 100))
+                if (isNumeric == true)
                 {
-                    try
+                    studyName = (string)cmbSubjects.SelectedItem;
+                    mark = Convert.ToInt16(edtMark.Text);
+
+                    if ((mark > 0) && (mark <= 100))
                     {
+
                         var confirm = objSubject.getSubject(studyName);
                         if (confirm != null)
                         {
                             if (mark > confirm.SbjMark)
                             {
                                 Performance = "Better";
-                                messageBox("Performing better than the goal mark of " + Convert.ToString(confirm.SbjMark));
-                                
+                                status = "Performing better than the goal mark of " + Convert.ToString(confirm.SbjMark);
                             }
                             else if (mark == confirm.SbjMark)
                             {
                                 Performance = "Good";
-                                messageBox("Performing good, the marks are equal of " + Convert.ToString(confirm.SbjMark));
-                               
+                                status = "Performing good, the marks are equal of " + Convert.ToString(confirm.SbjMark);
                             }
                             else if (mark < confirm.SbjMark)
                             {
                                 Performance = "Badly";
-                                messageBox("Performing badly than the goal mark of " + Convert.ToString(confirm.SbjMark));
-                                
+                                status = "Performing badly than the goal mark of " + Convert.ToString(confirm.SbjMark);
                             }
-                            objSubject.UpdateSubject(studyName,mark,Performance);
+                            objSubject.UpdateSubject(studyName, mark, Performance);
+                            messageBox(status);
                         }
                         else
                         {
                             messageBox("Please select a subject");
                         }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        messageBox("error " + ex.Message);
+                        messageBox("Please specify a number between 0 and 100");
                     }
                 }
                 else
                 {
-                    messageBox("Please specify a number between 0 and 100");
+                    messageBox("Please specify a numeric obtained mark");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                 messageBox("Please specify a numeric mark number");
+                messageBox("error " + ex.Message);
             }
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }

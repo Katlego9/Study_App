@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using StudyApp.Subjects;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -23,6 +24,8 @@ namespace StudyApp
     /// </summary>
     public sealed partial class AddSubjects : Page
     {
+        SubjectsViewModel SubjectModel = null;
+        ObservableCollection<SubjectViewModel> subjets = null;
         public AddSubjects()
         {
             this.InitializeComponent();
@@ -35,6 +38,25 @@ namespace StudyApp
             await msgDisplay.ShowAsync();
         }
 
+        private bool verifyDuplication(string name)
+        {
+            bool status = false;
+
+            SubjectModel = new SubjectsViewModel();
+
+            subjets = SubjectModel.GetAllSubjects();
+            if (subjets != null)
+            {
+                foreach (var s in subjets)
+                {
+                    if (name == s.SbjName)
+                    {
+                        status = true;
+                    }
+                }
+            }
+            return status;
+        }
         private void btnAddSubject_Click(object sender, RoutedEventArgs e)
         {
             var objSubject = new SubjectViewModel();
@@ -43,27 +65,33 @@ namespace StudyApp
             int sbjMark = 0;
             int verifyNum;
 
-            bool isNumeric = int.TryParse(txbGoalMark.Text, out verifyNum);
-
-            if (isNumeric == true)
+            try
             {
-                sbjName = txbSubject.Text;
-                sbjMark = Convert.ToInt16(txbGoalMark.Text);
+                bool isNumeric = int.TryParse(txbGoalMark.Text, out verifyNum);
 
-                if (!sbjName.Equals(""))
+                if (isNumeric == true)
                 {
+                    sbjName = txbSubject.Text;
+                    sbjMark = Convert.ToInt16(txbGoalMark.Text);
+
+                    if (!sbjName.Equals(""))
+                    {
                         if ((sbjMark >= 50) && (sbjMark <= 100))
                         {
-                            try
+                            if (verifyDuplication(sbjName) != true)
                             {
+
                                 objSubject.SetSubject(sbjName, sbjMark);
                                 messageBox("Successfully added" + "\n" + sbjName + " with a goal mark of " + sbjMark);
+                                lstOutput.Items.Add("Name: " + sbjName + "\nGoal mark of: " + sbjMark);
+
                                 txbSubject.Text = "";
                                 txbGoalMark.Text = "";
+
                             }
-                            catch (Exception ex)
+                            else
                             {
-                                messageBox("error " + ex.Message);
+                                messageBox("Subject name already exist. \nPlease choose another name.");
                             }
                         }
                         else
@@ -71,15 +99,24 @@ namespace StudyApp
                             messageBox("Please specify the goal mark between 50 and 100.");
 
                         }
+                    }
+                    else
+                    {
+                        messageBox("Please fill the subject name");
+                    }
                 }
                 else
                 {
-                    messageBox("Please fill the subject name");
+                    messageBox("Please enter a numeric number on the goal mark.");
                 }
+            }
+            catch (Exception ex)
+            {
+                messageBox("error " + ex.Message);
             }
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }

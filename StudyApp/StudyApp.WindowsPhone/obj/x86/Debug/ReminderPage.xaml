@@ -6,22 +6,52 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
+    </Page.Background>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Margin="0,-16.667,0,-0.333">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reminder" VerticalAlignment="Top" FontSize="25" Margin="16,60,0,0"/>
+        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reminder" VerticalAlignment="Top" FontSize="40" Margin="100,10,0,0" Height="45" Width="180" Grid.ColumnSpan="2"/>
 
-        <StackPanel HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Width="390" Margin="16,95,0,0">
-
-            <TextBlock TextWrapping="Wrap" Text="Add Reminder Description" FontSize="15" Margin="0,0,10.333,0" Height="18"/>
-            <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="0,0,126.333,0" Height="32"/>
-            <TextBlock TextWrapping="Wrap" Text="Please provide due date" Height="18" FontSize="15"/>
-            <DatePicker x:Name="dtpDate" Margin="0.167,0,0.166,0"/>
-            <Button x:ConnectionId='2' Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="-3,0,0,0"/>
+        <StackPanel HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="380" Margin="10,60,0,0" Grid.ColumnSpan="2">
+            <TextBlock TextWrapping="Wrap" Text="Add Reminder Description" FontSize="20" Margin="10,0" Height="30"/>
+            <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="10,0" Height="32"/>
+            <TextBlock TextWrapping="Wrap" Text="Please provide due date" Height="26" FontSize="20" Margin="10,0,0,0"/>
+            <DatePicker x:Name="dtpDate" Margin="10,0"/>
+            <Button x:ConnectionId='4' Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="10,0">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FFDBE85A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <ListBox x:Name="lstOutput" Height="255" Margin="10,0"/>
         </StackPanel>
-        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="-3,7,0,0" VerticalAlignment="Top"                      />
+        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="16,594,0,0" VerticalAlignment="Top"                       Height="58" Width="109"/>
+        <Button x:ConnectionId='2' x:Name="btnTwo" Content="View 2 Days" HorizontalAlignment="Left" Margin="16,555,0,0" VerticalAlignment="Top" Width="174" Height="58"                     >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF57E621" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:ConnectionId='3' x:Name="btnThree" Content="View 3 Days" Grid.Column="1" HorizontalAlignment="Left" Margin="10,555,0,0" VerticalAlignment="Top" Width="165" Height="58"                       >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFE63523" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>
