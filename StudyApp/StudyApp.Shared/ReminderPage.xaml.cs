@@ -71,23 +71,22 @@ namespace StudyApp
             ReminderModel = new RemindersViewModel();
 
             reminders = ReminderModel.GetAllReminders();
-
-            if (reminders != null)
+            string status = string.Empty;
+            try
             {
-                DateTimeOffset datepicker = System.DateTimeOffset.Now.AddDays(1);
-                string date = datepicker.ToString();
-                string reminderdate = date.Substring(0, 10);
-
-                DateTimeOffset datepicker1 = System.DateTimeOffset.Now.AddDays(0);
-                string date1 = datepicker1.ToString();
-                string reminderdate1 = date1.Substring(0, 10);
-                lstOutput.Items.Clear();
-
-                foreach (var r in reminders)
+                if (reminders != null)
                 {
-                    try
-                    {
+                    DateTimeOffset datepicker = System.DateTimeOffset.Now.AddDays(1);
+                    string date = datepicker.ToString();
+                    string reminderdate = date.Substring(0, 10);
 
+                    DateTimeOffset datepicker1 = System.DateTimeOffset.Now.AddDays(0);
+                    string date1 = datepicker1.ToString();
+                    string reminderdate1 = date1.Substring(0, 10);
+                    lstOutput.Items.Clear();
+
+                    foreach (var r in reminders)
+                    {
                         if (r.rDate == reminderdate1)
                         {
                             lstOutput.Items.Add(r.rName + " is due today!!.");
@@ -95,18 +94,20 @@ namespace StudyApp
                         else if (r.rDate == reminderdate)
                         {
                             lstOutput.Items.Add(r.rName + " is due the next day.");
-
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        messageBox("error " + ex.Message);
-                    }
                 }
+                else
+                {
+                    status = "No reminders found for the next 3 days";
+                }
+
+                if (status != string.Empty)
+                    messageBox(status);
             }
-            else
+            catch (Exception ex)
             {
-                messageBox("No reminders found for the next 3 days");
+                messageBox("error " + ex.Message);
             }
 
             base.OnNavigatedTo(e);
@@ -146,14 +147,16 @@ namespace StudyApp
                     else
                     {
                         status = "Date must be later than today.";
-
                     }
                 }
                 else
                 {
                     status = "Please specify the reminder name";
                 }
-                messageBox(status);
+
+                if (status != string.Empty)
+                    messageBox(status);
+                
             }
             catch (Exception ex)
             {
@@ -168,7 +171,7 @@ namespace StudyApp
 
         private void btnTwo_Click(object sender, RoutedEventArgs e)
         {
-            
+            string status = string.Empty;
             try
             {
                 ReminderModel = new RemindersViewModel();
@@ -187,27 +190,28 @@ namespace StudyApp
                         {
                             lstOutput.Items.Add(r.rName + " is due in the next 2 days.");
                         }
-                        else
-                        {
-                            messageBox("No reminders found for the next 2 days.");
-                        }
                     }
                 }
                 else
                 {
-                    messageBox("No reminders found");
+                    status = "No reminders found for the next 2 days.";
                 }
+
+                if (status != string.Empty)
+                    messageBox(status);
             }
             catch (Exception ex)
             {
                 messageBox("error " + ex.Message);
             }
+            
         }
 
         private void btnThree_Click(object sender, RoutedEventArgs e)
         {
             ReminderModel = new RemindersViewModel();
             reminders = ReminderModel.GetAllReminders();
+            string status = string.Empty;
 
             try
             {
@@ -225,16 +229,15 @@ namespace StudyApp
                         {
                             lstOutput.Items.Add(r.rName + " is due in the next 3 days.");
                         }
-                        else
-                        {
-                            messageBox("No reminders found for the next 3 days.");
-                        }
                     }
                 }
                 else
                 {
-                    messageBox("No reminders found.");
+                    status = "No reminders found for the next 3 days.";
                 }
+
+                if (status != string.Empty)
+                    messageBox(status);
             }
             catch (Exception ex)
             {

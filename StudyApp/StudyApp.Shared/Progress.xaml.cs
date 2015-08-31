@@ -33,6 +33,7 @@ namespace StudyApp
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            string status = string.Empty;
            
             try
             {
@@ -48,13 +49,17 @@ namespace StudyApp
                 }
                 else 
                 {
-                    messageBox("No Subjects found");
+                    status = "No Subjects found";
                 }
             }
             catch (Exception ex)
             {
                 messageBox("error " + ex.Message);
             }
+
+            if (status != string.Empty)
+                messageBox(status);
+
             base.OnNavigatedTo(e);
         }
 
@@ -75,9 +80,6 @@ namespace StudyApp
             int mark = 0;
 
             int verifyNum;
-
-           
-
 
             try
             {

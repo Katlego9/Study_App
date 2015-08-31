@@ -64,6 +64,7 @@ namespace StudyApp
             string sbjName = string.Empty;
             int sbjMark = 0;
             int verifyNum;
+            string status = string.Empty;
 
             try
             {
@@ -82,7 +83,7 @@ namespace StudyApp
                             {
 
                                 objSubject.SetSubject(sbjName, sbjMark);
-                                messageBox("Successfully added" + "\n" + sbjName + " with a goal mark of " + sbjMark);
+                                status = "Successfully added" + "\n" + sbjName + " with a goal mark of " + sbjMark;
                                 lstOutput.Items.Add("Name: " + sbjName + "\nGoal mark of: " + sbjMark);
 
                                 txbSubject.Text = "";
@@ -91,29 +92,32 @@ namespace StudyApp
                             }
                             else
                             {
-                                messageBox("Subject name already exist. \nPlease choose another name.");
+                                status = "Subject name already exist. \nPlease choose another name.";
                             }
                         }
                         else
                         {
-                            messageBox("Please specify the goal mark between 50 and 100.");
+                            status  = "Please specify the goal mark between 50 and 100.";
 
                         }
                     }
                     else
                     {
-                        messageBox("Please fill the subject name");
+                        status  = "Please fill the subject name";
                     }
                 }
                 else
                 {
-                    messageBox("Please enter a numeric number on the goal mark.");
+                    status = "Please enter a numeric number on the goal mark.";
                 }
             }
             catch (Exception ex)
             {
                 messageBox("error " + ex.Message);
             }
+
+            if (status != string.Empty)
+                messageBox(status);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

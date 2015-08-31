@@ -60,6 +60,8 @@ namespace StudyApp
             tmpStart.IsEnabled = false;
             SubjectModel = new SubjectsViewModel();
 
+            string status = string.Empty;
+
             try
             {
                 subjets = SubjectModel.GetAllSubjects();
@@ -72,13 +74,17 @@ namespace StudyApp
                 }
                 else
                 {
-                    messageBox("No Subjects in the database");
+                    status  = "No Subjects in the database";
                 }
             }
             catch (Exception ex)
             {
                 messageBox("error " + ex.Message);
             }
+
+            if (status != string.Empty)
+                messageBox(status);
+
             base.OnNavigatedTo(e);
         }
 
@@ -153,11 +159,13 @@ namespace StudyApp
             time = studyEndTime1 - studyEndTime;
             var objStudy = new StudyViewModel();
             string studyName = string.Empty;
-            studyName = (string)cmbSubjects.SelectedItem;
+            
+            string status = string.Empty;
 
             try
             {
-                if (studyName != null)
+                studyName = (string)cmbSubjects.SelectedItem;
+                if (studyName != string.Empty)
                 {
 
                     objStudy.SetStudy(studyName, time.ToString());
@@ -165,13 +173,16 @@ namespace StudyApp
                 }
                 else
                 {
-                    messageBox("Please select a subject to study");
+                    status  = "Please select a subject to study";
                 }
             }
             catch (Exception ex)
             {
                 messageBox("error " + ex.Message);
             }
+
+            if (status != string.Empty)
+                messageBox(status);
 
         }
 

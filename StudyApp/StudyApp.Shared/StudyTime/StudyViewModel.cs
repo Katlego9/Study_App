@@ -91,7 +91,7 @@ namespace StudyApp.StudyTime
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _sub = db.Query<Study>("Drop table Study").FirstOrDefault();
+                var _sub = db.Query<Study>("Delete from Study").FirstOrDefault();
                 return _sub;
 
             }

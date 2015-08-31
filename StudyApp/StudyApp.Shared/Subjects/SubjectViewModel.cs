@@ -118,7 +118,7 @@ namespace StudyApp.Subjects
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _sub = db.Query<Subject>("Drop table Subject").FirstOrDefault();
+                var _sub = db.Query<Subject>("Delete from Subject").FirstOrDefault();
                 return _sub;
 
             }

@@ -69,7 +69,8 @@ namespace StudyApp
         {
             string output = string.Empty;
             btnClear.IsEnabled = true;
-            
+
+            string status = string.Empty;
             try
             {
                 output = (string)cmbOutput.SelectedItem;
@@ -99,7 +100,7 @@ namespace StudyApp
                             }
                             else
                             {
-                                messageBox("No Subjects in the database");
+                                status = "No Subjects in the database";
                             }
                         }
                         catch (Exception ex)
@@ -128,7 +129,7 @@ namespace StudyApp
                             }
                             else
                             {
-                                messageBox("No Reminders in the database");
+                                status = "No Reminders in the database";
                             }
                         }
                         catch (Exception ex)
@@ -157,7 +158,7 @@ namespace StudyApp
                             }
                             else
                             {
-                                messageBox("No Studies in the database");
+                                status  ="No Studies in the database";
                             }
                         }
                         catch (Exception ex)
@@ -169,13 +170,16 @@ namespace StudyApp
                 }
                 else
                 {
-                    messageBox("No output is selected above");
+                    status  = "No output is selected above";
                 }
             }
             catch (Exception ex)
             {
                 messageBox("error " + ex.Message);
             }
+
+            if (status != string.Empty)
+                messageBox(status);
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)

@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\StudyApp.Windows.exe">
       <PackagePath>StudyApp.Windows.exe</PackagePath>
-      <Modified>2015-08-28T13:16:01.973</Modified>
+      <Modified>2015-08-31T09:46:59.904</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>

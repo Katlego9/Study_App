@@ -87,7 +87,7 @@ namespace StudyApp.Reminders
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _sub = db.Query<Reminder>("Drop table Reminder").FirstOrDefault();
+                var _sub = db.Query<Reminder>("Delete From Reminder").FirstOrDefault();
                 return _sub;
 
             }
