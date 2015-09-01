@@ -114,7 +114,6 @@ namespace StudyApp
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-          
             var objReminder = new ReminderViewModel();
 
             string task = string.Empty;
@@ -134,7 +133,6 @@ namespace StudyApp
                     {
                         if (verifyDuplication(task) != true)
                         {
-
                             objReminder.SetReminder(task, reminderdate);
                             status = "Successfully added Reminder" + "\n" + task + " with a due date of " + reminderdate;
                             txbReminder.Text = "";
