@@ -29,9 +29,9 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBlock x:Name="txtHeading1" Margin="0,10,14,0" TextWrapping="Wrap" Text="Forgot Password" VerticalAlignment="Top" FontSize="40" Width="293" HorizontalAlignment="Right"/>
+            <TextBlock x:Name="txtHeading1" Margin="0,10,14,0" TextWrapping="Wrap" Text="Forgot Password" VerticalAlignment="Top" FontSize="40" Width="293" HorizontalAlignment="Right" Height="47"/>
             <Grid HorizontalAlignment="Left" Height="100" Margin="260,305,0,0" VerticalAlignment="Top" Width="100"/>
-            <Button Content="&lt; Prev" HorizontalAlignment="Left" Margin="-4,-3,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.475,-0.289" Width="80" Height="38" Click="Button_Click"/>
+            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,-4,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79"/>
         </Grid>
 
     </Grid>

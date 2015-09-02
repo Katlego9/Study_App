@@ -53,7 +53,11 @@ namespace StudyApp
         private void btnProgress_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Progress));
+        }
 
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LogIn));
         }
 
     }

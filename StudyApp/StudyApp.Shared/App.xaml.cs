@@ -33,7 +33,7 @@ namespace StudyApp
     public sealed partial class App : Application
     {
         public string dbPath { get; set; }
-       
+
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
@@ -48,6 +48,8 @@ namespace StudyApp
 
         }
 
+
+
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used when the application is launched to open a specific file, to display
@@ -56,6 +58,7 @@ namespace StudyApp
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            
            
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -71,6 +74,8 @@ namespace StudyApp
                 dbase.CreateTable<Reminder>();
                 dbase.CreateTable<Study>();
             }
+
+      
             
 #endif
            
@@ -110,6 +115,7 @@ namespace StudyApp
                 
                 rootFrame.ContentTransitions = null;
                 rootFrame.Navigated += this.RootFrame_FirstNavigated;
+                
                  
 #endif
 

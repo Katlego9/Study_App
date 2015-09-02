@@ -9,6 +9,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -44,6 +45,7 @@ namespace StudyApp
         {
             try
             {
+                  cmbOutput.Items.Clear();
                   cmbOutput.Items.Add("Progress");
                   cmbOutput.Items.Add("Reminders");
                   cmbOutput.Items.Add("StudyTime");
@@ -60,10 +62,6 @@ namespace StudyApp
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
             await msgDisplay.ShowAsync();
         }
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
-        }
 
         private void cmbOutput_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -71,6 +69,7 @@ namespace StudyApp
             btnClear.IsEnabled = true;
 
             string status = string.Empty;
+
             try
             {
                 output = (string)cmbOutput.SelectedItem;
@@ -220,6 +219,23 @@ namespace StudyApp
                     table = "StudyTimes";
 
                 messageBox("error " + ex.Message + "\nPlease add " + table);
+            }
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void lsvOutput_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Brush SelectedBrush = new SolidColorBrush((Color)App.Current.Resources["SystemColorControlAccentColor"]);
+            Brush NormalBrush = new SolidColorBrush(Colors.Transparent);
+
+            for (int i = 0; i < lsvOutput.Items.Count; i++)
+            {
+                ListViewItem Item = lsvOutput.ContainerFromIndex(i) as ListViewItem;
+                Item.Background = Item.IsSelected ? SelectedBrush : NormalBrush;
             }
         }
     }

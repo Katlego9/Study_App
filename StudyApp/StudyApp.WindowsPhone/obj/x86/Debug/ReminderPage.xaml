@@ -10,22 +10,20 @@
         <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
     </Page.Background>
 
-    <Grid Margin="0,-16.667,0,-0.333">
+    <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill"/>
+            <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reminder" VerticalAlignment="Top" FontSize="40" Margin="100,10,0,0" Height="45" Width="180" Grid.ColumnSpan="2"/>
-
-        <StackPanel HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="380" Margin="10,60,0,0" Grid.ColumnSpan="2">
-            <TextBlock TextWrapping="Wrap" Text="Add Reminder Description" FontSize="20" Margin="10,0" Height="30"/>
-            <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="10,0" Height="32"/>
-            <TextBlock TextWrapping="Wrap" Text="Please provide due date" Height="26" FontSize="20" Margin="10,0,0,0"/>
-            <DatePicker x:Name="dtpDate" Margin="10,0"/>
-            <Button x:ConnectionId='4' Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="10,0">
+        <Grid HorizontalAlignment="Center" Height="620" Margin="15,10,5,0" VerticalAlignment="Top" Width="380" Grid.ColumnSpan="2">
+            <TextBlock TextWrapping="Wrap" Text="Add Reminder Description" FontSize="20" Margin="14,75,10,521"/>
+            <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="10,99,10,0" Height="15" RenderTransformOrigin="0.433,-6.125"/>
+            <TextBlock TextWrapping="Wrap" Text="Please provide due date" FontSize="20" Margin="10,141,10,448"/>
+            <DatePicker x:Name="dtpDate" Margin="11,177,0,388" HorizontalAlignment="Left" Width="360"/>
+            <Button x:ConnectionId='1' Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="11,227,6,338">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -33,25 +31,25 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <ListBox x:Name="lstOutput" Height="255" Margin="10,0"/>
-        </StackPanel>
-        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="16,594,0,0" VerticalAlignment="Top"                       Height="58" Width="109"/>
-        <Button x:ConnectionId='2' x:Name="btnTwo" Content="View 2 Days" HorizontalAlignment="Left" Margin="16,555,0,0" VerticalAlignment="Top" Width="174" Height="58"                     >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF57E621" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:ConnectionId='3' x:Name="btnThree" Content="View 3 Days" Grid.Column="1" HorizontalAlignment="Left" Margin="10,555,0,0" VerticalAlignment="Top" Width="165" Height="58"                       >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FFE63523" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+            <ListBox x:Name="lstOutput" Margin="11,287,9,83"/>
+            <Button x:ConnectionId='2' x:Name="btnTwo" Content="View 2 Days" HorizontalAlignment="Left" Margin="10,562,0,0" VerticalAlignment="Top" Width="174" Height="45"                     >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF57E621" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:ConnectionId='3' x:Name="btnThree" Content="View 3 Days" HorizontalAlignment="Left" Margin="205,562,0,0" VerticalAlignment="Top" Width="165" Height="45"                       >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FFE63523" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reminders" VerticalAlignment="Top" FontSize="40" Margin="114,10,0,0" Height="45" Width="180"/>
+        </Grid>
 
     </Grid>
 </Page>

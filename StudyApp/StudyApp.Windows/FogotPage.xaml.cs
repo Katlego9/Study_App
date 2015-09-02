@@ -26,6 +26,7 @@ namespace StudyApp
         public FogotPage()
         {
             this.InitializeComponent();
+            
         }
 
         private async void messageBox(string msg)
@@ -33,7 +34,7 @@ namespace StudyApp
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
             await msgDisplay.ShowAsync();
         }
-
+       
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             var objForgot = new MemberViewModel();
@@ -73,7 +74,7 @@ namespace StudyApp
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(LogIn));
         }

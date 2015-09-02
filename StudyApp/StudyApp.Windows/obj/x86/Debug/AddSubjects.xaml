@@ -13,7 +13,7 @@
         <ImageBrush Stretch="Fill"/>
     </Page.BorderBrush>
 
-    <Grid>
+    <Grid x:Name="appbar">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
         </Grid.Background>
@@ -33,7 +33,7 @@
             </Button>
             <ListBox x:Name="lstOutput" Margin="10,301,10,10"/>
             <TextBlock x:Name="txtOutput" HorizontalAlignment="Left" Margin="10,272,0,0" TextWrapping="Wrap" Text="Added subjects below:" VerticalAlignment="Top" FontSize="20"/>
-            <Button x:ConnectionId='2' Content="&lt; Prev" HorizontalAlignment="Left" Margin="-4,-3,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.475,-0.289" Width="80" Height="38"                     />
+            <AppBarButton x:ConnectionId='2' x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,-14,0,0" VerticalAlignment="Top"                            Height="69" Width="79"/>
         </Grid>
 
     </Grid>

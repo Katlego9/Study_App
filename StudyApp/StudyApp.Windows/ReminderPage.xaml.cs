@@ -162,11 +162,6 @@ namespace StudyApp
             }
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
-        }
-
         private void btnTwo_Click(object sender, RoutedEventArgs e)
         {
             string status = string.Empty;
@@ -241,6 +236,11 @@ namespace StudyApp
             {
                 messageBox("error " + ex.Message);
             }
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 

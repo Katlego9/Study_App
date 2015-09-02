@@ -47,7 +47,14 @@ namespace StudyApp
             timer.Interval = new TimeSpan(0, 0, 0, 1);
             timer.Tick += Each_Tick;
 
+            Windows.Phone.UI.Input.HardwareButtons.BackPressed += OnBackPressed;
         }
+
+        private void OnBackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
+        {
+            e.Handled = true;
+            this.Frame.Navigate(typeof(MainPage));
+        } 
 
         private async void messageBox(string msg)
         {
@@ -184,11 +191,6 @@ namespace StudyApp
             if (status != string.Empty)
                 messageBox(status);
 
-        }
-
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

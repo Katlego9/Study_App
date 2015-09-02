@@ -15,11 +15,11 @@
             <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
         </Grid.Background>
         <Grid HorizontalAlignment="Center" Height="546" Margin="10,51,13,0" VerticalAlignment="Top" Width="377">
-            <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Text="Please select the subject below" Margin="10,63,10,453" FontSize="20"/>
-            <ComboBox x:Name="cmbSubjects" Margin="10,88,10,411"/>
-            <TextBlock x:Name="txtMark" TextWrapping="Wrap" FontSize="20" Text="Please enter obtained mark:" Margin="10,140,10,379"/>
-            <TextBox x:Name="edtMark" Margin="10,172,10,336" TextWrapping="Wrap" VerticalAlignment="Stretch"/>
-            <Button x:ConnectionId='1' x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                       Margin="10,220,10,259">
+            <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Text="Please select the subject below" Margin="10,78,10,438" FontSize="20"/>
+            <ComboBox x:Name="cmbSubjects" Margin="10,108,10,391"/>
+            <TextBlock x:Name="txtMark" TextWrapping="Wrap" FontSize="20" Text="Please enter obtained mark:" Margin="10,160,10,359"/>
+            <TextBox x:Name="edtMark" Margin="10,187,10,321" TextWrapping="Wrap" VerticalAlignment="Stretch"/>
+            <Button x:ConnectionId='1' x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                       Margin="7,243,13,251">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -28,7 +28,7 @@
                 </Button.Background>
             </Button>
             <TextBlock x:Name="txtHeading" HorizontalAlignment="Center" Margin="77,10,30,0" TextWrapping="Wrap" Text="Check Progress " VerticalAlignment="Top" FontSize="40" Width="270"/>
-            <Button x:ConnectionId='2' Content="&lt; Prev" HorizontalAlignment="Left" Margin="-4,-3,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.475,-0.289" Width="79" Height="38"                     />
+            <AppBarButton x:ConnectionId='2' x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,-4,0,0" VerticalAlignment="Top"                            Height="69" Width="79"/>
         </Grid>
 
     </Grid>

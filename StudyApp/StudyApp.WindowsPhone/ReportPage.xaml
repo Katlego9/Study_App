@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="StudyApp.ReportPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StudyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
+    </Page.Background>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Center" Height="600" Margin="15,30,10,0" VerticalAlignment="Top" Width="375">
+            <TextBlock TextWrapping="Wrap" Text="Please select report output below" FontSize="20" Margin="9,60,10,515"/>
+            <ComboBox x:Name="cmbOutput" HorizontalAlignment="Left" Margin="9,89,0,0" VerticalAlignment="Top" Width="356" SelectionChanged="cmbOutput_SelectionChanged_1"/>
+            
+            <ListView x:Name="lsvOutput" Margin="10,188,10,93" FontSize="20" FontWeight="Bold" SelectionChanged="lsvOutput_SelectionChanged">
+                <Grid Height="100" Width="100"/>
+            </ListView>
+            <TextBlock x:Name="txtHeading" HorizontalAlignment="Right" TextWrapping="Wrap" Text="History" VerticalAlignment="Top" FontSize="40" Margin="0,5,127,0" Height="50" Width="133" RenderTransformOrigin="-1,0.5"/>
+            <Button x:Name="btnClear" Content="Clear All" HorizontalAlignment="Left" Margin="10,541,0,0" VerticalAlignment="Top" Width="355" Click="btnClear_Click" Height="20">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF40BD57" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBlock TextWrapping="Wrap" Text="Output:" FontSize="20" Margin="10,154,9,417"/>
+
+
+        </Grid>
+
+    </Grid>
+</Page>

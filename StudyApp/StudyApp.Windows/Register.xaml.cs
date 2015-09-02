@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,18 +23,37 @@ namespace StudyApp
     /// </summary>
     public sealed partial class Register : Page
     {
+        MembersViewModel MemberModel = null;
+        ObservableCollection<MemberViewModel> member = null;
+        public Register()
+        {
+            this.InitializeComponent();
+        }
 
         private async void messageBox(string msg)
         {
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
             await msgDisplay.ShowAsync();
         }
-
-        public Register()
+        private bool verifyDuplication(string name)
         {
-            this.InitializeComponent();
-        }
+            bool status = false;
 
+            MemberModel = new MembersViewModel();
+
+            member = MemberModel.GetAllMembers();
+            if (member != null)
+            {
+                foreach (var m in member)
+                {
+                    if (name == m.Name)
+                    {
+                        status = true;
+                    }
+                }
+            }
+            return status;
+        }
     
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
@@ -42,11 +62,7 @@ namespace StudyApp
             pwbConfirm.Password = string.Empty;
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(LogIn));
-        }
-
+ 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var objRegister = new MemberViewModel();
@@ -62,26 +78,37 @@ namespace StudyApp
 
             try
             {
-                if ((name != string.Empty) && (pass != string.Empty) && (confirm != string.Empty))
+                if (verifyDuplication(name) != true)
                 {
-                    if (pass == confirm)
+                    if ((name != string.Empty) && (pass != string.Empty) && (confirm != string.Empty))
                     {
+                        if (pass == confirm)
+                        {
+                            objRegister.SetMember(name, pass);
+                            status = "Registration successful";
+                            this.Frame.Navigate(typeof(LogIn));
 
-                        objRegister.SetMember(name, pass);
-                        status = "Registration successful";
-                        this.Frame.Navigate(typeof(LogIn));
+                            txbUsername.Text = string.Empty;
+                            pwbPass.Password = string.Empty;
+                            pwbConfirm.Password = string.Empty;
+                        }
+                        else
+                        {
+                            status = "Passwords do not match, please try again";
+                            pwbPass.Password = "";
+                            pwbConfirm.Password = "";
+
+                        }
                     }
                     else
                     {
-                        status = "Passwords do not match, please try again";
-                        pwbPass.Password = "";
-                        pwbConfirm.Password = "";
-
+                        status = "Please fill all the fields";
                     }
+                    
                 }
                 else
                 {
-                    status = "Please fill all the fields";
+                    status = "Username already exists. try again";
                 }
                 messageBox(status);
             }
@@ -89,6 +116,12 @@ namespace StudyApp
             {
                 messageBox("error " + ex.Message);
             }
+            
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LogIn));
         }
     }
 }

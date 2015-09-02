@@ -33,7 +33,6 @@
             </Button>
             <ListBox x:Name="lstOutput" Margin="10,301,10,10"/>
             <TextBlock x:Name="txtOutput" HorizontalAlignment="Left" Margin="10,272,0,0" TextWrapping="Wrap" Text="Added subjects below:" VerticalAlignment="Top" FontSize="20"/>
-            <Button Content="&lt; Prev" HorizontalAlignment="Left" Margin="-4,-3,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.475,-0.289" Width="80" Height="38" Click="Button_Click"/>
         </Grid>
 
     </Grid>

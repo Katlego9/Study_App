@@ -29,14 +29,25 @@ namespace StudyApp
         public AddSubjects()
         {
             this.InitializeComponent();
-           
+
+            this.NavigationCacheMode = NavigationCacheMode.Required;
+            Windows.Phone.UI.Input.HardwareButtons.BackPressed += OnBackPressed;
         }
-        
+
+        private void OnBackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
+        {
+            e.Handled = true;
+            this.Frame.Navigate(typeof(MainPage));
+
+        } 
+
         private async void messageBox(string msg)
         {
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
             await msgDisplay.ShowAsync();
         }
+
+       
 
         private bool verifyDuplication(string name)
         {
@@ -118,11 +129,6 @@ namespace StudyApp
 
             if (status != string.Empty)
                 messageBox(status);
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
