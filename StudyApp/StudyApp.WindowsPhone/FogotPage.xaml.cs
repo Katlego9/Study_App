@@ -26,7 +26,6 @@ namespace StudyApp
         public FogotPage()
         {
             this.InitializeComponent();
-
             this.NavigationCacheMode = NavigationCacheMode.Required;
             Windows.Phone.UI.Input.HardwareButtons.BackPressed += OnBackPressed;
         }
@@ -37,7 +36,6 @@ namespace StudyApp
             this.Frame.Navigate(typeof(LogIn));
 
         } 
-
         private async void messageBox(string msg)
         {
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);

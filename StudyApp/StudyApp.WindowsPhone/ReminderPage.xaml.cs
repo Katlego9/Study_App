@@ -40,6 +40,7 @@ namespace StudyApp
             this.Frame.Navigate(typeof(MainPage));
 
         } 
+
         private async void messageBox(string msg)
         {
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);

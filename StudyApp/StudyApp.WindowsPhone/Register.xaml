@@ -14,31 +14,32 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
         </Grid.Background>
-        <Grid HorizontalAlignment="Center" Height="628" Margin="15,29,10,0" VerticalAlignment="Top" Width="375">
-            <TextBlock x:Name="txtUsername" HorizontalAlignment="Left" Margin="10,109,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontSize="18"/>
-            <TextBlock x:Name="txtPassword" HorizontalAlignment="Left" Margin="10,175,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="18"/>
-            <TextBlock x:Name="txtConfirm" HorizontalAlignment="Left" Margin="10,233,0,0" TextWrapping="Wrap" Text="Confirm Password" VerticalAlignment="Top" FontSize="18" Width="140"/>
-            <TextBox x:Name="txbUsername" HorizontalAlignment="Left" Margin="105,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
-            <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="10,302,0,0" VerticalAlignment="Top" Width="355" Click="Button_Click">
+        <Grid HorizontalAlignment="Center" Height="601" Margin="15,29,10,0" VerticalAlignment="Top" Width="375">
+            <TextBlock x:Name="txtUsername" HorizontalAlignment="Left" Margin="10,109,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontSize="18" Foreground="#FFF5770F"/>
+            <TextBlock x:Name="txtPassword" HorizontalAlignment="Left" Margin="10,175,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="18" Foreground="#FFF5770F"/>
+            <TextBlock x:Name="txtConfirm" HorizontalAlignment="Left" Margin="7,222,0,0" TextWrapping="Wrap" Text="Confirm Password" VerticalAlignment="Top" FontSize="18" Width="83" Foreground="#FFF5770F"/>
+            <TextBox x:Name="txbUsername" HorizontalAlignment="Left" Margin="117,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248"/>
+            <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="7,296,0,0" VerticalAlignment="Top" Width="361" Click="Button_Click" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F" Height="50">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFDE3737" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" Margin="10,365,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.208" Width="355" Click="btnReset_Click">
+            <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" Margin="8,359,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.505,0.208" Width="360" Click="btnReset_Click" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F" Height="50">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFE8771A" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBlock HorizontalAlignment="Left" Margin="117,10,0,0" TextWrapping="Wrap" Text="Register" VerticalAlignment="Top" FontSize="40"/>
-            <PasswordBox x:Name="pwbPass" HorizontalAlignment="Left" Margin="105,158,0,0" VerticalAlignment="Top" Width="260"/>
-            <PasswordBox x:Name="pwbConfirm" HorizontalAlignment="Left" Margin="105,233,0,0" VerticalAlignment="Top" Width="260"/>
+            <TextBlock HorizontalAlignment="Left" Margin="144,10,0,0" TextWrapping="Wrap" Text="Register" VerticalAlignment="Top" FontSize="40" Foreground="#FFF5770F"/>
+            <PasswordBox x:Name="pwbPass" HorizontalAlignment="Left" Margin="117,165,0,0" VerticalAlignment="Top" Width="248"/>
+            <PasswordBox x:Name="pwbConfirm" HorizontalAlignment="Left" Margin="117,233,0,0" VerticalAlignment="Top" Width="248"/>
             <Grid HorizontalAlignment="Left" Height="100" Margin="283,527,-3,0" VerticalAlignment="Top" Width="100"/>
+            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,-4,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Background="Black" Foreground="#FFF5770F" BorderBrush="#FFFFFF0F"/>
         </Grid>
 
     </Grid>

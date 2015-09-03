@@ -18,37 +18,37 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid HorizontalAlignment="Center" Height="620" Margin="15,10,5,0" VerticalAlignment="Top" Width="380" Grid.ColumnSpan="2">
-            <TextBlock TextWrapping="Wrap" Text="Add Reminder Description" FontSize="20" Margin="14,75,10,521"/>
-            <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="10,99,10,0" Height="15" RenderTransformOrigin="0.433,-6.125"/>
-            <TextBlock TextWrapping="Wrap" Text="Please provide due date" FontSize="20" Margin="10,141,10,448"/>
-            <DatePicker x:Name="dtpDate" Margin="11,177,0,388" HorizontalAlignment="Left" Width="360"/>
-            <Button Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click" Margin="11,227,6,338">
+        <Grid HorizontalAlignment="Center" Height="620" Margin="10,10,10,0" VerticalAlignment="Top" Width="380" Grid.ColumnSpan="2">
+            <TextBlock TextWrapping="Wrap" Text="Add Reminder Description" FontSize="20" Margin="10,88,10,503" Foreground="#FFF5770F"/>
+            <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="10,122,10,0" Height="45" RenderTransformOrigin="0.433,-6.125"/>
+            <TextBlock TextWrapping="Wrap" Text="Please provide due date" FontSize="20" Margin="10,172,10,420" Foreground="#FFF5770F"/>
+            <DatePicker x:Name="dtpDate" Margin="10,205,0,362" HorizontalAlignment="Left" Width="362" Foreground="#FFF5770F"/>
+            <Button Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click" Margin="7,253,7,305" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFDBE85A" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <ListBox x:Name="lstOutput" Margin="11,287,9,83"/>
-            <Button x:Name="btnTwo" Content="View 2 Days" HorizontalAlignment="Left" Margin="10,562,0,0" VerticalAlignment="Top" Width="174" Height="45" Click="btnTwo_Click">
+            <ListBox x:Name="lstOutput" Margin="10,323,10,83" Foreground="#FFF5770F"/>
+            <Button x:Name="btnTwo" Content="View 2 Days" HorizontalAlignment="Left" Margin="7,561,0,0" VerticalAlignment="Top" Width="174" Height="58" Click="btnTwo_Click" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF57E621" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnThree" Content="View 3 Days" HorizontalAlignment="Left" Margin="205,562,0,0" VerticalAlignment="Top" Width="165" Height="45" Click="btnThree_Click">
+            <Button x:Name="btnThree" Content="View 3 Days" HorizontalAlignment="Left" Margin="207,561,0,0" VerticalAlignment="Top" Width="165" Height="55" Click="btnThree_Click" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFE63523" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reminders" VerticalAlignment="Top" FontSize="40" Margin="114,10,0,0" Height="45" Width="180"/>
+            <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reminders" VerticalAlignment="Top" FontSize="40" Margin="114,14,0,0" Height="45" Width="180" Foreground="#FFF5770F"/>
         </Grid>
 
     </Grid>

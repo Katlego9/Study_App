@@ -47,6 +47,7 @@ namespace StudyApp
         {
             e.Handled = true;
             this.Frame.Navigate(typeof(MainPage));
+
         } 
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -71,53 +72,13 @@ namespace StudyApp
             await msgDisplay.ShowAsync();
         }
 
-        private void btnClear_Click(object sender, RoutedEventArgs e)
-        {
-            var objSubject = new SubjectViewModel();
-            var objReminder = new ReminderViewModel();
-            var objStudy = new StudyViewModel();
-            string output = (string)cmbOutput.SelectedItem;
-            string table = string.Empty;
-
-            try
-            {
-                if (output == "Progress")
-                {
-                    lsvOutput.Items.Clear();
-                    objSubject.RemoveSubject();
-
-                }
-                else if (output == "Reminders")
-                {
-                    lsvOutput.Items.Clear();
-                    objReminder.RemoveReminder();
-
-                }
-                else if (output == "StudyTime")
-                {
-                    lsvOutput.Items.Clear();
-                    objStudy.RemoveStudy();
-                }
-            }
-            catch(Exception ex)
-            {
-                if (output == "Progress")
-                    table = "Subjects";
-                else if (output == "Reminders")
-                    table = "Reminders";
-                else if (output == "StudyTime")
-                    table = "StudyTimes";
-
-                messageBox("error " + ex.Message + "\nPlease add " + table);
-            }
-        }
-
-        private void cmbOutput_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        private void cmbOutput_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string output = string.Empty;
             btnClear.IsEnabled = true;
 
             string status = string.Empty;
+
             try
             {
                 output = (string)cmbOutput.SelectedItem;
@@ -172,7 +133,7 @@ namespace StudyApp
                                     lsvOutput.Items.Add("Due Date: " + r.rDate);
                                 }
                                 btnClear.Content = "Delete all Reminders";
-
+                                
                             }
                             else
                             {
@@ -205,7 +166,7 @@ namespace StudyApp
                             }
                             else
                             {
-                                status = "No Studies in the database";
+                                status  ="No Studies in the database";
                             }
                         }
                         catch (Exception ex)
@@ -217,7 +178,7 @@ namespace StudyApp
                 }
                 else
                 {
-                    status = "No output is selected above";
+                    status  = "No output is selected above";
                 }
             }
             catch (Exception ex)
@@ -227,6 +188,47 @@ namespace StudyApp
 
             if (status != string.Empty)
                 messageBox(status);
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            var objSubject = new SubjectViewModel();
+            var objReminder = new ReminderViewModel();
+            var objStudy = new StudyViewModel();
+            string output = (string)cmbOutput.SelectedItem;
+            string table = string.Empty;
+
+            try
+            {
+                if (output == "Progress")
+                {
+                    lsvOutput.Items.Clear();
+                    objSubject.RemoveSubject();
+
+                }
+                else if (output == "Reminders")
+                {
+                    lsvOutput.Items.Clear();
+                    objReminder.RemoveReminder();
+
+                }
+                else if (output == "StudyTime")
+                {
+                    lsvOutput.Items.Clear();
+                    objStudy.RemoveStudy();
+                }
+            }
+            catch(Exception ex)
+            {
+                if (output == "Progress")
+                    table = "Subjects";
+                else if (output == "Reminders")
+                    table = "Reminders";
+                else if (output == "StudyTime")
+                    table = "StudyTimes";
+
+                messageBox("error " + ex.Message + "\nPlease add " + table);
+            }
         }
 
         private void lsvOutput_SelectionChanged(object sender, SelectionChangedEventArgs e)

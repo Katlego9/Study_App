@@ -32,6 +32,13 @@ namespace StudyApp
             Windows.Phone.UI.Input.HardwareButtons.BackPressed += OnBackPressed;
         }
 
+        private void OnBackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
+        {
+            e.Handled = true;
+            this.Frame.Navigate(typeof(LogIn));
+
+        } 
+
         private async void messageBox(string msg)
         {
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
@@ -56,13 +63,7 @@ namespace StudyApp
             }
             return status;
         }
-        private void OnBackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
-        {
-            e.Handled = true;
-            this.Frame.Navigate(typeof(LogIn));
-
-        } 
-
+    
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
             txbUsername.Text = string.Empty;
@@ -70,6 +71,7 @@ namespace StudyApp
             pwbConfirm.Password = string.Empty;
         }
 
+ 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var objRegister = new MemberViewModel();
@@ -91,10 +93,13 @@ namespace StudyApp
                     {
                         if (pass == confirm)
                         {
-
                             objRegister.SetMember(name, pass);
                             status = "Registration successful";
                             this.Frame.Navigate(typeof(LogIn));
+
+                            txbUsername.Text = string.Empty;
+                            pwbPass.Password = string.Empty;
+                            pwbConfirm.Password = string.Empty;
                         }
                         else
                         {
@@ -108,6 +113,7 @@ namespace StudyApp
                     {
                         status = "Please fill all the fields";
                     }
+                    
                 }
                 else
                 {
@@ -119,6 +125,7 @@ namespace StudyApp
             {
                 messageBox("error " + ex.Message);
             }
+            
         }
     }
 }

@@ -14,21 +14,25 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
         </Grid.Background>
-        <Grid HorizontalAlignment="Center" Height="546" Margin="10,51,13,0" VerticalAlignment="Top" Width="377">
-            <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Text="Please select the subject below" Margin="10,78,10,438" FontSize="20"/>
-            <ComboBox x:Name="cmbSubjects" Margin="10,108,10,391"/>
-            <TextBlock x:Name="txtMark" TextWrapping="Wrap" FontSize="20" Text="Please enter obtained mark:" Margin="10,160,10,359"/>
-            <TextBox x:Name="edtMark" Margin="10,187,10,321" TextWrapping="Wrap" VerticalAlignment="Stretch"/>
-            <Button x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnMark_Click" Margin="7,243,13,251">
+        <Grid HorizontalAlignment="Center" Height="748" Margin="507,10,482,0" VerticalAlignment="Top" Width="377">
+            <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Text="Please select the subject below" Margin="14.912,91.433,5.088,626.06" FontSize="20" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Foreground="#FFF5770F">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform SkewX="-1.096" TranslateX="-2.22"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <ComboBox x:Name="cmbSubjects" Margin="10,120,10,596" Height="32"/>
+            <TextBlock x:Name="txtMark" TextWrapping="Wrap" FontSize="20" Text="Please enter obtained mark:" Margin="10,172,10,548" Foreground="#FFF5770F"/>
+            <TextBox x:Name="edtMark" Margin="10,200,10,516" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="32"/>
+            <Button x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnMark_Click" Margin="7,245,7,453" Height="50" Foreground="#FFF5770F" BorderBrush="#FFFFFF0F">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF19E259" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBlock x:Name="txtHeading" HorizontalAlignment="Center" Margin="77,10,30,0" TextWrapping="Wrap" Text="Check Progress " VerticalAlignment="Top" FontSize="40" Width="270"/>
-            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,-4,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79"/>
+            <TextBlock x:Name="txtHeading" HorizontalAlignment="Center" Margin="118,14,91,0" TextWrapping="Wrap" Text="Progress " VerticalAlignment="Top" FontSize="40" Width="168" Foreground="#FFF5770F"/>
+            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,0,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Foreground="#FFF5770F" Background="Black" BorderBrush="#FFFFFF0F"/>
         </Grid>
 
     </Grid>

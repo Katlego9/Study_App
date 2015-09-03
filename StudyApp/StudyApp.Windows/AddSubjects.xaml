@@ -17,23 +17,23 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
         </Grid.Background>
-        <Grid HorizontalAlignment="Center" Height="576" Margin="10,38,10,0" VerticalAlignment="Top" Width="380">
-            <TextBlock x:Name="txtHeading1" HorizontalAlignment="Center" Margin="78,0,71,0" TextWrapping="Wrap" Text="Add Subjects" VerticalAlignment="Top" FontSize="40"/>
-            <TextBlock x:Name="txtHeading" TextWrapping="Wrap" FontSize="20" Margin="10,68,0,485" Text="Please provide the subject: "/>
-            <TextBox x:Name="txbSubject" Margin="10,96,10,442" TextWrapping="Wrap" VerticalAlignment="Stretch"/>
-            <TextBlock x:Name="txtGoal" HorizontalAlignment="Left" Margin="10,139,0,0" TextWrapping="Wrap" Text="Please provide goal mark:" VerticalAlignment="Top" FontSize="20"/>
-            <TextBox x:Name="txbGoalMark" TextWrapping="Wrap" Margin="10,168,10,376" Height="32"/>
-            <Button x:Name="btnAddSubject" Content="Add Subject" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="50" Click="btnAddSubject_Click" Margin="7,217,7,309">
+        <Grid HorizontalAlignment="Center" Height="748" Margin="493,10,493,0" VerticalAlignment="Top" Width="380">
+            <TextBlock x:Name="txtHeading1" HorizontalAlignment="Center" Margin="122,18,98,0" TextWrapping="Wrap" Text="Subjects" VerticalAlignment="Top" FontSize="40" Width="160" Foreground="#FFF5770F"/>
+            <TextBlock x:Name="txtHeading" TextWrapping="Wrap" FontSize="20" Margin="10,87,10,632" Text="Please provide the subject: " Foreground="#FFF5770F"/>
+            <TextBox x:Name="txbSubject" Margin="10,116,10,600" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="32"/>
+            <TextBlock x:Name="txtGoal" HorizontalAlignment="Left" Margin="10,165,0,0" TextWrapping="Wrap" Text="Please provide goal mark:" VerticalAlignment="Top" FontSize="20" Foreground="#FFF5770F" Height="29"/>
+            <TextBox x:Name="txbGoalMark" TextWrapping="Wrap" Margin="10,194,10,522" Height="32"/>
+            <Button x:Name="btnAddSubject" Content="Add Subject" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="50" Click="btnAddSubject_Click" Margin="7,245,7,453" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF861DC1" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <ListBox x:Name="lstOutput" Margin="10,301,10,10"/>
-            <TextBlock x:Name="txtOutput" HorizontalAlignment="Left" Margin="10,272,0,0" TextWrapping="Wrap" Text="Added subjects below:" VerticalAlignment="Top" FontSize="20"/>
-            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,-14,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79"/>
+            <ListBox x:Name="lstOutput" Margin="10,345,10,34"/>
+            <TextBlock x:Name="txtOutput" HorizontalAlignment="Left" Margin="10,316,0,0" TextWrapping="Wrap" Text="Added subjects below:" VerticalAlignment="Top" FontSize="20" Foreground="#FFF5770F"/>
+            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,4,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Foreground="#FFF5770F" BorderBrush="#FFFFFF0F" Background="Black"/>
         </Grid>
 
     </Grid>

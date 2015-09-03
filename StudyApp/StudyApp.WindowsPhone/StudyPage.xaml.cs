@@ -46,7 +46,7 @@ namespace StudyApp
             now = DateTime.Now.TimeOfDay;
             timer.Interval = new TimeSpan(0, 0, 0, 1);
             timer.Tick += Each_Tick;
-
+           
             Windows.Phone.UI.Input.HardwareButtons.BackPressed += OnBackPressed;
         }
 
@@ -54,6 +54,7 @@ namespace StudyApp
         {
             e.Handled = true;
             this.Frame.Navigate(typeof(MainPage));
+
         } 
 
         private async void messageBox(string msg)
