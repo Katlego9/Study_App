@@ -32,7 +32,6 @@
                 </Button.Background>
             </Button>
             <TextBlock x:Name="txtHeading" HorizontalAlignment="Center" Margin="118,14,91,0" TextWrapping="Wrap" Text="Progress " VerticalAlignment="Top" FontSize="40" Width="168" Foreground="#FFF5770F"/>
-            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,0,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Foreground="#FFF5770F" Background="Black" BorderBrush="#FFFFFF0F"/>
         </Grid>
 
     </Grid>

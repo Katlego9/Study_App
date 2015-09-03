@@ -160,6 +160,7 @@ D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\Cimbalino.Toolkit.Core.pdb
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\Cimbalino.Toolkit.Core.xml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\Cimbalino.Toolkit.Core.pri
+D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.csprojResolveAssemblyReference.cache
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.g.i.cs
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.g.cs
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.g.i.cs
@@ -182,6 +183,8 @@ D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.g.cs
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\XamlTypeInfo.g.cs
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.xaml
+D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.xbf
+D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\XamlSaveStateFile.xml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.xaml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\FogotPage.xaml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\LogIn.xaml
@@ -191,7 +194,6 @@ D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReminderPage.xaml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReportPage.xaml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.xaml
-D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\App.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\AddSubjects.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\FogotPage.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\LogIn.xbf
@@ -201,7 +203,6 @@ D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReminderPage.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ReportPage.xbf
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyPage.xbf
-D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\XamlSaveStateFile.xml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.exe
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.pdb
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.csproj.GenerateResource.Cache
@@ -219,4 +220,3 @@ D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\Cimbalino.Toolkit.pri.xml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\Cimbalino.Toolkit.Core.pri.xml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\ProjectArchitectures.txt
-D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\obj\x86\Debug\StudyApp.WindowsPhone.csprojResolveAssemblyReference.cache

@@ -14,41 +14,26 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
         </Grid.Background>
-        <Grid HorizontalAlignment="Center" Height="627" Margin="10,30,0,0" VerticalAlignment="Top" Width="380">
-            <TextBlock TextWrapping="Wrap" Text="Please select the subject to study:" Margin="13,56,7,537" FontSize="20"/>
-            <ComboBox x:Name="cmbSubjects" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="360"/>
-            <TextBlock x:Name="txtStartTime" HorizontalAlignment="Left" Margin="10,149,0,0" TextWrapping="Wrap" Text="Start Time:" VerticalAlignment="Top" Width="353" Height="28" FontSize="20"/>
-            <TimePicker x:Name="tmpStart" RenderTransformOrigin="0.513,1.853" Margin="10,177,10,397"/>
-            <TextBlock x:Name="txtEndTime" TextWrapping="Wrap" Text="End Time:" FontSize="20" Margin="10,235,10,363"/>
-            <TimePicker x:Name="tmpEnd" Margin="10,259,10,317"/>
-            <Button x:ConnectionId='1' x:Name="btnStart" Content="Start" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="10,316,10,254">
+        <Grid HorizontalAlignment="Center" Height="620" Margin="10,10,10,0" VerticalAlignment="Top" Width="380">
+            <TextBlock TextWrapping="Wrap" Text="Please select the subject to study:" Margin="10,89,10,497" FontSize="20" Foreground="#FFF5770F"/>
+            <ComboBox x:Name="cmbSubjects" Margin="10,118,10,450"/>
+            <TextBlock x:Name="txtStartTime" HorizontalAlignment="Left" Margin="10,175,0,0" TextWrapping="Wrap" Text="Start Time:" VerticalAlignment="Top" Width="360" Height="28" FontSize="20" Foreground="#FFF5770F"/>
+            <TimePicker x:Name="tmpStart" RenderTransformOrigin="0.513,1.853" Margin="10,201,10,368" Foreground="#FFF5770F"/>
+            <TextBlock x:Name="txtEndTime" TextWrapping="Wrap" Text="End Time:" FontSize="20" Margin="10,263,10,330" Foreground="#FFF5770F"/>
+            <TimePicker x:Name="tmpEnd" Margin="10,285,10,278" Foreground="#FFF5770F"/>
+            <Button x:ConnectionId='1' x:Name="btnStart" Content="Start" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="4,345,10,211" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF2646D4" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" Margin="115,3,0,0" TextWrapping="Wrap" Text="Study Time" VerticalAlignment="Top" FontSize="40" Width="211"/>
-            <ListBox HorizontalAlignment="Left" Height="121" Margin="13,378,0,0" VerticalAlignment="Top" Width="350">
-                <TextBlock x:Name="txtElapsedTime" TextWrapping="Wrap" Text="Elapsed Time:" FontSize="20" SelectionHighlightColor="#FF171719" Height="36" Width="333">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="#FF191616" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
-                </TextBlock>
-                <TextBlock x:Name="txtTime" TextWrapping="Wrap" FontSize="20" Height="38" Width="323" RenderTransformOrigin="0.508,-2.273">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="#FF1F1B1B" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
-                </TextBlock>
+            <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" Margin="89,10,0,0" TextWrapping="Wrap" Text="Study Time" VerticalAlignment="Top" FontSize="40" Width="211" Foreground="#FFF5770F"/>
+            <ListBox HorizontalAlignment="Left" Height="193" Margin="4,417,0,0" VerticalAlignment="Top" Width="366">
+                <TextBlock x:Name="txtElapsedTime" TextWrapping="Wrap" Text="Elapsed Time:" FontSize="20" SelectionHighlightColor="#FF171719" Height="36" Width="333" Foreground="#FFF5770F"/>
+                <TextBlock x:Name="txtTime" TextWrapping="Wrap" FontSize="20" Height="38" Width="323" RenderTransformOrigin="0.508,-2.273" Foreground="#FFF5770F"/>
             </ListBox>
-        
         </Grid>
 
     </Grid>

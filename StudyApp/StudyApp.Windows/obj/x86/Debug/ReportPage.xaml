@@ -18,23 +18,26 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Grid HorizontalAlignment="Center" Height="627" Margin="15,30,10,0" VerticalAlignment="Top" Width="375">
-            <TextBlock TextWrapping="Wrap" Text="Please select report output below" FontSize="20" Margin="10,82,9,520"/>
-            <ComboBox x:ConnectionId='1' x:Name="cmbOutput"                                               Margin="10,112,10,471"/>
-            <TextBlock TextWrapping="Wrap" Text="Output:" FontSize="20" Margin="13,170,6,428"/>
-            <ListView x:Name="lsvOutput" Margin="10,204,10,66">
+        <Grid HorizontalAlignment="Center" Height="748" Margin="498,10,493,0" VerticalAlignment="Top" Width="375">
+            <TextBlock TextWrapping="Wrap" Text="Please select report output below" FontSize="20" Margin="10,82,9,636" Foreground="#FFF5770F"/>
+            <ComboBox x:ConnectionId='1' x:Name="cmbOutput"                                               Margin="10,117,10,599" Height="32"/>
+            <TextBlock TextWrapping="Wrap" Text="Output:" FontSize="20" Margin="13,154,6,566" Foreground="#FFF5770F"/>
+            <ListView x:ConnectionId='2' x:Name="lsvOutput" Margin="14.402,189.074,14.548,76.448" FontSize="20" FontWeight="Bold"                                               RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Foreground="#FFF5770F">
+                <ListView.RenderTransform>
+                    <CompositeTransform SkewX="0.186" TranslateX="-0.743"/>
+                </ListView.RenderTransform>
                 <Grid Height="100" Width="100"/>
             </ListView>
-            <TextBlock x:Name="txtHeading" HorizontalAlignment="Right" TextWrapping="Wrap" Text="History" VerticalAlignment="Top" FontSize="40" Margin="0,5,127,0" Height="50" Width="133" RenderTransformOrigin="-1,0.5"/>
-            <Button x:ConnectionId='2' x:Name="btnClear" Content="Clear All" HorizontalAlignment="Left" Margin="10,569,0,0" VerticalAlignment="Top" Width="355"                       >
+            <TextBlock x:Name="txtHeading" HorizontalAlignment="Right" TextWrapping="Wrap" Text="History" VerticalAlignment="Top" FontSize="40" Margin="0,9,122,0" Height="50" Width="133" RenderTransformOrigin="-1,0.5" Foreground="#FFF5770F"/>
+            <Button x:ConnectionId='3' x:Name="btnClear" Content="Clear All" HorizontalAlignment="Left" Margin="10,683,0,0" VerticalAlignment="Top" Width="355"                        BorderBrush="#FFFFFF0F" Foreground="#FFF5770F" Height="50">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF40BD57" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <AppBarButton x:ConnectionId='3' x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,-9,0,0" VerticalAlignment="Top"                            Height="69" Width="79"/>
+            <AppBarButton x:ConnectionId='4' x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-17,-5,0,0" VerticalAlignment="Top"                            Height="69" Width="79" Foreground="#FFF5770F" BorderBrush="#FFFFFF0F"/>
         </Grid>
 
     </Grid>

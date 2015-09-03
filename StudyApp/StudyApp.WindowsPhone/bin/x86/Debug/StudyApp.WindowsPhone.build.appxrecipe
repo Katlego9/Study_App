@@ -61,21 +61,6 @@
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Shared\Images\Background.jpg">
       <PackagePath>Images\Background.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Shared\Images\each_own_quality_study_hour_books_abstract_hd-wallpaper-1797898.jpg">
-      <PackagePath>Images\each_own_quality_study_hour_books_abstract_hd-wallpaper-1797898.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Shared\Images\emotional-blast-328247.jpg">
-      <PackagePath>Images\emotional-blast-328247.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Shared\Images\kartandtinki1_study-wallpapers_06.jpg">
-      <PackagePath>Images\kartandtinki1_study-wallpapers_06.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Shared\Images\study-pen-wallpaper.jpg">
-      <PackagePath>Images\study-pen-wallpaper.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Shared\Images\thelibrary-571786.jpeg">
-      <PackagePath>Images\thelibrary-571786.jpeg</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.WindowsPhone\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>

@@ -39,7 +39,6 @@
             <PasswordBox x:Name="pwbPass" HorizontalAlignment="Left" Margin="117,165,0,0" VerticalAlignment="Top" Width="248"/>
             <PasswordBox x:Name="pwbConfirm" HorizontalAlignment="Left" Margin="117,233,0,0" VerticalAlignment="Top" Width="248"/>
             <Grid HorizontalAlignment="Left" Height="100" Margin="283,527,-3,0" VerticalAlignment="Top" Width="100"/>
-            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,-4,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Background="Black" Foreground="#FFF5770F" BorderBrush="#FFFFFF0F"/>
         </Grid>
 
     </Grid>

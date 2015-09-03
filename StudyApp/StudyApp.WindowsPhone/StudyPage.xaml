@@ -34,7 +34,6 @@
                 <TextBlock x:Name="txtElapsedTime" TextWrapping="Wrap" Text="Elapsed Time:" FontSize="20" SelectionHighlightColor="#FF171719" Height="36" Width="333" Foreground="#FFF5770F"/>
                 <TextBlock x:Name="txtTime" TextWrapping="Wrap" FontSize="20" Height="38" Width="323" RenderTransformOrigin="0.508,-2.273" Foreground="#FFF5770F"/>
             </ListBox>
-            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-30,-4,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Foreground="#FFF5770F"/>
         </Grid>
 
     </Grid>

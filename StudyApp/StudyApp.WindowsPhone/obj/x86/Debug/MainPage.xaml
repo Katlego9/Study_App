@@ -6,65 +6,68 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Page.Background>
-        <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
-    </Page.Background>
+    <Page.BorderBrush>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Page.BorderBrush>
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
+            <ImageBrush ImageSource="Images/Background.jpg" Stretch="Fill"/>
         </Grid.Background>
-        <Grid HorizontalAlignment="Center" Height="590" Margin="10,40,10,0" VerticalAlignment="Top" Width="380">
+        <Grid HorizontalAlignment="Center" Height="620" Margin="10,10,10,0" VerticalAlignment="Top" Width="380">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="35*"/>
                 <ColumnDefinition Width="41*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='1' x:Name="btnAdd" Content="Add Subject" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,67,12,443"                      Grid.ColumnSpan="2" Height="80">
+            <Button x:ConnectionId='1' x:Name="btnAdd" Content="Add Subject" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,76,4,454"                      Grid.ColumnSpan="2" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F" Height="90">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF1C9C39" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:ConnectionId='2' x:Name="btnStudy" Content="Study Time" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12,145,10,365"                        Grid.ColumnSpan="2" Height="80">
+            <Button x:ConnectionId='2' x:Name="btnStudy" Content="Study Time" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,155,4,375"                        Grid.ColumnSpan="2" BorderBrush="#FFFFFF0F" Foreground="#FFF57713" Height="90">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF6E5757" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:ConnectionId='3' x:Name="btnReminder" Content="Add Reminders" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12,221,10,289"                           Grid.ColumnSpan="2" Height="80">
+            <Button x:ConnectionId='3' x:Name="btnReminder" Content="Add Reminders" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,234,4,296"                           Grid.ColumnSpan="2" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F" Height="90">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFD32222" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:ConnectionId='4' x:Name="btnProgress" Content="Progress Marks" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12,295,10,215"                           Grid.ColumnSpan="2" Height="80">
+            <Button x:ConnectionId='4' x:Name="btnProgress" Content="Progress Marks" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="11,313,3,217"                           Grid.ColumnSpan="2" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F" Height="90">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF2047CF" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:ConnectionId='5' x:Name="btnReport" Content="HIstory" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="12,371,10,139"                         Grid.ColumnSpan="2" Height="80">
+            <Button x:ConnectionId='5' x:Name="btnReport" Content="HIstory" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,392,4,138"                         Grid.ColumnSpan="2" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F" Height="90">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFC3BF60" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBlock x:Name="txtMain" HorizontalAlignment="Left" Margin="93,10,0,0" TextWrapping="Wrap" Text="Main Menu" VerticalAlignment="Top" FontSize="40" Height="51" Width="212" Grid.ColumnSpan="2"/>
-            <Button x:ConnectionId='6' x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="14,446,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="356" Height="80"                        >
+            <TextBlock x:Name="txtMain" HorizontalAlignment="Left" Margin="89,10,0,0" TextWrapping="Wrap" Text="Main Menu" VerticalAlignment="Top" FontSize="40" Height="51" Width="212" Grid.ColumnSpan="2" Foreground="#FFF5770F"/>
+            <Button x:ConnectionId='6' x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="8,470,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="90" Width="366"                        BorderBrush="#FFFFFF0F" Foreground="#FFF5770F">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFD18604" Offset="1"/>
+                        <GradientStop Color="#FFD6982C" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
