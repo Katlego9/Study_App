@@ -29,8 +29,8 @@ namespace StudyApp.Subjects
                 subjects = new ObservableCollection<SubjectViewModel>();
                 using (var db = new SQLite.SQLiteConnection(app.dbPath))
                 {
-                    var query = db.Table<Subject>().OrderBy(c => c.SbjName);
-                    foreach (var _subject in query)
+                    var q = db.Query<Subject>("select * from subject");
+                    foreach (var _subject in q)
                     {
                         var subject = new SubjectViewModel()
                         {

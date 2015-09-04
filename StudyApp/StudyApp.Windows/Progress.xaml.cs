@@ -84,17 +84,16 @@ namespace StudyApp
             try
             {
                 bool isNumeric = int.TryParse(edtMark.Text, out verifyNum);
+                studyName = (string)cmbSubjects.SelectedItem;
 
-                if (isNumeric == true)
+                var confirm = objSubject.getSubject(studyName);
+                if (confirm != null)
                 {
-                    studyName = (string)cmbSubjects.SelectedItem;
-                    mark = Convert.ToInt16(edtMark.Text);
-
-                    if ((mark > 0) && (mark <= 100))
+                    if (isNumeric == true)
                     {
+                        mark = Convert.ToInt16(edtMark.Text);
 
-                        var confirm = objSubject.getSubject(studyName);
-                        if (confirm != null)
+                        if ((mark > 0) && (mark <= 100))
                         {
                             if (mark > confirm.SbjMark)
                             {
@@ -113,20 +112,21 @@ namespace StudyApp
                             }
                             objSubject.UpdateSubject(studyName, mark, Performance);
                             messageBox(status);
+
                         }
                         else
                         {
-                            messageBox("Please select a subject");
+                            messageBox("Please specify a number between 0 and 100");
                         }
                     }
                     else
                     {
-                        messageBox("Please specify a number between 0 and 100");
+                        messageBox("Please specify a numeric obtained mark");
                     }
                 }
                 else
                 {
-                    messageBox("Please specify a numeric obtained mark");
+                    messageBox("Please select a subject");
                 }
             }
             catch (Exception ex)

@@ -141,7 +141,6 @@
       <RootProperty Name="UseLayoutRounding" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="RenderTransform" />
-      <RootProperty Name="Items" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="StudyApp.ReportPage" />

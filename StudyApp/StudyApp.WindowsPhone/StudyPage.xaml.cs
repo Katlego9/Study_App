@@ -46,7 +46,7 @@ namespace StudyApp
             now = DateTime.Now.TimeOfDay;
             timer.Interval = new TimeSpan(0, 0, 0, 1);
             timer.Tick += Each_Tick;
-           
+
             Windows.Phone.UI.Input.HardwareButtons.BackPressed += OnBackPressed;
         }
 
@@ -55,7 +55,7 @@ namespace StudyApp
             e.Handled = true;
             this.Frame.Navigate(typeof(MainPage));
 
-        } 
+        }
 
         private async void messageBox(string msg)
         {
@@ -65,24 +65,30 @@ namespace StudyApp
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             cmbSubjects.Items.Clear();
-            tmpStart.IsEnabled = false;
             SubjectModel = new SubjectsViewModel();
 
             string status = string.Empty;
 
             try
             {
-                subjets = SubjectModel.GetAllSubjects();
-                if (subjets != null)
+                if (timer.IsEnabled == false)
                 {
-                    foreach (var s in subjets)
+                    subjets = SubjectModel.GetAllSubjects();
+                    if (subjets != null)
                     {
-                        cmbSubjects.Items.Add(s.SbjName);
+                        foreach (var s in subjets)
+                        {
+                            cmbSubjects.Items.Add(s.SbjName);
+                        }
+                    }
+                    else
+                    {
+                        status = "No Subjects in the database";
                     }
                 }
                 else
                 {
-                    status  = "No Subjects in the database";
+                    status = "Study Time has already been started, please try again after time it is finished";
                 }
             }
             catch (Exception ex)
@@ -125,39 +131,60 @@ namespace StudyApp
             var now = DateTime.Now.TimeOfDay;
             var timeDifference = TimeSpan.Zero;
 
-
-
-            if (now < studyStartTime)
+            if (txtTime.Text != "It is now Time to finish studying!!")
             {
-                timeDifference = studyStartTime - now;
-                txtElapsedTime.Text = "Time to start studying is in...";
-                TimeTrimmer(timeDifference);
-            }
+                if (now < studyStartTime)
+                {
+                    timeDifference = studyStartTime - now;
+                    txtElapsedTime.Text = "Time to start studying is in...";
+                    TimeTrimmer(timeDifference);
+                }
 
-            if (now > studyStartTime && now < studyEndTime)
-            {
-                txtElapsedTime.Text = "Yay!";
-                txtTime.Text = "It is now Time to start studying!!";
-            }
+                if (now > studyStartTime && now < studyEndTime)
+                {
+                    txtElapsedTime.Text = "Yay!";
+                    txtTime.Text = "It is now Time to start studying!!";
+                }
 
-            if (now > studyEndTime && now < studyStartTime1)
-            {
-                timeDifference = studyStartTime1 - now;
-                txtElapsedTime.Text = "Studying has started: Elapsed time is in...";
-                TimeTrimmer(timeDifference);
-            }
+                if (now > studyEndTime && now < studyStartTime1)
+                {
+                    timeDifference = studyStartTime1 - now;
+                    txtElapsedTime.Text = "Studying has started: Elapsed time is in...";
+                    TimeTrimmer(timeDifference);
+                }
 
-            if (now > studyStartTime1 && now < studyEndTime1)
-            {
-                txtElapsedTime.Text = "Yay!";
-                txtTime.Text = "It is now Time to finish studying!!";
+                if (now > studyStartTime1 && now < studyEndTime1)
+                {
+                    txtElapsedTime.Text = "Yay!";
+                    txtTime.Text = "It is now Time to finish studying!!";
+                }
             }
+            else
+            {
+                timer.Stop();
+            }
+        }
+
+        public bool FutureTime()
+        {
+            if (tmpStart.Time > DateTime.Now.TimeOfDay)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool GreaterEndTime()
+        {
+            if (tmpEnd.Time > tmpStart.Time)
+            {
+                return true;
+            }
+            return false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            timer.Start();
-
             var studyStartTime = tmpStart.Time;
             var studyEndTime = studyStartTime + TimeSpan.FromSeconds(10);
 
@@ -167,21 +194,39 @@ namespace StudyApp
             time = studyEndTime1 - studyEndTime;
             var objStudy = new StudyViewModel();
             string studyName = string.Empty;
-            
+
+            var objSubject = new SubjectViewModel();
             string status = string.Empty;
+            studyName = (string)cmbSubjects.SelectedItem;
 
             try
             {
                 studyName = (string)cmbSubjects.SelectedItem;
-                if (studyName != string.Empty)
+
+                var confirm = objSubject.getSubject(studyName);
+                if (confirm != null)
                 {
+                    if (FutureTime())
+                    {
+                        if (GreaterEndTime())
+                        {
+                            objStudy.SetStudy(studyName, time.ToString());
+                            timer.Start();
 
-                    objStudy.SetStudy(studyName, time.ToString());
-
+                        }
+                        else
+                        {
+                            status = "End time must be greater than the start time";
+                        }
+                    }
+                    else
+                    {
+                        status = "Start time must be greater than the current time";
+                    }
                 }
                 else
                 {
-                    status  = "Please select a subject to study";
+                    status = "Please select a subject to study";
                 }
             }
             catch (Exception ex)
@@ -191,7 +236,6 @@ namespace StudyApp
 
             if (status != string.Empty)
                 messageBox(status);
-
         }
     }
 }

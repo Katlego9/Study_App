@@ -45,11 +45,11 @@ namespace StudyApp
         {
             try
             {
-                  cmbOutput.Items.Clear();
-                  cmbOutput.Items.Add("Progress");
-                  cmbOutput.Items.Add("Reminders");
-                  cmbOutput.Items.Add("StudyTime");
-                  btnClear.IsEnabled = false;
+                cmbOutput.Items.Clear();
+                cmbOutput.Items.Add("Progress");
+                cmbOutput.Items.Add("Reminders");
+                cmbOutput.Items.Add("StudyTime");
+                btnClear.Visibility = Visibility.Collapsed;
             }
             catch (Exception ex)
             {
@@ -79,39 +79,32 @@ namespace StudyApp
                     if (output == "Progress")
                     {
                         SubjectModel = new SubjectsViewModel();
-                        try
-                        {
-                            subjets = SubjectModel.GetAllSubjects();
-                            if (subjets != null)
-                            {
-                                lsvOutput.Items.Clear();
-                                foreach (var s in subjets)
-                                {
-                                    lsvOutput.Items.Add("=========================");
-                                    lsvOutput.Items.Add("Progress Details");
-                                    lsvOutput.Items.Add("Name: " + s.SbjName);
-                                    lsvOutput.Items.Add("Goal Mark: " + s.SbjMark);
-                                    lsvOutput.Items.Add("Obtained Mark: " + s.ObtainMark);
-                                    lsvOutput.Items.Add("Performance: " + s.Performance);
-                                }
-                                btnClear.Content = "Delete all Subjects";
+                        subjets = SubjectModel.GetAllSubjects();
 
-                            }
-                            else
-                            {
-                                status = "No Subjects in the database";
-                            }
-                        }
-                        catch (Exception ex)
+                        if (subjets != null)
                         {
-                            messageBox("error " + ex.Message);
+                            lsvOutput.Items.Clear();
+                            lsvOutput.Items.Add("Boo");
+                            foreach (var s in subjets)
+                            {
+                                lsvOutput.Items.Add("=========================");
+                                lsvOutput.Items.Add("Progress Details");
+                                lsvOutput.Items.Add("Name: " + s.SbjName);
+                                lsvOutput.Items.Add("Goal Mark: " + s.SbjMark);
+                                lsvOutput.Items.Add("Obtained Mark: " + s.ObtainMark);
+                                lsvOutput.Items.Add("Performance: " + s.Performance);
+                            }
+                            btnClear.Content = "Delete all Subjects";
+                        }
+                        else
+                        {
+                            status = "No Subjects found";
                         }
                     }
-                    else if (output == "Reminders")
+                   else if (output == "Reminders")
                     {
                         ReminderModel = new RemindersViewModel();
-                        try
-                        {
+                       
                             reminders = ReminderModel.GetAllReminders();
                             if (reminders != null)
                             {
@@ -124,23 +117,16 @@ namespace StudyApp
                                     lsvOutput.Items.Add("Due Date: " + r.rDate);
                                 }
                                 btnClear.Content = "Delete all Reminders";
-                                
                             }
                             else
                             {
-                                status = "No Reminders in the database";
+                                status = "No Reminders found";
                             }
-                        }
-                        catch (Exception ex)
-                        {
-                            messageBox("error " + ex.Message);
-                        }
                     }
                     else if (output == "StudyTime")
                     {
                         StudyModel = new StudysViewModel();
-                        try
-                        {
+                        
                             study = StudyModel.GetAllStudies();
                             if (study != null)
                             {
@@ -157,19 +143,14 @@ namespace StudyApp
                             }
                             else
                             {
-                                status  ="No Studies in the database";
+                                status = "No Studies found";
                             }
-                        }
-                        catch (Exception ex)
-                        {
-                            messageBox("error " + ex.Message);
-                        }
                     }
-
+                   
                 }
                 else
                 {
-                    status  = "No output is selected above";
+                    status = "No output is selected above";
                 }
             }
             catch (Exception ex)
@@ -179,6 +160,7 @@ namespace StudyApp
 
             if (status != string.Empty)
                 messageBox(status);
+            btnClear.Visibility = Visibility.Visible;
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
@@ -201,15 +183,15 @@ namespace StudyApp
                 {
                     lsvOutput.Items.Clear();
                     objReminder.RemoveReminder();
-
                 }
                 else if (output == "StudyTime")
                 {
                     lsvOutput.Items.Clear();
                     objStudy.RemoveStudy();
                 }
+                btnClear.Visibility = Visibility.Collapsed;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 if (output == "Progress")
                     table = "Subjects";
