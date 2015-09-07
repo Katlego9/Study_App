@@ -15,28 +15,28 @@
             <ImageBrush Stretch="Fill" ImageSource="Images/emotional-blast-328247.jpg"/>
         </Grid.Background>
         <Grid HorizontalAlignment="Center" Height="620" Margin="10,10,10,0" VerticalAlignment="Top" Width="380">
-            <TextBlock x:Name="txtUsername" HorizontalAlignment="Left" Margin="10,110,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontSize="18" Foreground="#FFF5770F"/>
-            <TextBlock x:Name="txtPAss" HorizontalAlignment="Left" Margin="10,167,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="18" Foreground="#FFF5770F"/>
+            <TextBlock x:Name="txtUsername" HorizontalAlignment="Left" Margin="10,110,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontSize="18" Foreground="#FFF1E0D9"/>
+            <TextBlock x:Name="txtPAss" HorizontalAlignment="Left" Margin="10,167,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="18" Foreground="#FFF1E0D9"/>
             <TextBox x:Name="txbName" HorizontalAlignment="Left" Margin="115,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255"/>
-            <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="7,257,0,0" VerticalAlignment="Top" Width="366" Click="Button_Click" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F" Height="50">
+            <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="7,257,0,0" VerticalAlignment="Top" Width="366" Click="Button_Click" BorderBrush="#FF403D39" Foreground="#FFF1E0D9" Height="50">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFD6982C" Offset="1"/>
+                        <GradientStop Color="#FF936413" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBlock Margin="10,23,268,0" TextWrapping="Wrap" Text="Login" FontSize="40" Width="102" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF5770F" RenderTransformOrigin="0.466,-0.227"/>
-            <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="7,320,0,0" VerticalAlignment="Top" Width="366" Click="Button_Click_1" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F" Height="50">
+            <TextBlock Margin="145,10,133,0" TextWrapping="Wrap" Text="Login" FontSize="40" Width="102" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF1E0D9" RenderTransformOrigin="0.466,-0.227"/>
+            <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="7,320,0,0" VerticalAlignment="Top" Width="366" Click="Button_Click_1" BorderBrush="#FF403D39" Foreground="#FFF1E0D9" Height="50">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFD6982C" Offset="1"/>
+                        <GradientStop Color="#FF936413" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
             <PasswordBox x:Name="pwbPass" HorizontalAlignment="Left" Margin="115,157,0,0" VerticalAlignment="Top" Width="255"/>
-            <HyperlinkButton x:Name="hpbForgot" Content="Forgot Password.." HorizontalAlignment="Left" Margin="15,205,0,0" VerticalAlignment="Top" FontSize="17" Width="354" Click="hpbForgot_Click" Foreground="#FFF5770F"/>
+            <HyperlinkButton x:Name="hpbForgot" Content="Forgot Password.." HorizontalAlignment="Left" Margin="15,205,0,0" VerticalAlignment="Top" FontSize="17" Width="354" Click="hpbForgot_Click" Foreground="#FFF1E0D9"/>
         </Grid>
 
     </Grid>

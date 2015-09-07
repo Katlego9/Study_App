@@ -63,7 +63,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="Margin" />
-      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
@@ -104,6 +104,7 @@
     <RootType FullName="StudyApp.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Margin" />
+      <RootProperty Name="Foreground" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
@@ -116,7 +117,6 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="StudyApp.ReminderPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
@@ -125,7 +125,6 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="UseLayoutRounding" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="RenderTransform" />
       <RootProperty Name="Items" />
       <RootEvent Name="SelectionChanged" />
@@ -134,7 +133,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="StudyApp.StudyPage" />
   </Roots.RootTypes>

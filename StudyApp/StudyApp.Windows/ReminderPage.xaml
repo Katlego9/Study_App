@@ -18,38 +18,39 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid HorizontalAlignment="Center" Height="748" Margin="498,10,488,0" VerticalAlignment="Top" Width="380" Grid.ColumnSpan="2">
-            <TextBlock TextWrapping="Wrap" Text="Add Reminder Description" FontSize="20" Margin="10,88,10,631" Foreground="#FFF5770F"/>
-            <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="10,122,10,594" Height="32" RenderTransformOrigin="0.433,-6.125"/>
-            <TextBlock TextWrapping="Wrap" Text="Please provide due date" FontSize="20" Margin="10,172,10,548" Foreground="#FFF5770F"/>
-            <DatePicker x:Name="dtpDate" Margin="10,205,0,511" HorizontalAlignment="Left" Width="362" Foreground="#FFF5770F"/>
-            <Button Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click" Margin="7,253,7,445" Height="50" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F">
+        <Grid HorizontalAlignment="Center" Height="748" Margin="222,10,198,0" VerticalAlignment="Top" Width="946" Grid.ColumnSpan="2">
+            <TextBlock TextWrapping="Wrap" Text="Add Reminder Description" FontSize="30" Margin="10,88,504,631" Foreground="#FFF1E0D9" RenderTransformOrigin="0.458,0.532"/>
+            <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="10,135,504,581" Height="32" RenderTransformOrigin="0.433,-6.125"/>
+            <TextBlock TextWrapping="Wrap" Text="Please provide due date" FontSize="30" Margin="10,190,582,509" Foreground="#FFF1E0D9"/>
+            <DatePicker x:Name="dtpDate" Margin="10,239,0,459" HorizontalAlignment="Left" Width="477" FontSize="30" Height="50"/>
+            <Button Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click" Margin="7,318,501,380" Height="50" BorderBrush="#FF403D39" Foreground="#FFF1E0D9" FontSize="20">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFD6982C" Offset="1"/>
+                        <GradientStop Color="#FF936413" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <ListBox x:Name="lstOutput" Margin="10,323,10,83" Foreground="#FFF5770F"/>
-            <Button x:Name="btnTwo" Content="View 2 Days" HorizontalAlignment="Left" Margin="11,679,0,0" VerticalAlignment="Top" Width="174" Height="50" Click="btnTwo_Click" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F">
+            <ListBox x:Name="lstOutput" Margin="507,135,-40,99" FontSize="20"/>
+            <Button x:Name="btnTwo" Content="View 2 Days" HorizontalAlignment="Left" Margin="764,679,-43,0" VerticalAlignment="Top" Width="225" Height="50" Click="btnTwo_Click" BorderBrush="#FF403D39" Foreground="#FFF1E0D9" FontSize="20">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFD6982C" Offset="1"/>
+                        <GradientStop Color="#FF936413" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnThree" Content="View 3 Days" HorizontalAlignment="Left" Margin="208,679,0,0" VerticalAlignment="Top" Width="165" Height="50" Click="btnThree_Click" BorderBrush="#FFFFFF0F" Foreground="#FFF5770F">
+            <Button x:Name="btnThree" Content="View 3 Days" HorizontalAlignment="Left" Margin="504,679,0,0" VerticalAlignment="Top" Width="225" Height="50" Click="btnThree_Click" BorderBrush="#FF403D39" Foreground="#FFF1E0D9" RenderTransformOrigin="1.137,5.511" FontSize="20">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFD6982C" Offset="1"/>
+                        <GradientStop Color="#FF936413" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reminders" VerticalAlignment="Top" FontSize="40" Margin="114,14,0,0" Height="45" Width="180" Foreground="#FFF5770F"/>
-            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,0,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Background="Black" Foreground="#FFF5770F" BorderBrush="#FFFFFF0F"/>
+            <TextBlock x:Name="txtHeading" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Reminders" VerticalAlignment="Top" FontSize="40" Margin="114,14,0,0" Height="45" Width="180" Foreground="#FFF1E0D9"/>
+            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,0,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Background="#FF936413" Foreground="#FFF1E0D9" BorderBrush="#FF403D39"/>
+            <TextBlock x:Name="txtOutput" HorizontalAlignment="Left" Margin="507,90,0,0" TextWrapping="Wrap" Text="Reminders Due:" VerticalAlignment="Top" FontSize="30" Foreground="#FFF1E0D9"/>
         </Grid>
 
     </Grid>

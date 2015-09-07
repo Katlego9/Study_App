@@ -92,7 +92,6 @@ namespace StudyApp
                         if (subjets != null)
                         {
                             lsvOutput.Items.Clear();
-                            lsvOutput.Items.Add("Boo");
                             foreach (var s in subjets)
                             {
                                 lsvOutput.Items.Add("=========================");

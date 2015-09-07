@@ -23,6 +23,8 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
@@ -56,6 +58,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="Background" />
       <RootProperty Name="Width" />
       <RootProperty Name="RenderTransformOrigin" />
@@ -63,7 +66,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="Margin" />
-      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
@@ -102,6 +105,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
       <RootProperty Name="Content" />
@@ -123,6 +127,7 @@
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
       <RootProperty Name="SkewX" />
       <RootProperty Name="TranslateX" />
+      <RootProperty Name="Rotation" />
     </RootType>
     <RootType FullName="StudyApp.Progress" />
     <RootType FullName="StudyApp.Register" />
@@ -130,16 +135,15 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="StudyApp.ReminderPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Margin" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="FontWeight" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="UseLayoutRounding" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="RenderTransform" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
@@ -148,7 +152,7 @@
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="StudyApp.StudyPage" />
