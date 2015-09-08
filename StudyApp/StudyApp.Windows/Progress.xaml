@@ -14,16 +14,21 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Images/Background.jpg"/>
         </Grid.Background>
-        <Grid HorizontalAlignment="Center" Height="748" Margin="507,10,482,0" VerticalAlignment="Top" Width="377">
-            <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Text="Please select the subject below" Margin="14.826,111.433,5.174,597.06" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Foreground="#FFF1E0D9">
+        <Grid HorizontalAlignment="Center" Height="748" Margin="507,10,451,0" VerticalAlignment="Top" Width="408">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90*"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="239*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Text="Please select the subject:" Margin="-206.145,160,245.455,70.493" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Foreground="#FFF1E0D9" Grid.RowSpan="2">
                 <TextBlock.RenderTransform>
                     <CompositeTransform SkewX="-1.096" TranslateX="-2.22"/>
                 </TextBlock.RenderTransform>
             </TextBlock>
-            <ComboBox x:Name="cmbSubjects" Margin="10,157,10,559" Height="32"/>
-            <TextBlock x:Name="txtMark" TextWrapping="Wrap" FontSize="30" Text="Please enter obtained mark:" Margin="10,194,10,513" Foreground="#FFF1E0D9"/>
-            <TextBox x:Name="edtMark" Margin="10,240,10,476" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="32"/>
-            <Button x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnMark_Click" Margin="7,315,7,383" Height="50" Foreground="#FFF1E0D9" BorderBrush="#FF403D39" FontSize="20">
+            <ComboBox x:Name="cmbSubjects" Margin="-207,22,245,36" Height="32" Grid.Row="1"/>
+            <TextBlock x:Name="txtMark" TextWrapping="Wrap" FontSize="30" Text="Please enter obtained mark:" Margin="264,161,-270,68" Foreground="#FFF1E0D9" Grid.RowSpan="2"/>
+            <TextBox x:Name="edtMark" Margin="264,22,-226,36" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="32" Grid.Row="1"/>
+            <Button x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnMark_Click" Margin="35,7,-3,421" Height="50" Foreground="#FFF1E0D9" BorderBrush="#FF403D39" FontSize="20" Grid.Row="2">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -31,8 +36,8 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBlock x:Name="txtHeading" HorizontalAlignment="Center" Margin="118,14,91,0" TextWrapping="Wrap" Text="Progress " VerticalAlignment="Top" FontSize="40" Width="168" Foreground="#FFF1E0D9"/>
-            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-20,0,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Foreground="#FFF1E0D9" Background="#FF936413" BorderBrush="#FF403D39"/>
+            <TextBlock x:Name="txtHeading" HorizontalAlignment="Center" Margin="-362,5,440,0" TextWrapping="Wrap" Text="Progress " VerticalAlignment="Top" FontSize="80" Width="330" Foreground="#FFF1E0D9"/>
+            <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-472,11,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Foreground="#FFF1E0D9" Background="#FF936413" BorderBrush="#FF403D39"/>
         </Grid>
 
     </Grid>

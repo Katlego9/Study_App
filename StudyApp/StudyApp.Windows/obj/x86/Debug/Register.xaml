@@ -39,7 +39,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <TextBlock HorizontalAlignment="Left" Margin="331,10,0,0" TextWrapping="Wrap" Text="Register" VerticalAlignment="Top" FontSize="40" Foreground="#FFF1E0D9"/>
+            <TextBlock HorizontalAlignment="Left" Margin="97,2,0,0" TextWrapping="Wrap" Text="Register" VerticalAlignment="Top" FontSize="40" Foreground="#FFF1E0D9"/>
             <PasswordBox x:Name="pwbPass" HorizontalAlignment="Left" Margin="406,154,0,0" VerticalAlignment="Top" Width="373"/>
             <PasswordBox x:Name="pwbConfirm" HorizontalAlignment="Left" Margin="415,257,0,0" VerticalAlignment="Top" Width="364"/>
             <Grid HorizontalAlignment="Left" Height="100" Margin="283,527,-3,0" VerticalAlignment="Top" Width="100"/>
