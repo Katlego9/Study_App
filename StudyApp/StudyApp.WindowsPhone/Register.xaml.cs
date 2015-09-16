@@ -39,11 +39,13 @@ namespace StudyApp
 
         } 
 
-        private async void messageBox(string msg)
+         private async void messageBox(string msg)
         {
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
             await msgDisplay.ShowAsync();
         }
+
+
         private bool verifyDuplication(string name)
         {
             bool status = false;
@@ -125,7 +127,6 @@ namespace StudyApp
             {
                 messageBox("error " + ex.Message);
             }
-            
         }
     }
 }

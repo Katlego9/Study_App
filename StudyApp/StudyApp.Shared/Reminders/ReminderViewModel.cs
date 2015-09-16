@@ -63,36 +63,36 @@ namespace StudyApp.Reminders
 
         private StudyApp.App app = (Application.Current as App);
 
-        public Reminder getReminder(string rName)
+        public Reminder getReminder(string rName, int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _rem = db.Query<Reminder>("Select * from Reminder Where rName ='" + rName + "'").FirstOrDefault();
+                var _rem = db.Query<Reminder>("Select * from Reminder Where rName ='" + rName + "' AND MemID =  '"+CurrentID + "'").FirstOrDefault();
                 return _rem;
 
             }
         }
 
-        public Reminder getDate(string date)
+        public Reminder getDate(string date, int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _rem = db.Query<Reminder>("Select * from Reminder Where rDate = '" + date + "'").FirstOrDefault();
+                var _rem = db.Query<Reminder>("Select * from Reminder Where rDate = '" + date + "' AND MemID = '" + CurrentID + "' ").FirstOrDefault();
                 return _rem;
 
             }
         }
 
-        public Reminder RemoveReminder()
+        public Reminder RemoveReminder(int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _sub = db.Query<Reminder>("Delete From Reminder").FirstOrDefault();
+                var _sub = db.Query<Reminder>("Delete From Reminder Where MemID = '" + CurrentID + "'").FirstOrDefault();
                 return _sub;
 
             }
         }
-        public void SetReminder(string Name, string Date)
+        public void SetReminder(string Name, string Date, int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
@@ -101,6 +101,7 @@ namespace StudyApp.Reminders
                     Id = 0,
                     rName = Name,
                     rDate = Date,
+                    MemID = CurrentID,
                 });
             }
 

@@ -13,6 +13,7 @@ namespace StudyApp.Subjects
         public int SbjMark { get; set; }
         public int ObtainMark { get; set; }
         public string Performance { get; set; }
+        public int MemID { get; set; }
 
     }
 }

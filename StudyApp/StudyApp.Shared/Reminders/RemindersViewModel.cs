@@ -25,12 +25,12 @@ namespace StudyApp.Reminders
             private StudyApp.App app = (Application.Current as App);
 
           
-            public ObservableCollection<ReminderViewModel> GetAllReminders()
+            public ObservableCollection<ReminderViewModel> GetAllReminders(int CurrentID)
             {
                 reminder = new ObservableCollection<ReminderViewModel>();
                 using (var db = new SQLite.SQLiteConnection(app.dbPath))
                 {
-                    var q = db.Query<Reminder>("select * from reminder");
+                    var q = db.Query<Reminder>("select * from reminder where MemID = "+CurrentID+" ");
                     foreach (var _reminder in q)
                     {
                         var reminders = new ReminderViewModel()

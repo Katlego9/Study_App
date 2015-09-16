@@ -26,6 +26,7 @@ namespace StudyApp
     {
         SubjectsViewModel SubjectModel = null;
         ObservableCollection<SubjectViewModel> subjets = null;
+        int GetID = 0;
         public Progress()
         {
             this.InitializeComponent();
@@ -37,8 +38,10 @@ namespace StudyApp
            
             try
             {
+                base.OnNavigatedTo(e);
+                GetID = (int)e.Parameter;
                 SubjectModel = new SubjectsViewModel();
-                subjets = SubjectModel.GetAllSubjects();
+                subjets = SubjectModel.GetAllSubjects(GetID);
 
                 if (subjets != null) 
                 {
@@ -60,7 +63,7 @@ namespace StudyApp
             if (status != string.Empty)
                 messageBox(status);
 
-            base.OnNavigatedTo(e);
+         
         }
 
         private async void messageBox(string msg)
@@ -86,7 +89,7 @@ namespace StudyApp
                 bool isNumeric = int.TryParse(edtMark.Text, out verifyNum);
                 studyName = (string)cmbSubjects.SelectedItem;
 
-                var confirm = objSubject.getSubject(studyName);
+                var confirm = objSubject.getSubject(studyName,GetID);
                 if (confirm != null)
                 {
                     if (isNumeric == true)
@@ -110,7 +113,7 @@ namespace StudyApp
                                 Performance = "Badly";
                                 status = "Performing badly than the goal mark of " + Convert.ToString(confirm.SbjMark);
                             }
-                            objSubject.UpdateSubject(studyName, mark, Performance);
+                            objSubject.UpdateSubject(studyName, mark, Performance,GetID);
                             messageBox(status);
 
                         }
@@ -137,7 +140,7 @@ namespace StudyApp
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(MainPage),GetID);
         }
      }
 }

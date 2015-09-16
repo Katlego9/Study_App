@@ -36,6 +36,8 @@ namespace StudyApp
         StudysViewModel StudyModel = null;
         ObservableCollection<StudyViewModel> study = null;
 
+        int GetID = 0;
+
         public ReportPage()
         {
             this.InitializeComponent();
@@ -46,18 +48,21 @@ namespace StudyApp
         private void OnBackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
         {
             e.Handled = true;
-            this.Frame.Navigate(typeof(MainPage));
-        } 
+            this.Frame.Navigate(typeof(MainPage),GetID);
+        }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             try
             {
-                  cmbOutput.Items.Clear();
-                  cmbOutput.Items.Add("Progress");
-                  cmbOutput.Items.Add("Reminders");
-                  cmbOutput.Items.Add("StudyTime");
-                  btnClear.Visibility = Visibility.Collapsed;
+                base.OnNavigatedTo(e);
+                GetID = (int)e.Parameter;
+
+                cmbOutput.Items.Clear();
+                cmbOutput.Items.Add("Progress");
+                cmbOutput.Items.Add("Reminders");
+                cmbOutput.Items.Add("StudyTime");
+                btnClear.Visibility = Visibility.Collapsed;
             }
             catch (Exception ex)
             {
@@ -87,7 +92,7 @@ namespace StudyApp
                     if (output == "Progress")
                     {
                         SubjectModel = new SubjectsViewModel();
-                        subjets = SubjectModel.GetAllSubjects();
+                        subjets = SubjectModel.GetAllSubjects(GetID);
 
                         if (subjets != null)
                         {
@@ -108,52 +113,52 @@ namespace StudyApp
                             status = "No Subjects found";
                         }
                     }
-                    else if (output == "Reminders")
+                   else if (output == "Reminders")
                     {
                         ReminderModel = new RemindersViewModel();
-
-                        reminders = ReminderModel.GetAllReminders();
-                        if (reminders != null)
-                        {
-                            lsvOutput.Items.Clear();
-                            foreach (var r in reminders)
+                       
+                            reminders = ReminderModel.GetAllReminders(GetID);
+                            if (reminders != null)
                             {
-                                lsvOutput.Items.Add("=========================");
-                                lsvOutput.Items.Add("Reminder Details");
-                                lsvOutput.Items.Add("Name: " + r.rName);
-                                lsvOutput.Items.Add("Due Date: " + r.rDate);
+                                lsvOutput.Items.Clear();
+                                foreach (var r in reminders)
+                                {
+                                    lsvOutput.Items.Add("=========================");
+                                    lsvOutput.Items.Add("Reminder Details");
+                                    lsvOutput.Items.Add("Name: " + r.rName);
+                                    lsvOutput.Items.Add("Due Date: " + r.rDate);
+                                }
+                                btnClear.Content = "Delete all Reminders";
                             }
-                            btnClear.Content = "Delete all Reminders";
-                        }
-                        else
-                        {
-                            status = "No Reminders found";
-                        }
+                            else
+                            {
+                                status = "No Reminders found";
+                            }
                     }
                     else if (output == "StudyTime")
                     {
                         StudyModel = new StudysViewModel();
-
-                        study = StudyModel.GetAllStudies();
-                        if (study != null)
-                        {
-                            lsvOutput.Items.Clear();
-                            foreach (var s in study)
+                        
+                            study = StudyModel.GetAllStudies(GetID);
+                            if (study != null)
                             {
-                                lsvOutput.Items.Add("=========================");
-                                lsvOutput.Items.Add("Study Details");
-                                lsvOutput.Items.Add("Name: " + s.StudyName);
-                                lsvOutput.Items.Add("Duration: " + s.Duration);
-                                lsvOutput.Items.Add("Date: " + s.Date);
+                                lsvOutput.Items.Clear();
+                                foreach (var s in study)
+                                {
+                                    lsvOutput.Items.Add("=========================");
+                                    lsvOutput.Items.Add("Study Details");
+                                    lsvOutput.Items.Add("Name: " + s.StudyName);
+                                    lsvOutput.Items.Add("Duration: " + s.Duration);
+                                    lsvOutput.Items.Add("Date: " + s.Date);
+                                }
+                                btnClear.Content = "Delete all Study Times";
                             }
-                            btnClear.Content = "Delete all Study Times";
-                        }
-                        else
-                        {
-                            status = "No Studies found";
-                        }
+                            else
+                            {
+                                status = "No Studies found";
+                            }
                     }
-
+                   
                 }
                 else
                 {
@@ -170,7 +175,6 @@ namespace StudyApp
             btnClear.Visibility = Visibility.Visible;
         }
 
-
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             var objSubject = new SubjectViewModel();
@@ -184,22 +188,22 @@ namespace StudyApp
                 if (output == "Progress")
                 {
                     lsvOutput.Items.Clear();
-                    objSubject.RemoveSubject();
+                    objSubject.RemoveSubject(GetID);
 
                 }
                 else if (output == "Reminders")
                 {
                     lsvOutput.Items.Clear();
-                    objReminder.RemoveReminder();
+                    objReminder.RemoveReminder(GetID);
                 }
                 else if (output == "StudyTime")
                 {
                     lsvOutput.Items.Clear();
-                    objStudy.RemoveStudy();
+                    objStudy.RemoveStudy(GetID);
                 }
                 btnClear.Visibility = Visibility.Collapsed;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 if (output == "Progress")
                     table = "Subjects";

@@ -26,12 +26,25 @@ namespace StudyApp
     {
         SubjectsViewModel SubjectModel = null;
         ObservableCollection<SubjectViewModel> subjets = null;
+        int GetID = 0;
         public AddSubjects()
         {
             this.InitializeComponent();
-           
         }
-        
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            try
+            {
+                base.OnNavigatedTo(e);
+                GetID = (int)e.Parameter;
+                lstOutput.Items.Clear();
+            }
+            catch
+            {
+ 
+            }                
+        }
         private async void messageBox(string msg)
         {
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
@@ -44,7 +57,7 @@ namespace StudyApp
 
             SubjectModel = new SubjectsViewModel();
 
-            subjets = SubjectModel.GetAllSubjects();
+            subjets = SubjectModel.GetAllSubjects(GetID);
             if (subjets != null)
             {
                 foreach (var s in subjets)
@@ -81,8 +94,8 @@ namespace StudyApp
                         {
                             if (verifyDuplication(sbjName) != true)
                             {
-
-                                objSubject.SetSubject(sbjName, sbjMark);
+                                
+                                objSubject.SetSubject(sbjName, sbjMark, GetID);
                                 status = "Successfully added" + "\n" + sbjName + " with a goal mark of " + sbjMark;
                                 lstOutput.Items.Add("Name: " + sbjName + "\nGoal mark of: " + sbjMark);
 
@@ -122,7 +135,7 @@ namespace StudyApp
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(MainPage),GetID);
         }
     }
 }

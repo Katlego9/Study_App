@@ -27,53 +27,23 @@ namespace StudyApp
     {
         RemindersViewModel ReminderModel = null;
         ObservableCollection<ReminderViewModel> reminders = null;
+        int GetID = 0;
         public ReminderPage()
         {
             this.InitializeComponent();
         }
 
-        private async void messageBox(string msg)
-        {
-            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
-            await msgDisplay.ShowAsync();
-        }
-
-        private bool VerifyDateIsFuture(DateTimeOffset date)
-        {
-            if (date > DateTimeOffset.Now)
-            {
-                return true;
-            }
-            return false;
-        }
-        private bool verifyDuplication(string name)
-        {
-            bool status = false;
-
-            ReminderModel = new RemindersViewModel();
-
-            reminders = ReminderModel.GetAllReminders();
-            if (reminders != null)
-            {
-                foreach (var r in reminders)
-                {
-                    if (name == r.rName)
-                    {
-                        status = true;
-                    }
-                }
-            }
-            return status;
-        }
-
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            ReminderModel = new RemindersViewModel();
-
-            reminders = ReminderModel.GetAllReminders();
-            string status = string.Empty;
             try
             {
+                base.OnNavigatedTo(e);
+                GetID = (int)e.Parameter;
+
+                ReminderModel = new RemindersViewModel();
+                reminders = ReminderModel.GetAllReminders(GetID);
+                string status = string.Empty;
+
                 if (reminders != null)
                 {
                     DateTimeOffset datepicker = System.DateTimeOffset.Now.AddDays(1);
@@ -109,9 +79,42 @@ namespace StudyApp
             {
                 messageBox("error " + ex.Message);
             }
-
-            base.OnNavigatedTo(e);
         }
+        private async void messageBox(string msg)
+        {
+            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
+            await msgDisplay.ShowAsync();
+        }
+
+        private bool VerifyDateIsFuture(DateTimeOffset date)
+        {
+            if (date > DateTimeOffset.Now)
+            {
+                return true;
+            }
+            return false;
+        }
+        private bool verifyDuplication(string name)
+        {
+            bool status = false;
+
+            ReminderModel = new RemindersViewModel();
+
+            reminders = ReminderModel.GetAllReminders(GetID);
+            if (reminders != null)
+            {
+                foreach (var r in reminders)
+                {
+                    if (name == r.rName)
+                    {
+                        status = true;
+                    }
+                }
+            }
+            return status;
+        }
+
+       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var objReminder = new ReminderViewModel();
@@ -133,7 +136,7 @@ namespace StudyApp
                     {
                         if (verifyDuplication(task) != true)
                         {
-                            objReminder.SetReminder(task, reminderdate);
+                            objReminder.SetReminder(task, reminderdate,GetID);
                             status = "Successfully added Reminder" + "\n" + task + " with a due date of " + reminderdate;
                             txbReminder.Text = "";
                         }
@@ -168,7 +171,7 @@ namespace StudyApp
             try
             {
                 ReminderModel = new RemindersViewModel();
-                reminders = ReminderModel.GetAllReminders();
+                reminders = ReminderModel.GetAllReminders(GetID);
 
                 if (reminders != null)
                 {
@@ -203,7 +206,7 @@ namespace StudyApp
         private void btnThree_Click(object sender, RoutedEventArgs e)
         {
             ReminderModel = new RemindersViewModel();
-            reminders = ReminderModel.GetAllReminders();
+            reminders = ReminderModel.GetAllReminders(GetID);
             string status = string.Empty;
 
             try
@@ -240,7 +243,7 @@ namespace StudyApp
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(MainPage),GetID);
         }
     }
 

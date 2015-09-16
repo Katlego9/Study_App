@@ -12,5 +12,6 @@ namespace StudyApp.StudyTime
         public string StudyName { get; set; }
         public string Duration { get; set; }
         public DateTimeOffset Date { get; set; }
+        public int MemID { get; set; }
     }
 }

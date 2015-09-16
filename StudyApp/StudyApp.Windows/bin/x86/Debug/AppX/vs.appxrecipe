@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-07T09:36:43.034</Modified>
+      <Modified>2015-09-15T10:27:45.637</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\StudyApp.Windows.exe">
       <PackagePath>StudyApp.Windows.exe</PackagePath>
-      <Modified>2015-09-08T08:53:07.297</Modified>
+      <Modified>2015-09-16T07:29:05.818</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -74,51 +74,51 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-09-03T12:30:50.949</Modified>
+      <Modified>2015-09-15T10:27:44.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\AddSubjects.xbf">
       <PackagePath>AddSubjects.xbf</PackagePath>
-      <Modified>2015-09-08T08:53:06.868</Modified>
+      <Modified>2015-09-15T10:27:44.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\FogotPage.xbf">
       <PackagePath>FogotPage.xbf</PackagePath>
-      <Modified>2015-09-07T10:50:44.224</Modified>
+      <Modified>2015-09-15T10:27:44.324</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\LogIn.xbf">
       <PackagePath>LogIn.xbf</PackagePath>
-      <Modified>2015-09-07T10:50:44.229</Modified>
+      <Modified>2015-09-15T10:27:44.325</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-09-07T10:50:44.235</Modified>
+      <Modified>2015-09-15T10:27:44.325</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\Progress.xbf">
       <PackagePath>Progress.xbf</PackagePath>
-      <Modified>2015-09-07T10:50:44.241</Modified>
+      <Modified>2015-09-15T10:27:44.326</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\Register.xbf">
       <PackagePath>Register.xbf</PackagePath>
-      <Modified>2015-09-08T08:53:06.871</Modified>
+      <Modified>2015-09-15T10:27:44.326</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\ReminderPage.xbf">
       <PackagePath>ReminderPage.xbf</PackagePath>
-      <Modified>2015-09-07T10:50:44.252</Modified>
+      <Modified>2015-09-15T10:27:44.327</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\ReportPage.xbf">
       <PackagePath>ReportPage.xbf</PackagePath>
-      <Modified>2015-09-07T10:50:44.257</Modified>
+      <Modified>2015-09-15T10:27:44.327</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\StudyPage.xbf">
       <PackagePath>StudyPage.xbf</PackagePath>
-      <Modified>2015-09-07T10:50:44.263</Modified>
+      <Modified>2015-09-15T10:27:44.328</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\StudyApp.Windows.xr.xml">
       <PackagePath>StudyApp.Windows.xr.xml</PackagePath>
-      <Modified>2015-09-07T10:50:43.923</Modified>
+      <Modified>2015-09-09T12:41:38.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-09-07T09:36:41.703</Modified>
+      <Modified>2015-09-15T10:27:45.212</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

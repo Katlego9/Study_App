@@ -35,6 +35,8 @@ namespace StudyApp
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
             await msgDisplay.ShowAsync();
         }
+
+
         private bool verifyDuplication(string name)
         {
             bool status = false;

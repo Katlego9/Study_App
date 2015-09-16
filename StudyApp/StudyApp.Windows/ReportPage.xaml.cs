@@ -36,6 +36,8 @@ namespace StudyApp
         StudysViewModel StudyModel = null;
         ObservableCollection<StudyViewModel> study = null;
 
+        int GetID = 0;
+
         public ReportPage()
         {
             this.InitializeComponent();
@@ -45,6 +47,9 @@ namespace StudyApp
         {
             try
             {
+                base.OnNavigatedTo(e);
+                GetID = (int)e.Parameter;
+
                 cmbOutput.Items.Clear();
                 cmbOutput.Items.Add("Progress");
                 cmbOutput.Items.Add("Reminders");
@@ -79,7 +84,7 @@ namespace StudyApp
                     if (output == "Progress")
                     {
                         SubjectModel = new SubjectsViewModel();
-                        subjets = SubjectModel.GetAllSubjects();
+                        subjets = SubjectModel.GetAllSubjects(GetID);
 
                         if (subjets != null)
                         {
@@ -104,7 +109,7 @@ namespace StudyApp
                     {
                         ReminderModel = new RemindersViewModel();
                        
-                            reminders = ReminderModel.GetAllReminders();
+                            reminders = ReminderModel.GetAllReminders(GetID);
                             if (reminders != null)
                             {
                                 lsvOutput.Items.Clear();
@@ -126,7 +131,7 @@ namespace StudyApp
                     {
                         StudyModel = new StudysViewModel();
                         
-                            study = StudyModel.GetAllStudies();
+                            study = StudyModel.GetAllStudies(GetID);
                             if (study != null)
                             {
                                 lsvOutput.Items.Clear();
@@ -175,18 +180,18 @@ namespace StudyApp
                 if (output == "Progress")
                 {
                     lsvOutput.Items.Clear();
-                    objSubject.RemoveSubject();
+                    objSubject.RemoveSubject(GetID);
 
                 }
                 else if (output == "Reminders")
                 {
                     lsvOutput.Items.Clear();
-                    objReminder.RemoveReminder();
+                    objReminder.RemoveReminder(GetID);
                 }
                 else if (output == "StudyTime")
                 {
                     lsvOutput.Items.Clear();
-                    objStudy.RemoveStudy();
+                    objStudy.RemoveStudy(GetID);
                 }
                 btnClear.Visibility = Visibility.Collapsed;
             }
@@ -205,7 +210,7 @@ namespace StudyApp
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(MainPage),GetID);
         }
 
         private void lsvOutput_SelectionChanged(object sender, SelectionChangedEventArgs e)

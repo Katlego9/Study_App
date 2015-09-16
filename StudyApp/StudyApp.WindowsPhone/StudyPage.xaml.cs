@@ -36,6 +36,9 @@ namespace StudyApp
         SubjectsViewModel SubjectModel = null;
         ObservableCollection<SubjectViewModel> subjets = null;
 
+        int GetID = 0;
+        bool navigate = true;
+
         public StudyPage()
         {
             this.InitializeComponent();
@@ -52,9 +55,15 @@ namespace StudyApp
 
         private void OnBackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
         {
-            e.Handled = true;
-            this.Frame.Navigate(typeof(MainPage));
-
+            e.Handled = navigate;
+            if (navigate != true)
+            {
+                this.Frame.Navigate(typeof(StudyPage), GetID);
+            }
+            else
+            {
+                this.Frame.Navigate(typeof(MainPage), GetID);
+            }
         }
 
         private async void messageBox(string msg)
@@ -71,9 +80,11 @@ namespace StudyApp
 
             try
             {
-                if (timer.IsEnabled == false)
+                base.OnNavigatedTo(e);
+                GetID = (int)e.Parameter;
+                if (timer.IsEnabled != true)
                 {
-                    subjets = SubjectModel.GetAllSubjects();
+                    subjets = SubjectModel.GetAllSubjects(GetID);
                     if (subjets != null)
                     {
                         foreach (var s in subjets)
@@ -88,7 +99,7 @@ namespace StudyApp
                 }
                 else
                 {
-                    status = "Study Time has already been started, please try again after time it is finished";
+                    status = "Study Time has already been started, please try again after time is finished";
                 }
             }
             catch (Exception ex)
@@ -99,7 +110,7 @@ namespace StudyApp
             if (status != string.Empty)
                 messageBox(status);
 
-            base.OnNavigatedTo(e);
+
         }
 
         public void TimeTrimmer(TimeSpan timeDifference)
@@ -131,6 +142,8 @@ namespace StudyApp
             var now = DateTime.Now.TimeOfDay;
             var timeDifference = TimeSpan.Zero;
 
+            navigate = false;
+            
             if (txtTime.Text != "It is now Time to finish studying!!")
             {
                 if (now < studyStartTime)
@@ -162,6 +175,10 @@ namespace StudyApp
             else
             {
                 timer.Stop();
+                txtElapsedTime.Text = "";
+                txtTime.Text = "";
+                navigate = true;
+              
             }
         }
 
@@ -203,14 +220,14 @@ namespace StudyApp
             {
                 studyName = (string)cmbSubjects.SelectedItem;
 
-                var confirm = objSubject.getSubject(studyName);
+                var confirm = objSubject.getSubject(studyName, GetID);
                 if (confirm != null)
                 {
                     if (FutureTime())
                     {
                         if (GreaterEndTime())
                         {
-                            objStudy.SetStudy(studyName, time.ToString());
+                            objStudy.SetStudy(studyName, time.ToString(), GetID);
                             timer.Start();
 
                         }
@@ -236,6 +253,7 @@ namespace StudyApp
 
             if (status != string.Empty)
                 messageBox(status);
+
         }
     }
 }

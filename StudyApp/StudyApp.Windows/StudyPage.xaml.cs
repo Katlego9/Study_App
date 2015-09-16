@@ -32,9 +32,10 @@ namespace StudyApp
         private TimeSpan now;
         TimeSpan time;
 
-
         SubjectsViewModel SubjectModel = null;
         ObservableCollection<SubjectViewModel> subjets = null;
+
+        int GetID = 0;
 
         public StudyPage()
         {
@@ -63,9 +64,11 @@ namespace StudyApp
 
             try
             {
-                if (timer.IsEnabled == false)
+                base.OnNavigatedTo(e);
+                GetID = (int)e.Parameter;
+                if (timer.IsEnabled != true)
                 {
-                    subjets = SubjectModel.GetAllSubjects();
+                    subjets = SubjectModel.GetAllSubjects(GetID);
                     if (subjets != null)
                     {
                         foreach (var s in subjets)
@@ -80,7 +83,7 @@ namespace StudyApp
                 }
                 else
                 {
-                    status = "Study Time has already been started, please try again after time it is finished";
+                    status = "Study Time has already been started, please try again after time is finished";
                 }
             }
             catch (Exception ex)
@@ -91,7 +94,7 @@ namespace StudyApp
             if (status != string.Empty)
                 messageBox(status);
 
-            base.OnNavigatedTo(e);
+           
         }
 
         public void TimeTrimmer(TimeSpan timeDifference)
@@ -123,38 +126,43 @@ namespace StudyApp
             var now = DateTime.Now.TimeOfDay;
             var timeDifference = TimeSpan.Zero;
 
-            if (txtTime.Text != "It is now Time to finish studying!!")
-            {
-                if (now < studyStartTime)
-                {
-                    timeDifference = studyStartTime - now;
-                    txtElapsedTime.Text = "Time to start studying is in...";
-                    TimeTrimmer(timeDifference);
-                }
+            appBack.Visibility = Visibility.Collapsed;
 
-                if (now > studyStartTime && now < studyEndTime)
+                if (txtTime.Text != "It is now Time to finish studying!!")
                 {
-                    txtElapsedTime.Text = "Yay!";
-                    txtTime.Text = "It is now Time to start studying!!";
-                }
+                    if (now < studyStartTime)
+                    {
+                        timeDifference = studyStartTime - now;
+                        txtElapsedTime.Text = "Time to start studying is in...";
+                        TimeTrimmer(timeDifference);
+                    }
 
-                if (now > studyEndTime && now < studyStartTime1)
-                {
-                    timeDifference = studyStartTime1 - now;
-                    txtElapsedTime.Text = "Studying has started: Elapsed time is in...";
-                    TimeTrimmer(timeDifference);
-                }
+                    if (now > studyStartTime && now < studyEndTime)
+                    {
+                        txtElapsedTime.Text = "Yay!";
+                        txtTime.Text = "It is now Time to start studying!!";
+                    }
 
-                if (now > studyStartTime1 && now < studyEndTime1)
-                {
-                    txtElapsedTime.Text = "Yay!";
-                    txtTime.Text = "It is now Time to finish studying!!";
+                    if (now > studyEndTime && now < studyStartTime1)
+                    {
+                        timeDifference = studyStartTime1 - now;
+                        txtElapsedTime.Text = "Studying has started: Elapsed time is in...";
+                        TimeTrimmer(timeDifference);
+                    }
+
+                    if (now > studyStartTime1 && now < studyEndTime1)
+                    {
+                        txtElapsedTime.Text = "Yay!";
+                        txtTime.Text = "It is now Time to finish studying!!";
+                    }
                 }
-            }
-            else
-            {
-                timer.Stop();
-            }
+                else
+                {
+                    timer.Stop();
+                    txtElapsedTime.Text = "";
+                    txtTime.Text = "";
+                    appBack.Visibility = Visibility.Visible;
+                }
         }
 
         public bool FutureTime()
@@ -195,16 +203,15 @@ namespace StudyApp
             {
                 studyName = (string)cmbSubjects.SelectedItem;
 
-                var confirm = objSubject.getSubject(studyName);
+                var confirm = objSubject.getSubject(studyName,GetID);
                 if (confirm != null)
                 {
                     if (FutureTime())
                     {
                         if (GreaterEndTime())
                         {
-                            objStudy.SetStudy(studyName, time.ToString());
+                            objStudy.SetStudy(studyName, time.ToString(),GetID);
                             timer.Start();
-
                         }
                         else
                         {
@@ -232,7 +239,7 @@ namespace StudyApp
         }
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(MainPage),GetID);
         }
     }
 }

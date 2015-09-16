@@ -37,6 +37,7 @@ namespace StudyApp
         {
             var objLogin = new MemberViewModel();
 
+
             string name = string.Empty;
             string pass = string.Empty;
             string status = string.Empty;
@@ -52,8 +53,7 @@ namespace StudyApp
                     if (confirm != null)
                     {
                         status = "Login successful" + "\nWelcome " + confirm.Name;
-                        this.Frame.Navigate(typeof(MainPage));
-
+                        this.Frame.Navigate(typeof(MainPage), confirm.Id);
                     }
                     else
                     {
@@ -73,7 +73,7 @@ namespace StudyApp
                 messageBox("error " + ex.Message);
             }
         }
-        
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Register));

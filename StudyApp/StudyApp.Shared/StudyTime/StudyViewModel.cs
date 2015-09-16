@@ -78,25 +78,25 @@ namespace StudyApp.StudyTime
 
         private StudyApp.App app = (Application.Current as App);
 
-        public Study getStudyTime(string name)
+        public Study getStudyTime(string name, int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _sub = db.Query<Study>("Select * from Study Where StudyName ='" + name + "'").FirstOrDefault();
+                var _sub = db.Query<Study>("Select * from Study Where StudyName ='" + name + "' AND MemID = '" + CurrentID +"' ").FirstOrDefault();
                 return _sub;
 
             }
         }
-        public Study RemoveStudy()
+        public Study RemoveStudy(int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _sub = db.Query<Study>("Delete from Study").FirstOrDefault();
+                var _sub = db.Query<Study>("Delete from Study where MemID = '" +CurrentID+ "'").FirstOrDefault();
                 return _sub;
 
             }
         }
-        public void SetStudy(string name, string duration)
+        public void SetStudy(string name, string duration, int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
@@ -106,6 +106,7 @@ namespace StudyApp.StudyTime
                     StudyName = name,
                     Duration = duration,
                     Date = DateTimeOffset.Now,
+                    MemID = CurrentID,
                 });
             }
 

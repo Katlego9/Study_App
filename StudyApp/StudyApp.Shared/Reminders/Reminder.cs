@@ -12,6 +12,7 @@ namespace StudyApp.Reminders
         public int Id { get; set; }
         public string rName { get; set; }
         public string rDate { get; set; }
+        public int MemID { get; set; }
 
     }
 }

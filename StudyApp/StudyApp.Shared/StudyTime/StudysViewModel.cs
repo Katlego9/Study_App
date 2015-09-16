@@ -24,33 +24,12 @@ namespace StudyApp.StudyTime
         }
         private StudyApp.App app = (Application.Current as App);
 
-        public ObservableCollection<StudyViewModel> GetStudy()
+        public ObservableCollection<StudyViewModel> GetAllStudies(int CurrentID)
         {
             study = new ObservableCollection<StudyViewModel>();
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var query = db.Table<Study>().OrderBy(c => c.StudyName);
-                foreach (var _subject in query)
-                {
-                    var studytime = new StudyViewModel()
-                    {
-                        Id = _subject.Id,
-                        StudyName = _subject.StudyName,
-                        Duration = _subject.Duration,
-                        Date = _subject.Date
-
-                    };
-                    study.Add(studytime);
-                }
-            }
-            return study;
-        }
-        public ObservableCollection<StudyViewModel> GetAllStudies()
-        {
-            study = new ObservableCollection<StudyViewModel>();
-            using (var db = new SQLite.SQLiteConnection(app.dbPath))
-            {
-                var q = db.Query<Study>("select * from study");
+                var q = db.Query<Study>("select * from study where MemID = "+CurrentID+" ");
                 foreach (var _subject in q)
                 {
                     var studytime = new StudyViewModel()

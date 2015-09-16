@@ -24,35 +24,47 @@ namespace StudyApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-    
+        int GetID = 0;
         public MainPage()
         {
             this.InitializeComponent();
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            try
+            {
+                base.OnNavigatedTo(e);
+                GetID = (int)e.Parameter;
+            }
+            catch
+            {
+
+            }
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AddSubjects));
+            this.Frame.Navigate(typeof(AddSubjects), GetID);
         }
 
         private void btnReminder_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ReminderPage));
+            this.Frame.Navigate(typeof(ReminderPage), GetID);
         }
 
         private void btnStudy_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(StudyPage));
+            this.Frame.Navigate(typeof(StudyPage), GetID);
         }
 
         private void btnReport_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ReportPage));
+            this.Frame.Navigate(typeof(ReportPage), GetID);
         }
 
         private void btnProgress_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Progress));
+            this.Frame.Navigate(typeof(Progress), GetID);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

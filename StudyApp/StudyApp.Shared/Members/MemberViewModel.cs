@@ -84,7 +84,6 @@ namespace StudyApp
                      Password = pass,
                 });
             }
-            
         }
  
         public Members getForgot(string name)

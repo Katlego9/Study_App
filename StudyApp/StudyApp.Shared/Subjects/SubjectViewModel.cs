@@ -94,36 +94,36 @@ namespace StudyApp.Subjects
 
         private StudyApp.App app = (Application.Current as App);
 
-        public Subject getSubject(string sbjname)
+        public Subject getSubject(string sbjname, int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _sub = db.Query<Subject>("Select * from Subject Where SbjName ='" + sbjname + "' ").FirstOrDefault();
+                var _sub = db.Query<Subject>("Select * from Subject Where SbjName ='" + sbjname + "' AND MemID = "+CurrentID+" ").FirstOrDefault();
                 return _sub;
 
             }
         }
 
-        public Subject UpdateSubject(string sbjname, int mark, string status)
+        public Subject UpdateSubject(string sbjname, int mark, string status,int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _sub = db.Query<Subject>("Update Subject set ObtainMark = " + mark + ", Performance = '" + status + "' Where SbjName ='" + sbjname + "' ").FirstOrDefault();
+                var _sub = db.Query<Subject>("Update Subject set ObtainMark = " + mark + ", Performance = '" + status + "' Where SbjName ='" + sbjname + "'AND MemID = "+ CurrentID+" ").FirstOrDefault();
                 return _sub;
 
             }
         }
 
-        public Subject RemoveSubject()
+        public Subject RemoveSubject(int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _sub = db.Query<Subject>("Delete from Subject").FirstOrDefault();
+                var _sub = db.Query<Subject>("Delete from Subject where MemID = '"+CurrentID+"'").FirstOrDefault();
                 return _sub;
 
             }
         }
-        public void SetSubject(string Name, int Mark)
+        public void SetSubject(string Name, int Mark, int CurrentID)
         {
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
@@ -134,6 +134,7 @@ namespace StudyApp.Subjects
                     SbjMark = Mark,
                     ObtainMark = 0,
                     Performance = "N/A",
+                    MemID = CurrentID,
                 });
             }
 
