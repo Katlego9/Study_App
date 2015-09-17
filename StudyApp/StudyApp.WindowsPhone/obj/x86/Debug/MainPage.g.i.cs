@@ -15,6 +15,8 @@ namespace StudyApp
     partial class MainPage : global::Windows.UI.Xaml.Controls.Page
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.TextBlock txtMain; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.Button btnAdd; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.Button btnStudy; 
@@ -24,8 +26,6 @@ namespace StudyApp
         private global::Windows.UI.Xaml.Controls.Button btnProgress; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.Button btnReport; 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private global::Windows.UI.Xaml.Controls.TextBlock txtMain; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.Button btnLogout; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
@@ -41,12 +41,12 @@ namespace StudyApp
             _contentLoaded = true;
             global::Windows.UI.Xaml.Application.LoadComponent(this, new global::System.Uri("ms-appx:///MainPage.xaml"), global::Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);
  
+            txtMain = (global::Windows.UI.Xaml.Controls.TextBlock)this.FindName("txtMain");
             btnAdd = (global::Windows.UI.Xaml.Controls.Button)this.FindName("btnAdd");
             btnStudy = (global::Windows.UI.Xaml.Controls.Button)this.FindName("btnStudy");
             btnReminder = (global::Windows.UI.Xaml.Controls.Button)this.FindName("btnReminder");
             btnProgress = (global::Windows.UI.Xaml.Controls.Button)this.FindName("btnProgress");
             btnReport = (global::Windows.UI.Xaml.Controls.Button)this.FindName("btnReport");
-            txtMain = (global::Windows.UI.Xaml.Controls.TextBlock)this.FindName("txtMain");
             btnLogout = (global::Windows.UI.Xaml.Controls.Button)this.FindName("btnLogout");
         }
     }

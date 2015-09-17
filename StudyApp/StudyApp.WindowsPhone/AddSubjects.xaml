@@ -23,14 +23,7 @@
             <TextBox x:Name="txbSubject" Margin="10,116,10,460" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="32"/>
             <TextBlock x:Name="txtGoal" HorizontalAlignment="Left" Margin="10,165,0,0" TextWrapping="Wrap" Text="Please provide goal mark:" VerticalAlignment="Top" FontSize="20" Foreground="#FFF1E0D9" Height="29"/>
             <TextBox x:Name="txbGoalMark" TextWrapping="Wrap" Margin="10,194,10,0" Height="32"/>
-            <Button x:Name="btnAddSubject" Content="Add Subject" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnAddSubject_Click" Margin="7,245,7,312" BorderBrush="#FF403D39" Foreground="#FFF1E0D9" Height="50">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF936413" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button x:Name="btnAddSubject" Content="Add Subject" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnAddSubject_Click" Margin="7,245,7,312" Height="50" Style="{StaticResource ButtonStyle}"/>
             <ListBox x:Name="lstOutput" Margin="7,345,10,10" FontSize="20"/>
             <TextBlock x:Name="txtOutput" HorizontalAlignment="Left" Margin="7,316,0,0" TextWrapping="Wrap" Text="Added subjects below:" VerticalAlignment="Top" FontSize="20" Foreground="#FFF1E0D9"/>
         </Grid>

@@ -28,7 +28,7 @@
                 </ListView.RenderTransform>
             </ListView>
             <TextBlock x:Name="txtHeading" HorizontalAlignment="Right" TextWrapping="Wrap" Text="History" VerticalAlignment="Top" FontSize="80" Margin="-34,-1,585,0" Height="115" Width="360" RenderTransformOrigin="-1,0.5" Foreground="#FFF1E0D9"/>
-            <Button x:ConnectionId='3' x:Name="btnClear" Content="Clear All" HorizontalAlignment="Left" Margin="532,691,0,0" VerticalAlignment="Top" Width="372"                        BorderBrush="#FF403D39" Foreground="#FFF1E0D9" Height="50" FontSize="20">
+            <Button x:ConnectionId='3' x:Name="btnClear" Content="Clear All" HorizontalAlignment="Left" Margin="532,691,0,0" VerticalAlignment="Top" Width="372"                        BorderBrush="#FF403D39" Foreground="#FFF1E0D9" Height="50" FontSize="20" Style="{StaticResource BtnStyle}">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>

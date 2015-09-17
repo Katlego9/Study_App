@@ -23,7 +23,7 @@
             <TextBox x:Name="txbReminder" TextWrapping="Wrap" Margin="11,190,561,526" Height="32" RenderTransformOrigin="0.433,-6.125"/>
             <TextBlock TextWrapping="Wrap" Text="Please provide due date" FontSize="30" Margin="11,245,581,454" Foreground="#FFF1E0D9"/>
             <DatePicker x:Name="dtpDate" Margin="11,294,0,404" HorizontalAlignment="Left" Width="429" FontSize="30" Height="50"/>
-            <Button x:ConnectionId='1' Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="61,373,592,325" Height="50" BorderBrush="#FF403D39" Foreground="#FFF1E0D9" FontSize="20" Width="345">
+            <Button x:ConnectionId='1' Content="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="61,373,592,325" Height="50" BorderBrush="#FF403D39" Foreground="#FFF1E0D9" FontSize="20" Width="345" Style="{StaticResource BtnStyle}">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -32,7 +32,7 @@
                 </Button.Background>
             </Button>
             <ListBox x:Name="lstOutput" Margin="507,190,12,99" FontSize="20"/>
-            <Button x:ConnectionId='2' x:Name="btnTwo" Content="View 2 Days" HorizontalAlignment="Left" Margin="764,679,-43,0" VerticalAlignment="Top" Width="225" Height="50"                      BorderBrush="#FF403D39" Foreground="#FFF1E0D9" FontSize="20">
+            <Button x:ConnectionId='2' x:Name="btnTwo" Content="View 2 Days" HorizontalAlignment="Left" Margin="764,679,-43,0" VerticalAlignment="Top" Width="225" Height="50"                      BorderBrush="#FF403D39" Foreground="#FFF1E0D9" FontSize="20" Style="{StaticResource BtnStyle}">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -40,7 +40,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:ConnectionId='3' x:Name="btnThree" Content="View 3 Days" HorizontalAlignment="Left" Margin="504,679,0,0" VerticalAlignment="Top" Width="225" Height="50"                        BorderBrush="#FF403D39" Foreground="#FFF1E0D9" RenderTransformOrigin="1.137,5.511" FontSize="20">
+            <Button x:ConnectionId='3' x:Name="btnThree" Content="View 3 Days" HorizontalAlignment="Left" Margin="504,679,0,0" VerticalAlignment="Top" Width="225" Height="50"                        BorderBrush="#FF403D39" Foreground="#FFF1E0D9" RenderTransformOrigin="1.137,5.511" FontSize="20" Style="{StaticResource BtnStyle}">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>

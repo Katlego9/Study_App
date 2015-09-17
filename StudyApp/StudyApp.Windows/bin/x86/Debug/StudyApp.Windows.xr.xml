@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.RootTypes>
-    <RootType FullName="Windows.UI.Xaml.Application" />
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
+      <RootProperty Name="MergedDictionaries" />
+      <RootProperty Name="Source" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="BorderBrush" />
@@ -64,6 +70,7 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Style" />
       <RootProperty Name="Background" />
       <RootProperty Name="Width" />
       <RootProperty Name="RenderTransformOrigin" />
@@ -91,6 +98,7 @@
       <RootProperty Name="Background" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Media.LinearGradientBrush">
       <RootProperty Name="EndPoint" />
       <RootProperty Name="StartPoint" />
@@ -164,5 +172,15 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="StudyApp.StudyPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Background" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Setter">
+      <RootProperty Name="Property" />
+      <RootProperty Name="Value" />
+    </RootType>
   </Roots.RootTypes>
 </Roots>

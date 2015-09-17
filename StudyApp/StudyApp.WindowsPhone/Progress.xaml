@@ -23,14 +23,7 @@
             <ComboBox x:Name="cmbSubjects" Margin="10,119,10,444"/>
             <TextBlock x:Name="txtMark" TextWrapping="Wrap" FontSize="20" Text="Please enter obtained mark:" Margin="10,183,10,409" Foreground="#FFF1E0D9"/>
             <TextBox x:Name="edtMark" Margin="10,216,10,370" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="32"/>
-            <Button x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnMark_Click" Margin="10,258,4,299" Foreground="#FFF1E0D9" BorderBrush="#FF403D39">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF936413" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnMark_Click" Margin="10,258,4,299" Style="{StaticResource ButtonStyle}"/>
             <TextBlock x:Name="txtHeading" HorizontalAlignment="Center" Margin="118,14,91,0" TextWrapping="Wrap" Text="Progress " VerticalAlignment="Top" FontSize="40" Width="168" Foreground="#FFF1E0D9"/>
         </Grid>
 

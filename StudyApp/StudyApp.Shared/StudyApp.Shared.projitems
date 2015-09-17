@@ -34,4 +34,10 @@
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Images\Background.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
 </Project>

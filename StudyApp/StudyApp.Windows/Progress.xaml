@@ -28,14 +28,7 @@
             <ComboBox x:Name="cmbSubjects" Margin="-207,22,245,36" Height="32" Grid.Row="1"/>
             <TextBlock x:Name="txtMark" TextWrapping="Wrap" FontSize="30" Text="Please enter obtained mark:" Margin="264,161,-270,68" Foreground="#FFF1E0D9" Grid.RowSpan="2"/>
             <TextBox x:Name="edtMark" Margin="264,22,-226,36" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="32" Grid.Row="1"/>
-            <Button x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnMark_Click" Margin="35,7,-3,421" Height="50" Foreground="#FFF1E0D9" BorderBrush="#FF403D39" FontSize="20" Grid.Row="2">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF936413" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button x:Name="btnMark" Content="Check Mark" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnMark_Click" Margin="35,7,-3,421" Height="50" Grid.Row="2" Style="{StaticResource ButtonStyle}"/>
             <TextBlock x:Name="txtHeading" HorizontalAlignment="Center" Margin="-362,5,440,0" TextWrapping="Wrap" Text="Progress " VerticalAlignment="Top" FontSize="80" Width="330" Foreground="#FFF1E0D9"/>
             <AppBarButton x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-472,11,0,0" VerticalAlignment="Top" Click="AppBarButton_Click" Height="69" Width="79" Foreground="#FFF1E0D9" Background="#FF936413" BorderBrush="#FF403D39"/>
         </Grid>

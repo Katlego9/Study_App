@@ -21,11 +21,11 @@
             <TimePicker x:Name="tmpStart" RenderTransformOrigin="0.513,1.853" Margin="10,201,10,368"/>
             <TextBlock x:Name="txtEndTime" TextWrapping="Wrap" Text="End Time:" FontSize="20" Margin="10,263,10,330" Foreground="#FFF1E0D9"/>
             <TimePicker x:Name="tmpEnd" Margin="10,285,10,278"/>
-            <Button x:ConnectionId='1' x:Name="btnStart" Content="Start" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="4,345,10,211" BorderBrush="#FF403D39" Foreground="#FFF1E0D9">
+            <Button x:ConnectionId='1' x:Name="btnStart" Content="Start" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                      Margin="4,345,10,211" BorderBrush="#FFC78731" Foreground="#FF93411F">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF936413" Offset="1"/>
+                        <GradientStop Color="#FF366C2E" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>

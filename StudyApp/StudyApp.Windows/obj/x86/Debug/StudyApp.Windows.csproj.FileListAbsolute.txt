@@ -305,4 +305,9 @@ D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\Cimbalino.Toolkit.pri.xml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\Cimbalino.Toolkit.Core.pri.xml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\ProjectArchitectures.txt
+D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\Styles.xbf
+D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\Styles.g.i.cs
+D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\Styles.g.cs
+D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\Styles.xaml
 D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\StudyApp.Windows.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\obj\x86\Debug\Styles.xbf
