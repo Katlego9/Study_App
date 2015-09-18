@@ -21,14 +21,7 @@
         <Grid HorizontalAlignment="Center" Height="723" Margin="493,35,118,0" VerticalAlignment="Top" Width="362">
             <TextBlock x:Name="txtUsername" HorizontalAlignment="Left" Margin="7,110,-5,0" TextWrapping="Wrap" Text="Please Enter Username:" VerticalAlignment="Top" FontSize="30" Width="360" Foreground="#FFF1E0D9" Height="47"/>
             <TextBox x:Name="txbUsername" HorizontalAlignment="Left" Margin="10,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342"/>
-            <Button x:ConnectionId='1' x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="348"                         Margin="7,218,0,0" BorderBrush="#FF403D39" Foreground="#FFF1E0D9" Height="50" FontSize="20" Style="{StaticResource BtnStyle}">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF936413" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button x:ConnectionId='1' x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="348"                         Margin="7,218,0,0" Height="50" Style="{StaticResource ButtonStyle}"/>
             <TextBlock x:Name="txtHeading1" Margin="-328,-20,52,0" TextWrapping="Wrap" Text="Forgot Password" VerticalAlignment="Top" FontSize="80" Width="638" HorizontalAlignment="Right" Height="100" Foreground="#FFF1E0D9"/>
             <Grid HorizontalAlignment="Left" Height="100" Margin="260,305,0,0" VerticalAlignment="Top" Width="100"/>
             <AppBarButton x:ConnectionId='2' x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="-458,-14,0,0" VerticalAlignment="Top"                            Height="69" Width="79" BorderBrush="#FF403D39" Foreground="#FFF1E0D9"/>

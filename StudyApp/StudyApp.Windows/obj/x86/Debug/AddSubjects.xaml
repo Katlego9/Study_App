@@ -23,14 +23,7 @@
             <TextBox x:Name="txbSubject" Margin="41,203,966,513" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="32"/>
             <TextBlock x:Name="txtGoal" HorizontalAlignment="Left" Margin="445,152,0,0" TextWrapping="Wrap" Text="Please provide goal mark:" VerticalAlignment="Top" FontSize="30" Foreground="#FFF1E0D9" Height="47"/>
             <TextBox x:Name="txbGoalMark" TextWrapping="Wrap" Margin="446,203,561,513" Height="32"/>
-            <Button x:ConnectionId='1' x:Name="btnAddSubject" Content="Add Subject" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="50"                             Margin="237,678,764,20" BorderBrush="#FF403D39" Foreground="#FFF1E0D9" FontSize="20" Style="{StaticResource ButtonStyle}">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF936413" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button x:ConnectionId='1' x:Name="btnAddSubject" Content="Add Subject" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="50"                             Margin="237,678,764,20" Style="{StaticResource ButtonStyle}"/>
             <ListBox x:Name="lstOutput" Margin="853,203,51,23" FontSize="30"/>
             <TextBlock x:Name="txtOutput" HorizontalAlignment="Left" Margin="853,152,0,0" TextWrapping="Wrap" Text="Added subjects below:" VerticalAlignment="Top" FontSize="30" Foreground="#FFF1E0D9" Height="42"/>
             <AppBarButton x:ConnectionId='2' x:Name="appBack" HorizontalAlignment="Left" Icon="Back" Label="" Margin="11,16,0,0" VerticalAlignment="Top"                            Height="69" Width="79" Foreground="#FFF1E0D9" BorderBrush="#FF403D39" Background="#FF936413"/>

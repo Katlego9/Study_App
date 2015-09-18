@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\StudyApp.Windows.exe">
       <PackagePath>StudyApp.Windows.exe</PackagePath>
-      <Modified>2015-09-17T07:46:25.140</Modified>
+      <Modified>2015-09-18T07:49:05.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -78,19 +78,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\Styles.xbf">
       <PackagePath>Styles.xbf</PackagePath>
-      <Modified>2015-09-17T07:46:24.774</Modified>
+      <Modified>2015-09-18T07:49:04.846</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\AddSubjects.xbf">
       <PackagePath>AddSubjects.xbf</PackagePath>
-      <Modified>2015-09-17T07:46:24.772</Modified>
+      <Modified>2015-09-18T07:49:04.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\FogotPage.xbf">
       <PackagePath>FogotPage.xbf</PackagePath>
-      <Modified>2015-09-16T09:11:25.416</Modified>
+      <Modified>2015-09-18T07:49:04.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\LogIn.xbf">
       <PackagePath>LogIn.xbf</PackagePath>
-      <Modified>2015-09-16T09:11:25.420</Modified>
+      <Modified>2015-09-18T07:49:04.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
@@ -98,27 +98,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\Progress.xbf">
       <PackagePath>Progress.xbf</PackagePath>
-      <Modified>2015-09-16T09:11:25.424</Modified>
+      <Modified>2015-09-18T07:49:04.811</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\Register.xbf">
       <PackagePath>Register.xbf</PackagePath>
-      <Modified>2015-09-16T09:11:25.427</Modified>
+      <Modified>2015-09-18T07:49:04.817</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\ReminderPage.xbf">
       <PackagePath>ReminderPage.xbf</PackagePath>
-      <Modified>2015-09-16T09:11:25.431</Modified>
+      <Modified>2015-09-18T07:49:04.822</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\ReportPage.xbf">
       <PackagePath>ReportPage.xbf</PackagePath>
-      <Modified>2015-09-16T09:11:25.434</Modified>
+      <Modified>2015-09-18T07:49:04.834</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\StudyPage.xbf">
       <PackagePath>StudyPage.xbf</PackagePath>
-      <Modified>2015-09-16T09:11:25.438</Modified>
+      <Modified>2015-09-18T07:49:04.840</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\StudyApp.Windows.xr.xml">
       <PackagePath>StudyApp.Windows.xr.xml</PackagePath>
-      <Modified>2015-09-17T07:46:24.752</Modified>
+      <Modified>2015-09-18T07:49:04.532</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Visual Studio 2013\Projects\Study_App\StudyApp\StudyApp.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

@@ -4,10 +4,17 @@
     xmlns:local="using:StudyApp">
     
     <Style x:Key="ButtonStyle" TargetType="Button">
-        <Setter Property="FontSize" Value="60"/>
+        <Setter Property="FontSize" Value="20"/>
         <Setter Property="BorderBrush" Value="#FF403D39"/>
         <Setter Property="Foreground" Value="#FFF1E0D9"/>
-        <Setter Property="Background" Value="#FF936413"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF936413" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
     </Style>
     
 </ResourceDictionary>
